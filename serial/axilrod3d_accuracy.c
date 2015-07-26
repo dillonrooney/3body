@@ -34,9 +34,9 @@ int randInput(FILE * fp, particle * particles, int n){
 	double buf;
 	srand(1);
 	for (i = 0; i<n;i++){
-		particles[i].x = 9*(double)rand()/(double)RAND_MAX;
-		particles[i].y = 9*(double)rand()/(double)RAND_MAX;
-		particles[i].z = 9*(double)rand()/(double)RAND_MAX;
+		particles[i].x = 0*(double)rand()/(double)RAND_MAX +i;
+		particles[i].y = 0*(double)rand()/(double)RAND_MAX;
+		particles[i].z = 0*(double)rand()/(double)RAND_MAX;
 		
 		particles[i].vx = 0;
 		particles[i].vy = 0;
@@ -102,7 +102,7 @@ int updateLeapFrog(double h, particle * particles, int n){
 	//for i
 	//v += h*dv
 	
-	
+	printf("leapfrogging\n");
 	return 1;
 	
 }
@@ -181,14 +181,14 @@ double findForce(particle * a, particle * b, particle * c){
 	double ra4 = ra3*ra;
 	double ra5 = ra4*ra;
 	double ra6 = ra5*ra;
-	rb = sqrt(rbcx*rbcx +rbcy*rbcy + rbcz*rbcz);
+	rb = sqrt(rcax*rcax +rcay*rcay + rcaz*rcaz);
 	double rb1 = rb;
 	double rb2 = rb*rb;
 	double rb3 = rb2*rb;
 	double rb4 = rb3*rb;
 	double rb5 = rb4*rb;
 	double rb6 = rb5*rb;
-	rc = sqrt(rbcx*rbcx +rbcy*rbcy + rbcz*rbcz);
+	rc = sqrt(rabx*rabx +raby*raby + rabz*rabz);
 	double rc1 = rc;
 	double rc2 = rc*rc;
 	double rc3 = rc2*rc;
@@ -236,7 +236,7 @@ double findForce(particle * a, particle * b, particle * c){
 double energy_change(particle * particles, int n, int printing){
 	static double energy;
 	int i,j,k;
-	double d21, d22, d23;
+	double d21, d22, d23, rrrcubed;
 	double currentEnergy=0;
 	for (i=0;i<n;i++){
 		//kinetic
@@ -247,7 +247,7 @@ double energy_change(particle * particles, int n, int printing){
 				d21 = (particles[i].x - particles[j].x)*(particles[i].x - particles[j].x) + (particles[i].y - particles[j].y)*(particles[i].y - particles[j].y) + (particles[i].z - particles[j].z)*(particles[i].z - particles[j].z);
 				d22 = (particles[k].x - particles[j].x)*(particles[k].x - particles[j].x) + (particles[k].y - particles[j].y)*(particles[k].y - particles[j].y) + (particles[k].z - particles[j].z)*(particles[k].z - particles[j].z);
 				d23 = (particles[i].x - particles[k].x)*(particles[i].x - particles[k].x) + (particles[i].y - particles[k].y)*(particles[i].y - particles[k].y) + (particles[i].z - particles[k].z)*(particles[i].z - particles[k].z);
-				currentEnergy+=(1.0/6.0)*(1+3*(d21+d22-d23)*(-d21+d22+d23)*(d21-d22+d23))/(d21*d22*d23);
+				currentEnergy+=(d21*d22*d23+3*(d21+d22-d23)*(-d21+d22+d23)*(d21-d22+d23)/8)/(d21*d22*d23*d21*d22*d23*sqrt(d21*d22*d23));
 			}
 			
 		}
@@ -264,7 +264,7 @@ double energy_change(particle * particles, int n, int printing){
 
 
 int main(int argc, char ** argv){
-	int n = 10;
+	int n = 3;
 	particle * particles = malloc(sizeof(particle)* n);
 	FILE * fp = fopen("input.dat", "r");
 	randInput(fp, particles, n);
@@ -276,23 +276,23 @@ int main(int argc, char ** argv){
 	struct timeval t1,t2;
 	double h,t;
 	
-	for(h=1;h>0.00001;h*=0.5){
+	//for(h=1;h>0.900001;h*=0.5){
 			//gettimeofday(&t1, NULL);
 			printf("%lf\n" , h);
 			randInput(fp, particles, n);
-			//fprintParticles(stdout, particles, n);
+			fprintParticles(stdout, particles, n);
 			energy_change(particles, n,0);
-			for(t=0; t<=1;t+=h){	
-				updateLeapFrog(h, particles, n);
-			}
+			//for(t=0; t<1;t+=h){	
+				updateLeapFrog(0.00001, particles, n);
+			//}
 			printf("%lf\n",h);
-			//fprintParticles(stdout, particles, n);
+			fprintParticles(stdout, particles, n);
 			energy_change(particles, n, 1);
 			//timing
 			//gettimeofday(&t2, NULL);
 			//time = t2.tv_sec + 0.000001*t2.tv_usec - t1.tv_sec - 0.000001*t1.tv_usec;
 			//printf("%d\t%lf\n",i,time);
-	}
+	//}
 	
 	//printParticles(particles, n);	
 	//updateEuler(double h, particles, n);	
