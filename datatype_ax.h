@@ -4,9 +4,7 @@
 //Force Calculation
 //printf
 //various initializations
-#include<math.h>
-#include "mpi.h"
-//Need include guard as multiple datatype headers will conflict
+
 
 
 typedef struct particle_s{
@@ -29,56 +27,55 @@ MPI_Datatype new_type;
 create_MPI_struct(&new_type);
 
 */
-create_MPI_struct(MPI_Datatype * new_type){
+create_MPI_struct(&new_type){
 	particle example;
-	MPI_Aint example_address;
-	MPI_Aint other_address;
+	int example_address;
+	int other_address;
 	
-		// int quark_address, flavor_address, color_address, charge_address, mass_address,
-	    // x_address, y_address, z_address, px_address, py_address, pz_address;
-	// int flavor_offset, color_offset, charge_offset, mass_offset, ...
-	// ...
-	// MPI_Get_address(&tau, &tau_address);
-	// MPI_Get_address(&tau.flavor, &flavor_address);
-	// MPI_Get_address(&tau.color, &color_address);
-	// MPI_Get_address(&tau.charge, &charge_address);
-	// MPI_Get_address(&tau.mass, &mass_address);
-	// ...
-	// flavor_offset = flavor_address - tau_address;
-	// color_offset = color_address - tau_address;
-	// charge_offset = charge_address - tau_address;
-	// mass_offset = mass_address - tau_address;
+	// int quark_address, flavor_address, color_address, charge_address, mass_address,
+    // x_address, y_address, z_address, px_address, py_address, pz_address;
+// int flavor_offset, color_offset, charge_offset, mass_offset, ...
+// ...
+// MPI_Get_address(&tau, &tau_address);
+// MPI_Get_address(&tau.flavor, &flavor_address);
+// MPI_Get_address(&tau.color, &color_address);
+// MPI_Get_address(&tau.charge, &charge_address);
+// MPI_Get_address(&tau.mass, &mass_address);
+// ...
+// flavor_offset = flavor_address - tau_address;
+// color_offset = color_address - tau_address;
+// charge_offset = charge_address - tau_address;
+// mass_offset = mass_address - tau_address;
 
-	MPI_Get_address(&example, &example_address);
-	MPI_Aint array_of_displacements[10];
-	MPI_Get_address(&example.x, &other_address);
-	array_of_displacements[0]=other_address-example_address;
-	MPI_Get_address(&example.y, &other_address);
-	array_of_displacements[1]=other_address-example_address;
-	MPI_Get_address(&example.z, &other_address);
-	array_of_displacements[2]=other_address-example_address;
-	MPI_Get_address(&example.vx, &other_address);
-	array_of_displacements[3]=other_address-example_address;
-	MPI_Get_address(&example.vy, &other_address);
-	array_of_displacements[4]=other_address-example_address;
-	MPI_Get_address(&example.vz, &other_address);
-	array_of_displacements[5]=other_address-example_address;
-	MPI_Get_address(&example.dvx, &other_address);
-	array_of_displacements[6]=other_address-example_address;
-	MPI_Get_address(&example.dvy, &other_address);
-	array_of_displacements[7]=other_address-example_address;
-	MPI_Get_address(&example.dvz, &other_address);
-	array_of_displacements[8]=other_address-example_address;
-	MPI_Get_address(&example.mass, &other_address);
-	array_of_displacements[9]=other_address-example_address;
+MPI_Get_address(&example, &example_address);
+int array_of_displacements[10];
+MPI_Get_address(&example.x, &other_address);
+array_of_displacements[0]=other_address-example_address;
+MPI_Get_address(&example.y, &other_address);
+array_of_displacements[1]=other_address-example_address;
+MPI_Get_address(&example.z, &other_address);
+array_of_displacements[2]=other_address-example_address;
+MPI_Get_address(&example.vx, &other_address);
+array_of_displacements[3]=other_address-example_address;
+MPI_Get_address(&example.vy, &other_address);
+array_of_displacements[4]=other_address-example_address;
+MPI_Get_address(&example.vz, &other_address);
+array_of_displacements[5]=other_address-example_address;
+MPI_Get_address(&example.dvx, &other_address);
+array_of_displacements[6]=other_address-example_address;
+MPI_Get_address(&example.dvy, &other_address);
+array_of_displacements[7]=other_address-example_address;
+MPI_Get_address(&example.dvz, &other_address);
+array_of_displacements[8]=other_address-example_address;
+MPI_Get_address(&example.mass, &other_address);
+array_of_displacements[9]=other_address-example_address;
 
 
-	//(10, array_of_block_lengths, array_of_displacements, array_of_types, &new_type);
-	//int array_of_block_lengths[10] = {sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double)};
-	int array_of_block_lengths[10] = {1,1,1,1,1,1,1,1,1,1};
-	MPI_Datatype array_of_types [10]  = {MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE};
+//(10, array_of_block_lengths, array_of_displacements, array_of_types, &new_type);
+int array_of_block_lengths[10] = {sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double)};
+MPI_Datatype array_of_types [10]  = {MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE};
 
-	MPI_Type_create_struct(10, array_of_block_lengths, array_of_displacements, array_of_types, new_type);
+MPI_Type_create_struct(10, array_of_block_lengths, array_of_displacements, array_of_types, &new_type);
 
 }
 
@@ -87,7 +84,7 @@ create_MPI_struct(MPI_Datatype * new_type){
 
 
 double findForce(particle * a, particle * b, particle * c){
-//	printf("finding forces\n");
+	printf("finding forces\n");
 	//I need to be more explicit on possible multiple counting
 	double ra,rb,rc;
 	//ra is the distance between particle b and particle c

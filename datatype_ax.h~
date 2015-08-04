@@ -74,8 +74,8 @@ create_MPI_struct(MPI_Datatype * new_type){
 
 
 	//(10, array_of_block_lengths, array_of_displacements, array_of_types, &new_type);
-	//int array_of_block_lengths[10] = {sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double)};
-	int array_of_block_lengths[10] = {1,1,1,1,1,1,1,1,1,1};
+	int array_of_block_lengths[10] = {sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double),sizeof(double)};
+	//int array_of_block_lengths[10] = {1,1,1,1,1,1,1,1,1,1};
 	MPI_Datatype array_of_types [10]  = {MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE, MPI_DOUBLE};
 
 	MPI_Type_create_struct(10, array_of_block_lengths, array_of_displacements, array_of_types, new_type);
@@ -87,7 +87,7 @@ create_MPI_struct(MPI_Datatype * new_type){
 
 
 double findForce(particle * a, particle * b, particle * c){
-//	printf("finding forces\n");
+	printf("finding forces\n");
 	//I need to be more explicit on possible multiple counting
 	double ra,rb,rc;
 	//ra is the distance between particle b and particle c
