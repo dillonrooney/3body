@@ -166,7 +166,7 @@ double findForce(particle * a, particle * b, particle * c){
 void fprintParticles(FILE*fp, particle * particles, int n){
 	int i;
 	for(i=0;i<n;i++){
-		fprintf(fp, "%d\t%lf\t%lf\t%lf\n\t\t%lf\t%lf\t%lf\t%lf\n",i,particles[i].x,particles[i].y,particles[i].z,particles[i].vx,particles[i].vy,particles[i].vz, particles[i].mass);		
+		fprintf(fp, "%d\t%g\t%g\t%g\n\t\t%g\t%g\t%g\n\t\t%g\t%g\t%g\t%g\n",i,particles[i].x,particles[i].y,particles[i].z,particles[i].vx,particles[i].vy,particles[i].vz, particles[i].dvx,particles[i].dvy,particles[i].dvz, particles[i].mass);		
 	}
 }
 

@@ -58,7 +58,7 @@ int main(int argc, char ** argv){
 		
 		
 	int nParticles = 72;
-	int nEach = nParticles;
+	int nEach = nParticles/size;
 	double diff;
 	particle * buffers[4];
 	particle * spare_particle_pointer;
@@ -67,9 +67,9 @@ int main(int argc, char ** argv){
 	buffers[2] = calloc(sizeof(particle), nEach);
 	buffers[3] = calloc(sizeof(particle), nEach);
 	
-	int buf_index[3];
+	int buf_index[3] = {rank, rank, rank};
 	
-	diff =compareMultipleParticles(buffers[0], buffers[1], nEach);
+	//diff =compareMultipleParticles(buffers[0], buffers[1], nEach);
 	//Read or Randomize and print
 	readParticles("../serial/serialOut72.dat", buffers[3], nEach);
 	int i;
@@ -82,9 +82,9 @@ int main(int argc, char ** argv){
 		buffers[2][i] = buffers[0][i];
 	}
 	
-	diff =compareMultipleParticles(buffers[0], buffers[1], nEach);
+	diff =compareMultipleParticles(buffers[0], buffers[3], nEach);
 
-	printf("rank %d diff = %g \n", rank, diff);
+	printf("rank %d diff = %g \t\t expected different \n", rank, diff);
 	//Loop
 		//Pass
 		//Calculate
@@ -100,6 +100,7 @@ int main(int argc, char ** argv){
 			MPI_pass(buffers, 1, buffers[3], nEach, 1, buf_index);
 			//Do some stuff
 			func(buffers, nEach, buf_index);
+			
 		}
 	}
 
@@ -123,11 +124,18 @@ int main(int argc, char ** argv){
 		buffers[2][i].dvz = buffers[0][i].dvz;
 	}
 
+	if(rank == 0){
+		fprintParticles(stdout, buffers[3], nEach);
+		fprintParticles(stdout, buffers[0], nEach);
+
+	}
+
 	//Check results
 	//use buffers[3]
 	diff =compareMultipleParticles(buffers[0], buffers[3], nEach);
 
-	printf("rank %d diff = %g \n", rank, diff);
+	printf("rank %d diff = %g \t\texpect same now \n", rank, diff);
+
 	//freeing and finalization
 	free(buffers[0]);
 	free(buffers[1]);
