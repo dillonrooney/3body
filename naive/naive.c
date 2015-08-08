@@ -3,14 +3,14 @@
 #include "mpi.h"
 
 //include datatype to be tested
-#include "datatype_ax.h"
+#include "../headers/datatype_ax.h"
 MPI_Datatype MPI_particle;
 int rank;
 int size;
 
-#include "mpi_pass.h"
-#include "compare_ax.h"
-#include "mpi_io.h"
+#include "../headers/mpi_pass.h"
+#include "../headers/compare_ax.h"
+#include "../headers/mpi_io.h"
 
 
 

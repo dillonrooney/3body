@@ -3,7 +3,7 @@
 #include "mpi.h"
 
 //include datatype to be tested
-#include "datatype_ax.h"
+#include "../headers/datatype_ax.h"
 //
 
 

@@ -3,12 +3,12 @@
 #include<math.h>
 #include<sys/time.h>
 
-#include "../naive/datatype_ax.h"
+#include "../headers/datatype_ax.h"
 MPI_Datatype MPI_particle;
 int rank;
 int size;
 
-#include "../naive/mpi_io.h"
+#include "../headers/mpi_io.h"
 
 
 

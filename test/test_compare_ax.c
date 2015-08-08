@@ -8,12 +8,12 @@
 	MPI_Datatype MPI_particle;
 
 //include datatype to be tested
-#include "datatype_ax.h"
+#include "../headers/datatype_ax.h"
 //
 //include compare
-#include "compare_ax.h"
-//include read and write functions
-#include "mpi_io.h"
+#include "../headers/compare_ax.h"
+// read and write functions not needed
+//#include "../headers/mpi_io.h"
 
 
 int main(int argc, char ** argv){

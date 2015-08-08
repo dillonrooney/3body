@@ -8,10 +8,10 @@ int size;
 MPI_Datatype MPI_particle;
 
 //include datatype
-#include "datatype_ax.h"
+#include "../headers/datatype_ax.h"
 
 //include mpi_pass to be tested
-#include "mpi_pass.h"
+#include "../headers/mpi_pass.h"
 
 
 
