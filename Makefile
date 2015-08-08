@@ -1,5 +1,7 @@
-
-LOAD="module load openmpi..."
+#Lonsdale
+LOAD="module load default-gcc-openmpi"
+#chuck
+#LOAD="module load "
 CFLAGS="-Wall -lm"
 
 .PHONY: clean test test_datatype_ax test_compare_ax test_pass
