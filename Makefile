@@ -1,8 +1,4 @@
-#Lonsdale
-LOAD="module load default-gcc-openmpi"
-#chuck
-#LOAD="module load openmpi-x86_64"
-CFLAGS="-Wall -lm"
+CFLAGS=-lm
 
 .PHONY: clean test test_datatype_ax test_compare_ax test_pass
 
@@ -24,29 +20,23 @@ test/test_datatype.c: headers/datatype_ax.h
 test/test_compare_ax.c: headers/datatype_ax.h headers/compare_ax.h
 #binaries
 test/bin/pass: test/test_pass.c
-	$(LOAD)
 	mpicc $(CFLAGS) test/test_pass.c -o test/bin/pass
 
 test/bin/datatype_ax: test/test_datatype.c
-	$(LOAD)
 	mpicc $(CFLAGS) test/test_datatype.c -o test/bin/datatype_ax
 
 test/bin/compare_ax: test/test_compare_ax.c
-	$(LOAD)
 	mpicc $(CFLAGS) test/test_compare_ax.c -o test/bin/compare_ax
 
 
 #runs
 test_pass:test/bin/pass
-	$(LOAD)
 	mpirun -n 3 test/bin/pass
 
 test_datatype_ax:test/bin/datatype_ax
-	$(LOAD)
 	mpirun -n 3 test/bin/datatype_ax
 
 test_compare_ax:test/bin/compare_ax
-	$(LOAD)
 	mpirun -n 1 test/bin/compare_ax
 
 test: test_datatype_ax test_compare_ax test_pass
