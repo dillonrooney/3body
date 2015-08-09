@@ -30,14 +30,24 @@ int main(int argc, char ** argv){
 		}
 		basicParticle(&thing1);
 		printf("this is rank 0\n");
+		printf("there are 15 things, but I am only going to send 10");
+		fprintParticles(stdout, things, 15);
+		MPI_Barrier(MPI_COMM_WORLD);
 		MPI_Send(things, 10, MPI_particle, 1, 0, MPI_COMM_WORLD);
 
 
 		
 	}else if(rank==1){
-		printf("this is rank 1\n");
+		
+		MPI_Barrier(MPI_COMM_WORLD);
 		MPI_Recv(things, 10, MPI_particle, 0, 0, MPI_COMM_WORLD, &status_ignore);
+		printf("this is rank 1\n");
+		printf("the first 10 should be nice, and the last 5 should be undefined\n")
 		fprintParticles(stdout, things, 15);
+	}
+	else{
+		MPI_Barrier(MPI_COMM_WORLD);
+		
 	}
 	
 	

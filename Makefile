@@ -34,7 +34,7 @@ test_pass:test/bin/pass
 	mpirun -n 3 test/bin/pass
 
 test_datatype_ax:test/bin/datatype_ax
-	mpirun -n 3 test/bin/datatype_ax
+	mpirun -n 2 test/bin/datatype_ax
 
 test_compare_ax:test/bin/compare_ax
 	mpirun -n 1 test/bin/compare_ax
