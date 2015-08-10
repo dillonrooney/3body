@@ -71,7 +71,7 @@ int main(int argc, char ** argv){
 	//Setup
 		
 		
-	int nParticles = 72;
+	int nParticles = 720;
 	int nEach = nParticles/size;
 	double diff;
 	particle * buffers[4];
@@ -148,8 +148,8 @@ int main(int argc, char ** argv){
 	}
 
 	if(rank == 0){
-		fprintParticles(stdout, buffers[3], nEach);
-		fprintParticles(stdout, buffers[0], nEach);
+		//fprintParticles(stdout, buffers[3], nEach);
+		//fprintParticles(stdout, buffers[0], nEach);
 
 	}
 
