@@ -50,8 +50,21 @@ int main(int argc, char ** argv){
 	create_MPI_struct(&MPI_particle);
 	MPI_Type_commit(&MPI_particle);
 
-
-
+	char * readFName =NULL;
+	char * writeFname = NULL;
+	char * defaultFName = "default.dat";
+	int writeData = 0;
+	int compareData = 0;
+	//change to allow command line arguments
+	if(size == 0){
+		writeFname = defaultFName;
+		writeData = 1;
+		
+	}else{
+		readFName = defaultFName;
+		compareData = 1;
+	}
+	
 
 
 	//Setup
@@ -71,7 +84,14 @@ int main(int argc, char ** argv){
 	
 	//diff =compareMultipleParticles(buffers[0], buffers[1], nEach);
 	//Read or Randomize and print
-	readParticles("../serial/serialOut72.dat", buffers[3], nEach);
+	if(readFName == NULL){
+		initialize_2(buffers[3], nEach);
+	}else{
+		readParticles(readFName, buffers[3], nEach);
+	}
+	
+	
+	
 	int i;
 	for(i=0;i<nEach;i++){
 		buffers[0][i] = buffers[3][i];
@@ -82,9 +102,9 @@ int main(int argc, char ** argv){
 		buffers[2][i] = buffers[0][i];
 	}
 	
-	diff =compareMultipleParticles(buffers[0], buffers[3], nEach);
+	//diff =compareMultipleParticles(buffers[0], buffers[3], nEach);
 
-	printf("rank %d diff = %g \t\t expected different \n", rank, diff);
+	//printf("rank %d diff = %g \t\t expected different \n", rank, diff);
 	//Loop
 		//Pass
 		//Calculate
@@ -132,9 +152,17 @@ int main(int argc, char ** argv){
 
 	//Check results
 	//use buffers[3]
-	diff =compareMultipleParticles(buffers[0], buffers[3], nEach);
-
-	printf("rank %d diff = %g \t\texpect same now \n", rank, diff);
+	
+	if(compareData == 1){
+		diff =compareMultipleParticles(buffers[0], buffers[3], nEach);
+		printf("rank %d diff = %g \t\texpect same now \n", rank, diff);
+	}
+	if(writeData == 1){
+		if(writeFname == NULL){
+			writeFname = defaultFName;
+		}
+		writeParticles(writeFName, buffers[0], nEach);
+	}
 
 	//freeing and finalization
 	free(buffers[0]);

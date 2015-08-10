@@ -6,6 +6,7 @@
 //various initializations
 #include<math.h>
 #include "mpi.h"
+#include<stdlib.h>
 //Need include guard as multiple datatype headers will conflict
 
 
@@ -183,4 +184,47 @@ void basicParticle(particle * in){
 	in->dvz = 123;
 	in->mass = 9;
 
+}
+
+
+void initialize_1(particle * in, int nEach){
+	int i;
+	srand(rank);
+	//not a very good random number generator, but it could work for basic testing.
+	
+	for(i = 0;i<nEach;i++){
+		in[i].x = sin((double)rand());
+		in[i].y = sin((double)rand());
+		in[i].z = rand();
+		in[i].vx = rand();
+		in[i].vy = sin((double)rand());
+		in[i].vz = rand();
+		in[i].dvx = arctan((double)rand());
+		in[i].dvy = sin((double)rand());
+		in[i].dvz = rand();
+		in[i].mass = rand();
+		
+	}	
+}
+
+void initialize_2(particle * in, int nEach){
+	int i;
+	srand(rank);
+	//not a very good random number generator, but it could work for basic testing.
+	//need reasonably close values for x,y,z
+	
+	
+	for(i = 0;i<nEach;i++){
+		in[i].x = sin((double)rand());
+		in[i].y = sin((double)rand());
+		in[i].z = sin((double)rand());
+		in[i].vx = 0;
+		in[i].vy = 0;
+		in[i].vz = 0;
+		in[i].dvx = 0;
+		in[i].dvy = 0;
+		in[i].dvz = 0;
+		in[i].mass = 1;
+		
+	}	
 }
