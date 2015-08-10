@@ -199,7 +199,7 @@ void initialize_1(particle * in, int nEach){
 		in[i].vx = rand();
 		in[i].vy = sin((double)rand());
 		in[i].vz = rand();
-		in[i].dvx = arctan((double)rand());
+		in[i].dvx = tan((double)rand());
 		in[i].dvy = sin((double)rand());
 		in[i].dvz = rand();
 		in[i].mass = rand();
@@ -212,15 +212,15 @@ void initialize_2(particle * in, int nEach){
 	srand(rank);
 	//not a very good random number generator, but it could work for basic testing.
 	//need reasonably close values for x,y,z
-	
+	printf("initializing\n");	
 	
 	for(i = 0;i<nEach;i++){
 		in[i].x = sin((double)rand());
 		in[i].y = sin((double)rand());
 		in[i].z = sin((double)rand());
-		in[i].vx = 0;
-		in[i].vy = 0;
-		in[i].vz = 0;
+		in[i].vx = i;
+		in[i].vy = rand();
+		in[i].vz = (double)rand();
 		in[i].dvx = 0;
 		in[i].dvy = 0;
 		in[i].dvz = 0;

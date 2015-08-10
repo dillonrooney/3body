@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include "mpi.h"
+	int rank;
+	int size;
 
 //include datatype to be tested
 #include "../headers/datatype_ax.h"
@@ -9,8 +11,6 @@
 
 int main(int argc, char ** argv){
 	
-	int rank;
-	int size;
 	MPI_Init(&argc,&argv);
 	particle thing1,thing2;
 	particle things[15];
@@ -42,7 +42,7 @@ int main(int argc, char ** argv){
 		MPI_Barrier(MPI_COMM_WORLD);
 		MPI_Recv(things, 10, MPI_particle, 0, 0, MPI_COMM_WORLD, &status_ignore);
 		printf("this is rank 1\n");
-		printf("the first 10 should be nice, and the last 5 should be undefined\n")
+		printf("the first 10 should be nice, and the last 5 should be undefined\n");
 		fprintParticles(stdout, things, 15);
 	}
 	else{

@@ -8,6 +8,8 @@ naive/naive.c: headers/mpi_pass.h headers/compare_ax.h headers/mpi_io.h headers/
 
 serial/serial_MPI.c: headers/mpi_io.h headers/datatype_ax.h
 #binaries
+bin/naive: naive/naive.c
+	mpicc naive/naive.c -o bin/naive $(CFLAGS)
 
 #runs
 

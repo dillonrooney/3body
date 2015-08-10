@@ -2,11 +2,12 @@
 #include<stdlib.h>
 #include "mpi.h"
 
+int rank;
+int size;
+
 //include datatype to be tested
 #include "../headers/datatype_ax.h"
 MPI_Datatype MPI_particle;
-int rank;
-int size;
 
 #include "../headers/mpi_pass.h"
 #include "../headers/compare_ax.h"
@@ -51,13 +52,13 @@ int main(int argc, char ** argv){
 	MPI_Type_commit(&MPI_particle);
 
 	char * readFName =NULL;
-	char * writeFname = NULL;
+	char * writeFName = NULL;
 	char * defaultFName = "default.dat";
 	int writeData = 0;
 	int compareData = 0;
 	//change to allow command line arguments
-	if(size == 0){
-		writeFname = defaultFName;
+	if(size == 1){
+		writeFName = defaultFName;
 		writeData = 1;
 		
 	}else{
@@ -88,6 +89,8 @@ int main(int argc, char ** argv){
 		initialize_2(buffers[3], nEach);
 	}else{
 		readParticles(readFName, buffers[3], nEach);
+		
+		//fprintParticles(stdout, buffers[3], nEach);
 	}
 	
 	
@@ -158,8 +161,8 @@ int main(int argc, char ** argv){
 		printf("rank %d diff = %g \t\texpect same now \n", rank, diff);
 	}
 	if(writeData == 1){
-		if(writeFname == NULL){
-			writeFname = defaultFName;
+		if(writeFName == NULL){
+			writeFName = defaultFName;
 		}
 		writeParticles(writeFName, buffers[0], nEach);
 	}

@@ -149,9 +149,15 @@ double compare_particle(particle*in1, particle * in2){
 double compareMultipleParticles(particle*in1, particle * in2, int nEach){
 	
 	double out = 0;
+	double newDiff;
 	int i;
 	for (i=0;i<nEach;i++){
-		out += compare_particle(in1+i, in2+i);
+		newDiff  = compare_particle(in1+i, in2+i);
+		if(isnan(newDiff)){
+			return newDiff;
+		}
+		out = out<newDiff?newDiff:out;
+		//out += compare_particle(in1+i, in2+i);
 	}
 
 	return out;	
