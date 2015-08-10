@@ -5,8 +5,10 @@ CFLAGS=-lm
 #main programs
 #sources
 naive/naive.c: headers/mpi_pass.h headers/compare_ax.h headers/mpi_io.h headers/datatype_ax.h
+	touch naive/naive.c
 
 serial/serial_MPI.c: headers/mpi_io.h headers/datatype_ax.h
+	touch serial/serial_MPI.c
 #binaries
 bin/naive: naive/naive.c
 	mpicc naive/naive.c -o bin/naive $(CFLAGS)
@@ -16,10 +18,12 @@ bin/naive: naive/naive.c
 #testing
 #sources
 test/test_pass.c: headers/datatype_ax.h headers/mpi_pass.h
+	touch test/test_pass.c
 
 test/test_datatype.c: headers/datatype_ax.h
-
+	touch test/test_datatype.c
 test/test_compare_ax.c: headers/datatype_ax.h headers/compare_ax.h
+	touch test/test_compare_ax.c
 #binaries
 test/bin/pass: test/test_pass.c
 	mpicc $(CFLAGS) test/test_pass.c -o test/bin/pass
