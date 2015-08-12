@@ -1,6 +1,6 @@
 CFLAGS=-lm
 
-.PHONY: clean test test_datatype_ax test_compare_ax test_pass
+.PHONY: clean test test_datatype_ax test_compare_ax test_pass test_split
 
 #main programs
 #sources
@@ -24,6 +24,8 @@ test/test_datatype.c: headers/datatype_ax.h
 	touch test/test_datatype.c
 test/test_compare_ax.c: headers/datatype_ax.h headers/compare_ax.h
 	touch test/test_compare_ax.c
+test/test_split.c: headers/split.h
+	touch test/test_split.c
 #binaries
 test/bin/pass: test/test_pass.c
 	mpicc $(CFLAGS) test/test_pass.c -o test/bin/pass
@@ -33,6 +35,9 @@ test/bin/datatype_ax: test/test_datatype.c
 
 test/bin/compare_ax: test/test_compare_ax.c
 	mpicc $(CFLAGS) test/test_compare_ax.c -o test/bin/compare_ax
+
+test/bin/split: test/test_split.c
+	gcc test/test_split.c -o test/bin/split
 
 
 #runs
@@ -44,10 +49,13 @@ test_datatype_ax:test/bin/datatype_ax
 
 test_compare_ax:test/bin/compare_ax
 	mpirun -n 1 test/bin/compare_ax
+	
+test_split:test/bin/split
+	./test/bin/split v
 
-test: test_datatype_ax test_compare_ax test_pass
+test: test_datatype_ax test_compare_ax test_pass test_split
 
-
+#others
 clean:
 	rm bin/*
 	rm test/bin/*
