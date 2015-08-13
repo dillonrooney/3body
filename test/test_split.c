@@ -36,7 +36,7 @@ int main(int argc, char** argv){
 		}
 		int n = 10;
 		if(verbosity == 1){
-			printf("expect 4, 3, 3\n")
+			printf("expect 4, 3, 3\n");
 		}
 		for(i=0;i<3;i++){
 			if((i==0 && pieceSize(10, 3, i) !=4)||(i!=0 && pieceSize(10, 3, i) !=3)){
@@ -44,17 +44,17 @@ int main(int argc, char** argv){
 				failed = 1;
 			}
 			if(verbosity == 1){
-				printf("%d, " , pieceSize(10, 3, i))
+				printf("%d, " , pieceSize(10, 3, i));
 			}
 		}
 		if(verbosity == 1){
 			printf("\n");
 		}
 		int nTests = 7;
-		int totals[nTests] = {2,123,665, 999, 500, 1000000, 9493759837};
-		int pieces[nTests] = {1, 12, 23, 154, 50, 1024, 234};
-		for(i=0;i<nPieces;i++){
-			failed += testAccumulation(totals, pieces);
+		int totals[7] = {2,123,665, 999, 500, 1000000, 2147483647};
+		int pieces[7] = {1, 12, 23, 154, 50, 1024, 234};
+		for(i=0;i<nTests;i++){
+			failed += testAccumulation(totals[i], pieces[i]);
 		}
 		if(failed == 0){
 			printf("split.h test passed\n");

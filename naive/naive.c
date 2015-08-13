@@ -71,7 +71,7 @@ int main(int argc, char ** argv){
 	//Setup
 		
 		
-	int nParticles = 720;
+	int nParticles = 727;
 	int nEach = nParticles/size;
 	double diff;
 	particle * buffers[4];
