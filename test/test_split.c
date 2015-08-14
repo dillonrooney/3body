@@ -51,10 +51,10 @@ int main(int argc, char** argv){
 		if(verbosity == 1){
 			printf("\n");
 		}
-		const int nTests = 7;
+
+		int nTests = 7;
 		int totals[7] = {2,123,665, 999, 500, 1000000, 2147483647};
 		int pieces[7] = {1, 12, 23, 154, 50, 1024, 234};
-		
 		for(i=0;i<nTests;i++){
 			failed += testAccumulation(totals[i], pieces[i]);
 		}
