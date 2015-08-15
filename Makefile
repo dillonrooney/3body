@@ -26,6 +26,9 @@ test/test_compare_ax.c: headers/datatype_ax.h headers/compare_ax.h
 	touch test/test_compare_ax.c
 test/test_split.c: headers/split.h
 	touch test/test_split.c
+test/test_cla.c: headers/cla.h
+	touch test/test_cla.c
+	
 #binaries
 test/bin/pass: test/test_pass.c
 	mpicc $(CFLAGS) test/test_pass.c -o test/bin/pass
@@ -38,6 +41,8 @@ test/bin/compare_ax: test/test_compare_ax.c
 
 test/bin/split: test/test_split.c
 	gcc test/test_split.c -o test/bin/split
+test/bin/cla: test/test_cla.c
+	gcc test/test_cla.c -o test/bin/cla
 
 
 #runs
@@ -52,6 +57,12 @@ test_compare_ax:test/bin/compare_ax
 	
 test_split:test/bin/split
 	./test/bin/split v
+test_cla:test/bin/cla
+	#test for failure if given invalid input
+	./test/bin/cla; test $$? -eq 1
+	echo "printing file to read:"
+	cat test/test.ini
+	./test/bin/cla test/test.ini
 
 test: test_datatype_ax test_compare_ax test_pass test_split
 
