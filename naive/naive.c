@@ -11,6 +11,7 @@ MPI_Datatype MPI_particle;
 
 #include "../headers/mpi_pass.h"
 #include "../headers/compare_ax.h"
+#include "../headers/split.h"
 #include "../headers/mpi_io.h"
 #include "../headers/cla.h"
 
@@ -61,11 +62,13 @@ int main(int argc, char ** argv){
 	create_MPI_struct(&MPI_particle);
 	MPI_Type_commit(&MPI_particle);
 
-	char * readFName =NULL;
-	char * writeFName = NULL;
-	char * defaultFName = "default.dat";
-	int writeData = 0;
-	int compareData = 0;
+	//Deprecated and dangerous as superseded by options structure
+	//char * readFName =NULL;
+	//char * writeFName = NULL;
+	//char * defaultFName = "default.dat";
+	//int writeData = 0;
+	//int compareData = 0;
+	
 	//change to allow command line arguments
 	
 
@@ -90,9 +93,11 @@ int main(int argc, char ** argv){
 	
 	//diff =compareMultipleParticles(buffers[0], buffers[1], nEachMax);
 	//Read or Randomize and print
-	if(options.Input == 1){
-		readParticles(readFName, buffers[3], nParticles, size, rank);
+	if(options.readInput == 1){
+		printf("reading particles\n");
+		readParticles(options.readFName, buffers[3], nParticles, size, rank);
 	}else if(options.genFunction == 2){
+		printf("generating particles\n");
 		initialize_2(buffers[3], nEachMax);
 		
 		//fprintParticles(stdout, buffers[3], nEachMax);
@@ -100,7 +105,7 @@ int main(int argc, char ** argv){
 		
 	}
 	
-	
+	printf("should have particles now\n");
 	
 	int i;
 	for(i=0;i<nEachMax;i++){
@@ -136,10 +141,10 @@ int main(int argc, char ** argv){
 		}
 	}
 
-
+	printf("combining results\n");
 
 	//Combine results
-	for(i=0;i<nEachMax;i++){
+	for(i=0;i<nEach[0];i++){
 		buffers[0][i].dvx += buffers[1][i].dvx+buffers[2][i].dvx;
 		buffers[0][i].dvx /= 6;
 		buffers[1][i].dvx = buffers[0][i].dvx;
@@ -164,12 +169,12 @@ int main(int argc, char ** argv){
 
 	//Check results
 	//use buffers[3]
-	
-	if(options.compareData == 1){
-		diff =compareMultipleParticles(buffers[0], buffers[3], nEach[0]);
+	if(options.compareResults == 1){
+		printf("comparing results");	
+		diff =compareMultipleParticles(buffers[0], buffers[3],  nEach[0]);
 		printf("rank %d diff = %g\n", rank, diff);
 	}
-	if(options.writeData == 1){
+	if(options.writeOutput == 1){
 		writeParticles(options.writeFName, buffers[0], nParticles, size, rank);
 	}
 
