@@ -12,6 +12,7 @@ MPI_Datatype MPI_particle;
 #include "../headers/mpi_pass.h"
 #include "../headers/compare_ax.h"
 #include "../headers/mpi_io.h"
+#include "../headers/cla.h"
 
 
 
@@ -45,6 +46,15 @@ int main(int argc, char ** argv){
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 	
+	clOptions options;
+	if(getCla(argc, argv, &options)){
+		//NOTHING TO WORRY ABOUT
+	}else{
+		printf("command line options failure\n");
+		
+		return 1;
+	}
+	
 	MPI_Status status_ignore;
 	//MPI Particle Initialization
 	//MPI_Datatype MPI_particle;
@@ -57,21 +67,12 @@ int main(int argc, char ** argv){
 	int writeData = 0;
 	int compareData = 0;
 	//change to allow command line arguments
-	if(size == 1){
-		writeFName = defaultFName;
-		writeData = 1;
-		
-	}else{
-		readFName = defaultFName;
-		compareData = 1;
-	}
 	
-
 
 	//Setup
 		
 		
-	int nParticles = 720;
+	int nParticles = options.nParticles;
 	int nEachMax = pieceSize(nParticles, size, 0);
 	double diff;
 	particle * buffers[4];
@@ -89,12 +90,14 @@ int main(int argc, char ** argv){
 	
 	//diff =compareMultipleParticles(buffers[0], buffers[1], nEachMax);
 	//Read or Randomize and print
-	if(readFName == NULL){
-		initialize_2(buffers[3], nEachMax);
-	}else{
+	if(options.Input == 1){
 		readParticles(readFName, buffers[3], nParticles, size, rank);
+	}else if(options.genFunction == 2){
+		initialize_2(buffers[3], nEachMax);
 		
 		//fprintParticles(stdout, buffers[3], nEachMax);
+	}else{
+		
 	}
 	
 	
@@ -162,15 +165,12 @@ int main(int argc, char ** argv){
 	//Check results
 	//use buffers[3]
 	
-	if(compareData == 1){
+	if(options.compareData == 1){
 		diff =compareMultipleParticles(buffers[0], buffers[3], nEach[0]);
-		printf("rank %d diff = %g \t\texpect same now \n", rank, diff);
+		printf("rank %d diff = %g\n", rank, diff);
 	}
-	if(writeData == 1){
-		if(writeFName == NULL){
-			writeFName = defaultFName;
-		}
-		writeParticles(writeFName, buffers[0], nParticles, size, rank);
+	if(options.writeData == 1){
+		writeParticles(options.writeFName, buffers[0], nParticles, size, rank);
 	}
 
 	//freeing and finalization
