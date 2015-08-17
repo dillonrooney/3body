@@ -1,0 +1,380 @@
+nogen
+c64
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+reading particles
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+should have particles now
+combining results
+comparing resultsrank 2 diff = 508.988
+combining results
+comparing resultsrank 6 diff = 691.116
+combining results
+comparing resultsrank 4 diff = 996.053
+combining results
+comparing resultsrank 3 diff = 514.275
+combining results
+comparing resultsrank 7 diff = 462.391
+combining results
+comparing resultsrank 0 diff = 145.615
+combining results
+comparing resultsrank 5 diff = 1545.51
+combining results
+comparing resultsrank 1 diff = 565.263
+combining results
+comparing resultsrank 59 diff = 429.004
+combining results
+comparing resultsrank 63 diff = 362.932
+combining results
+comparing resultsrank 18 diff = 9026.47
+combining results
+comparing resultsrank 30 diff = 6752.75
+combining results
+comparing resultsrank 43 diff = 356.144
+combining results
+comparing resultsrank 19 diff = 3981.04
+combining results
+comparing resultsrank 24 diff = 1589.82
+combining results
+comparing resultsrank 48 diff = 420.793
+combining results
+comparing resultsrank 62 diff = 354.961
+combining results
+comparing resultsrank 32 diff = 767.316
+combining results
+comparing resultsrank 25 diff = 320.333
+combining results
+comparing resultsrank 54 diff = 510.519
+combining results
+comparing resultsrank 56 diff = 313.689
+combining results
+comparing resultsrank 38 diff = 170.504
+combining results
+comparing resultsrank 40 diff = 727.885
+combining results
+comparing resultsrank 11 diff = 552.631
+combining results
+comparing resultsrank 20 diff = 890.386
+combining results
+comparing resultsrank 46 diff = 248.272
+combining results
+comparing resultsrank 8 diff = 321.436
+combining results
+comparing resultsrank 16 diff = 6270.84
+combining results
+comparing resultsrank 31 diff = 871.823
+combining results
+comparing resultsrank 50 diff = 1277.98
+combining results
+comparing resultsrank 57 diff = 701.223
+combining results
+comparing resultsrank 34 diff = 298.16
+combining results
+comparing resultsrank 42 diff = 385.205
+combining results
+comparing resultsrank 14 diff = 512
+combining results
+comparing resultsrank 17 diff = 458.6
+combining results
+comparing resultsrank 26 diff = 1823.71
+combining results
+comparing resultsrank 51 diff = 502.481
+combining results
+comparing resultsrank 61 diff = 2597.98
+combining results
+comparing resultsrank 35 diff = 203.44
+combining results
+comparing resultsrank 41 diff = 276.331
+combining results
+comparing resultsrank 9 diff = 536.865
+combining results
+comparing resultsrank 21 diff = 185.318
+combining results
+comparing resultsrank 27 diff = 635.323
+combining results
+comparing resultsrank 53 diff = 418.622
+combining results
+comparing resultsrank 60 diff = 606.618
+combining results
+comparing resultsrank 36 diff = 291.673
+combining results
+comparing resultsrank 44 diff = 216.391
+combining results
+comparing resultsrank 12 diff = 645.377
+combining results
+comparing resultsrank 22 diff = 529.409
+combining results
+comparing resultsrank 29 diff = 404.927
+combining results
+comparing resultsrank 49 diff = 512.54
+combining results
+comparing resultsrank 58 diff = 466.771
+combining results
+comparing resultsrank 37 diff = 3994.91
+combining results
+comparing resultsrank 45 diff = 362.956
+combining results
+comparing resultsrank 13 diff = 625.844
+combining results
+comparing resultsrank 23 diff = 1678.07
+combining results
+comparing resultsrank 28 diff = 4623.17
+combining results
+comparing resultsrank 55 diff = 499.365
+combining results
+comparing resultsrank 33 diff = 240.799
+combining results
+comparing resultsrank 47 diff = 459.579
+combining results
+comparing resultsrank 10 diff = 449.603
+combining results
+comparing resultsrank 52 diff = 2843.44
+combining results
+comparing resultsrank 39 diff = 313.264
+combining results
+comparing resultsrank 15 diff = 338.418
+
+real	0m12.444s
+user	1m9.549s
+sys	0m1.315s
+
+
+###############################################################################
+TCHPC Cluster: lonsdale
+Job 213418 (1024particles) for User 'rooneydt' in Account 'mschpc'
+Finished at: Mon Aug 17 05:40:47 IST 2015
+
+Job completion status:
+======================
+
+       JobID    JobName AllocCPUS NTasks NNodes     MaxRSS    MaxRSSNode  MaxDiskRead MaxDiskWrite    Elapsed      State ExitCode 
+------------ ---------- --------- ------ ------ ---------- ------------- ------------ ------------ ---------- ---------- -------- 
+213418       1024parti+        64             8                                                      00:00:16  COMPLETED      0:0 
+213418.batch      batch        64      1      1      3116K lonsdale-n110        0.20M        0.00M   00:00:16  COMPLETED      0:0 
+213418.0          orted         7      7      7     26632K lonsdale-n146        0.17M        0.35M   00:00:13  COMPLETED      0:0 
+
+
+Job details:
+============
+
+JobId=213418 JobName=1024particles
+   UserId=rooneydt(5482) GroupId=rooneydt(9287)
+   Priority=11825861 Nice=0 Account=mschpc QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:16 TimeLimit=00:05:00 TimeMin=N/A
+   SubmitTime=2015-08-17T00:33:51 EligibleTime=2015-08-17T00:39:34
+   StartTime=2015-08-17T05:40:31 EndTime=2015-08-17T05:40:47
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=compute AllocNode:Sid=lonsdale01:17121
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   BatchHost=lonsdale-n110
+   NumNodes=8 NumCPUs=64 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+     Nodes=lonsdale-n[110,146-152] CPU_IDs=0-7 Mem=15000
+   MinCPUsNode=1 MinMemoryNode=15000M MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   Shared=0 Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/users/mschpc/2014/rooneydt/3body/sbatch6.sh
+   WorkDir=/home/users/mschpc/2014/rooneydt/3body
+   StdErr=/home/users/mschpc/2014/rooneydt/3body/slurm-213418.out
+   StdIn=/dev/null
+   StdOut=/home/users/mschpc/2014/rooneydt/3body/slurm-213418.out
+
+
+Disk quota details:
+===================
+
+Quota Type           Name  Filesystem     Usage in MB     Limit in MB    % Used
+-------------------------------------------------------------------------------
+USER             rooneydt       /home              29          51,200     0.06%
+
+GROUP              mschpc   /projects          23,731          51,200    46.35%
+
+
+SLURM Bank Statement:
+=====================
+
+User           Usage |        Account     Usage | Account Limit Available (CPU hrs)
+---------- --------- + -------------- --------- + ------------- ---------
+
+aljohani          22 |         MSCHPC    95,774 |       400,000   304,226
+boycek           714 |         MSCHPC    95,774 |       400,000   304,226
+dalyso           200 |         MSCHPC    95,774 |       400,000   304,226
+deleligt         709 |         MSCHPC    95,774 |       400,000   304,226
+dowlindo         563 |         MSCHPC    95,774 |       400,000   304,226
+dunneff        4,157 |         MSCHPC    95,774 |       400,000   304,226
+elynch         2,903 |         MSCHPC    95,774 |       400,000   304,226
+hannigs            6 |         MSCHPC    95,774 |       400,000   304,226
+hernonma         457 |         MSCHPC    95,774 |       400,000   304,226
+holtonmi           0 |         MSCHPC    95,774 |       400,000   304,226
+howardrj          37 |         MSCHPC    95,774 |       400,000   304,226
+hynesr         1,365 |         MSCHPC    95,774 |       400,000   304,226
+jabehan        3,698 |         MSCHPC    95,774 |       400,000   304,226
+jbulava          158 |         MSCHPC    95,774 |       400,000   304,226
+jose               0 |         MSCHPC    95,774 |       400,000   304,226
+kcleary           67 |         MSCHPC    95,774 |       400,000   304,226
+lambem           514 |         MSCHPC    95,774 |       400,000   304,226
+liul1            504 |         MSCHPC    95,774 |       400,000   304,226
+luoq           2,782 |         MSCHPC    95,774 |       400,000   304,226
+makirby        1,126 |         MSCHPC    95,774 |       400,000   304,226
+mcbridne       2,142 |         MSCHPC    95,774 |       400,000   304,226
+mehtav            82 |         MSCHPC    95,774 |       400,000   304,226
+melbyrne         326 |         MSCHPC    95,774 |       400,000   304,226
+murphd37      15,590 |         MSCHPC    95,774 |       400,000   304,226
+murrayb8       2,421 |         MSCHPC    95,774 |       400,000   304,226
+nobyrnes       1,513 |         MSCHPC    95,774 |       400,000   304,226
+oconnm28         619 |         MSCHPC    95,774 |       400,000   304,226
+ormondca       1,661 |         MSCHPC    95,774 |       400,000   304,226
+osheac9          968 |         MSCHPC    95,774 |       400,000   304,226
+osullm40       2,258 |         MSCHPC    95,774 |       400,000   304,226
+paddy          1,363 |         MSCHPC    95,774 |       400,000   304,226
+phalpin          286 |         MSCHPC    95,774 |       400,000   304,226
+purdyd           173 |         MSCHPC    95,774 |       400,000   304,226
+rooneydt         311 |         MSCHPC    95,774 |       400,000   304,226
+sharding       1,196 |         MSCHPC    95,774 |       400,000   304,226
+sikelleh         763 |         MSCHPC    95,774 |       400,000   304,226
+simpsoao         509 |         MSCHPC    95,774 |       400,000   304,226
+smurray4         514 |         MSCHPC    95,774 |       400,000   304,226
+spellacl       1,730 |         MSCHPC    95,774 |       400,000   304,226
+vetsaa            80 |         MSCHPC    95,774 |       400,000   304,226
+wechen         7,593 |         MSCHPC    95,774 |       400,000   304,226
+wyattg           200 |         MSCHPC    95,774 |       400,000   304,226
+zhuang         2,527 |         MSCHPC    95,774 |       400,000   304,226
+
+
+Acknowledgements:
+=================
+
+Note that usage of TCHPC Resources *must* be acknowledged in all publications.
+
+Please see this page for details relevant to this cluster:
+
+http://www.tchpc.tcd.ie/resources/acknowledgementpolicy
+
+################################################################################
