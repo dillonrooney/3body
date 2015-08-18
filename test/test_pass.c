@@ -48,7 +48,7 @@ int main(int argc, char ** argv){
 	int buf_index[3] = {rank, rank, rank};
 	
 	
-	MPI_pass(buffers, 1, buffers[3], nEach, 1, buf_index);
+	MPI_pass(buffers, 1, nEach, 1, buf_index);
 	if(rank == 0){
 		ofp = fopen("rk1.dat", "w" );
 		fprintf(ofp,"this is rank 0\n");
@@ -77,7 +77,7 @@ int main(int argc, char ** argv){
 	}else{
 		
 		//Rank 0 is doing stuff
-		MPI_pass(buffers, 1, buffers[3], nEach, 1, buf_index);
+		MPI_pass(buffers, 1, nEach, 1, buf_index);
 		MPI_Barrier(MPI_COMM_WORLD);
 		//Rank 1 is doing stuff
 		MPI_Barrier(MPI_COMM_WORLD);

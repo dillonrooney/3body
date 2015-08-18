@@ -108,7 +108,7 @@ int main(int argc, char ** argv){
 	}else{
 		//no input
 		printf("error: no initial data specified\n");
-		MPI_Finalize()
+		MPI_Finalize();
 	}
 	
 	
@@ -127,13 +127,13 @@ int main(int argc, char ** argv){
 	}
 	
 	if(options.verbosity>=3){
-		printf("rank %d printing particles set 0 \n");
+		printf("rank %d printing particles set 0 \n", rank);
 		fprintParticles(stdout, buffers[0], nEachMax);
-		printf("rank %d printing particles set 1 \n");
+		printf("rank %d printing particles set 1 \n", rank);
 		fprintParticles(stdout, buffers[1], nEachMax);
-		printf("rank %d printing particles set 2 \n");
+		printf("rank %d printing particles set 2 \n", rank);
 		fprintParticles(stdout, buffers[2], nEachMax);
-		printf("rank %d printing particles set 3 \n");
+		printf("rank %d printing particles set 3 \n", rank);
 		fprintParticles(stdout, buffers[3], nEachMax);
 	}
 	
@@ -164,13 +164,13 @@ int main(int argc, char ** argv){
 		printf("combining results\n");
 	}
 	if(options.verbosity>=3){
-		printf("rank %d printing particles set 0 \n");
+		printf("rank %d printing particles set 0 \n", rank);
 		fprintParticles(stdout, buffers[0], nEachMax);
-		printf("rank %d printing particles set 1 \n");
+		printf("rank %d printing particles set 1 \n", rank);
 		fprintParticles(stdout, buffers[1], nEachMax);
-		printf("rank %d printing particles set 2 \n");
+		printf("rank %d printing particles set 2 \n", rank);
 		fprintParticles(stdout, buffers[2], nEachMax);
-		printf("rank %d printing particles set 3 \n");
+		printf("rank %d printing particles set 3 \n", rank);
 		fprintParticles(stdout, buffers[3], nEachMax);
 	}
 	//Combine results
@@ -200,7 +200,7 @@ int main(int argc, char ** argv){
 	//Check results
 	//use buffers[3]
 	if(options.compareResults == 1){
-		if(verbosity>=2){
+		if(options.verbosity>=2){
 			printf("comparing results");
 		}	
 		diff =compareMultipleParticles(buffers[0], buffers[3],  nEach[0]);
