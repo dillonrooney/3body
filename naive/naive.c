@@ -94,18 +94,27 @@ int main(int argc, char ** argv){
 	//diff =compareMultipleParticles(buffers[0], buffers[1], nEachMax);
 	//Read or Randomize and print
 	if(options.readInput == 1){
-		printf("reading particles\n");
+		if(options.verbosity>=2){
+			printf("reading particles\n");
+		}
 		readParticles(options.readFName, buffers[3], nParticles, size, rank);
 	}else if(options.genFunction == 2){
-		printf("generating particles\n");
+		if(options.verbosity>=2){
+			printf("generating particles\n");
+		}
 		initialize_2(buffers[3], nEachMax);
 		
 		//fprintParticles(stdout, buffers[3], nEachMax);
 	}else{
-		
+		//no input
+		printf("error: no initial data specified\n");
+		MPI_Finalize()
 	}
 	
-	printf("should have particles now\n");
+	
+	if(options.verbosity>=2){
+		printf("should have particles now\n");
+	}
 	
 	int i;
 	for(i=0;i<nEachMax;i++){
@@ -115,6 +124,17 @@ int main(int argc, char ** argv){
 		buffers[0][i].dvz = 0;		
 		buffers[1][i] = buffers[0][i];
 		buffers[2][i] = buffers[0][i];
+	}
+	
+	if(options.verbosity>=3){
+		printf("rank %d printing particles set 0 \n");
+		fprintParticles(stdout, buffers[0], nEachMax);
+		printf("rank %d printing particles set 1 \n");
+		fprintParticles(stdout, buffers[1], nEachMax);
+		printf("rank %d printing particles set 2 \n");
+		fprintParticles(stdout, buffers[2], nEachMax);
+		printf("rank %d printing particles set 3 \n");
+		fprintParticles(stdout, buffers[3], nEachMax);
 	}
 	
 	//diff =compareMultipleParticles(buffers[0], buffers[3], nEachMax);
@@ -129,20 +149,30 @@ int main(int argc, char ** argv){
 	int j;
 	for(i=0;i<size;i++){
 		//pass right buffer 2
-		MPI_pass(buffers, 2, buffers[3], nEachMax, 1, buf_index);
+		MPI_pass(buffers, 2, nEachMax, 1, buf_index);
 		nEach[2] = pieceSize(nParticles, size, buf_index[2]);
 		for(j=0;j<size;j++){
 			//Pass right buffer 1
-			MPI_pass(buffers, 1, buffers[3], nEachMax, 1, buf_index);
+			MPI_pass(buffers, 1, nEachMax, 1, buf_index);
 			nEach[1] = pieceSize(nParticles, size, buf_index[1]);
 			//Do some stuff
 			func(buffers, nEach, buf_index);
 			
 		}
 	}
-
-	printf("combining results\n");
-
+	if(options.verbosity>=3){
+		printf("combining results\n");
+	}
+	if(options.verbosity>=3){
+		printf("rank %d printing particles set 0 \n");
+		fprintParticles(stdout, buffers[0], nEachMax);
+		printf("rank %d printing particles set 1 \n");
+		fprintParticles(stdout, buffers[1], nEachMax);
+		printf("rank %d printing particles set 2 \n");
+		fprintParticles(stdout, buffers[2], nEachMax);
+		printf("rank %d printing particles set 3 \n");
+		fprintParticles(stdout, buffers[3], nEachMax);
+	}
 	//Combine results
 	for(i=0;i<nEach[0];i++){
 		buffers[0][i].dvx += buffers[1][i].dvx+buffers[2][i].dvx;
@@ -170,7 +200,9 @@ int main(int argc, char ** argv){
 	//Check results
 	//use buffers[3]
 	if(options.compareResults == 1){
-		printf("comparing results");	
+		if(verbosity>=2){
+			printf("comparing results");
+		}	
 		diff =compareMultipleParticles(buffers[0], buffers[3],  nEach[0]);
 		printf("rank %d diff = %g\n", rank, diff);
 	}

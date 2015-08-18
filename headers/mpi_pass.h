@@ -12,7 +12,7 @@
 
 
 
-MPI_pass(particle ** buffers, int passBuffer, particle * spare_buffer, int nEach, int passDistance, int * buf_index){
+MPI_pass(particle ** buffers, int passBuffer, int nEach, int passDistance, int * buf_index){
 	
 	//check for NULL pointers
 	if(buffers == NULL || buffers[passBuffer]==NULL ||buf_index == NULL || spare_buffer == NULL){

@@ -58,7 +58,7 @@ int main(int argc, char ** argv){
 		}
 		fprintParticles(ofp, buffers[1],nEach);
 		fprintParticles(ofp, buffers[2],nEach);
-		MPI_pass(buffers, 1, buffers[3], nEach, 1, buf_index);
+		MPI_pass(buffers, 1, nEach, 1, buf_index);
 		fprintf(ofp, "buffer 1 should have moved\n");
 		fprintParticles(ofp, buffers[1],nEach);
 		MPI_Barrier(MPI_COMM_WORLD);
@@ -68,7 +68,7 @@ int main(int argc, char ** argv){
 		fclose(ofp);
 	}else if(rank == 1){
 		//Rank 0 is doing stuff
-		MPI_pass(buffers, 1, buffers[3], nEach, 1, buf_index);
+		MPI_pass(buffers, 1, nEach, 1, buf_index);
 		MPI_Barrier(MPI_COMM_WORLD);
 		printf("this is rank 1\n");
 		fprintParticles(stdout,buffers[1], nEach);
