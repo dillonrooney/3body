@@ -1,0 +1,193 @@
+[lonsdale-n001:24536] *** Process received signal ***
+[lonsdale-n001:24536] Signal: Segmentation fault (11)
+[lonsdale-n001:24536] Signal code: Address not mapped (1)
+[lonsdale-n001:24536] Failing at address: 0xc0
+[lonsdale-n001:24536] [ 0] /lib64/libpthread.so.0() [0x396280f710]
+[lonsdale-n001:24536] [ 1] /lib64/libc.so.6(_IO_vfprintf+0x39) [0x3962044009]
+[lonsdale-n001:24536] [ 2] /lib64/libc.so.6(_IO_fprintf+0x88) [0x396204f0e8]
+[lonsdale-n001:24536] [ 3] bin/naive(clock_stop+0xcf) [0x403e25]
+[lonsdale-n001:24536] [ 4] bin/naive(main+0x5bd) [0x404540]
+[lonsdale-n001:24536] [ 5] /lib64/libc.so.6(__libc_start_main+0xfd) [0x396201ed5d]
+[lonsdale-n001:24536] [ 6] bin/naive() [0x401779]
+[lonsdale-n001:24536] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 24536 on node lonsdale-n001.cluster exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+
+real	0m1.116s
+user	0m0.053s
+sys	0m0.068s
+[lonsdale-n001:24543] *** Process received signal ***
+[lonsdale-n001:24543] Signal: Segmentation fault (11)
+[lonsdale-n001:24543] Signal code: Address not mapped (1)
+[lonsdale-n001:24543] Failing at address: 0xc0
+[lonsdale-n001:24543] [ 0] /lib64/libpthread.so.0() [0x396280f710]
+[lonsdale-n001:24543] [ 1] /lib64/libc.so.6(_IO_vfprintf+0x39) [0x3962044009]
+[lonsdale-n001:24543] [ 2] /lib64/libc.so.6(_IO_fprintf+0x88) [0x396204f0e8]
+[lonsdale-n001:24543] [ 3] bin/naive(clock_stop+0xcf) [0x403e25]
+[lonsdale-n001:24543] [ 4] bin/naive(main+0x5bd) [0x404540]
+[lonsdale-n001:24543] [ 5] /lib64/libc.so.6(__libc_start_main+0xfd) [0x396201ed5d]
+[lonsdale-n001:24543] [ 6] bin/naive() [0x401779]
+[lonsdale-n001:24543] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 24543 on node lonsdale-n001.cluster exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+
+real	0m1.104s
+user	0m0.093s
+sys	0m0.133s
+[lonsdale-n001:24556] *** Process received signal ***
+[lonsdale-n001:24556] Signal: Segmentation fault (11)
+[lonsdale-n001:24556] Signal code: Address not mapped (1)
+[lonsdale-n001:24556] Failing at address: 0xc0
+[lonsdale-n001:24556] [ 0] /lib64/libpthread.so.0() [0x396280f710]
+[lonsdale-n001:24556] [ 1] /lib64/libc.so.6(_IO_vfprintf+0x39) [0x3962044009]
+[lonsdale-n001:24556] [ 2] /lib64/libc.so.6(_IO_fprintf+0x88) [0x396204f0e8]
+[lonsdale-n001:24556] [ 3] bin/naive(clock_stop+0xcf) [0x403e25]
+[lonsdale-n001:24556] [ 4] bin/naive(main+0x5bd) [0x404540]
+[lonsdale-n001:24556] [ 5] /lib64/libc.so.6(__libc_start_main+0xfd) [0x396201ed5d]
+[lonsdale-n001:24556] [ 6] bin/naive() [0x401779]
+[lonsdale-n001:24556] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 24556 on node lonsdale-n001.cluster exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+
+real	0m1.123s
+user	0m0.127s
+sys	0m0.181s
+[lonsdale-n001:24572] *** Process received signal ***
+[lonsdale-n001:24572] Signal: Segmentation fault (11)
+[lonsdale-n001:24572] Signal code: Address not mapped (1)
+[lonsdale-n001:24572] Failing at address: 0xc0
+[lonsdale-n001:24572] [ 0] /lib64/libpthread.so.0() [0x396280f710]
+[lonsdale-n001:24572] [ 1] /lib64/libc.so.6(_IO_vfprintf+0x39) [0x3962044009]
+[lonsdale-n001:24572] [ 2] /lib64/libc.so.6(_IO_fprintf+0x88) [0x396204f0e8]
+[lonsdale-n001:24572] [ 3] bin/naive(clock_stop+0xcf) [0x403e25]
+[lonsdale-n001:24572] [ 4] bin/naive(main+0x5bd) [0x404540]
+[lonsdale-n001:24572] [ 5] /lib64/libc.so.6(__libc_start_main+0xfd) [0x396201ed5d]
+[lonsdale-n001:24572] [ 6] bin/naive() [0x401779]
+[lonsdale-n001:24572] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 24572 on node lonsdale-n001.cluster exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+
+real	0m1.255s
+user	0m0.412s
+sys	0m0.435s
+
+
+###############################################################################
+TCHPC Cluster: lonsdale
+Job 214135 (timing_test) for User 'rooneydt' in Account 'mschpc'
+Finished at: Wed Aug 19 16:00:52 IST 2015
+
+Job completion status:
+======================
+
+       JobID    JobName AllocCPUS NTasks NNodes     MaxRSS    MaxRSSNode  MaxDiskRead MaxDiskWrite    Elapsed      State ExitCode 
+------------ ---------- --------- ------ ------ ---------- ------------- ------------ ------------ ---------- ---------- -------- 
+214135       timing_te+         8             1                                                      00:00:07     FAILED     11:0 
+214135.batch      batch         8      1      1      8244K lonsdale-n001        0.41M        0.00M   00:00:07     FAILED     11:0 
+
+
+Job details:
+============
+
+JobId=214135 JobName=timing_test
+   UserId=rooneydt(5482) GroupId=rooneydt(9287)
+   Priority=10138827 Nice=0 Account=mschpc QOS=normal
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=139:0
+   DerivedExitCode=0:0
+   RunTime=00:00:07 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2015-08-19T16:00:44 EligibleTime=2015-08-19T16:00:44
+   StartTime=2015-08-19T16:00:45 EndTime=2015-08-19T16:00:52
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=debug AllocNode:Sid=lonsdale01:8802
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   BatchHost=lonsdale-n001
+   NumNodes=1 NumCPUs=8 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+     Nodes=lonsdale-n001 CPU_IDs=0-7 Mem=15000
+   MinCPUsNode=1 MinMemoryNode=15000M MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   Shared=0 Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/users/mschpc/2014/rooneydt/3body/test_timing.sh
+   WorkDir=/home/users/mschpc/2014/rooneydt/3body
+   StdErr=/home/users/mschpc/2014/rooneydt/3body/slurm-214135.out
+   StdIn=/dev/null
+   StdOut=/home/users/mschpc/2014/rooneydt/3body/slurm-214135.out
+
+
+Disk quota details:
+===================
+
+Quota Type           Name  Filesystem     Usage in MB     Limit in MB    % Used
+-------------------------------------------------------------------------------
+USER             rooneydt       /home              30          51,200     0.06%
+
+GROUP              mschpc   /projects          23,731          51,200    46.35%
+
+
+SLURM Bank Statement:
+=====================
+
+User           Usage |        Account     Usage | Account Limit Available (CPU hrs)
+---------- --------- + -------------- --------- + ------------- ---------
+
+aljohani          22 |         MSCHPC   102,763 |       400,000   297,237
+boycek           430 |         MSCHPC   102,763 |       400,000   297,237
+dalyso           200 |         MSCHPC   102,763 |       400,000   297,237
+deleligt         709 |         MSCHPC   102,763 |       400,000   297,237
+dowlindo         563 |         MSCHPC   102,763 |       400,000   297,237
+dunneff        4,157 |         MSCHPC   102,763 |       400,000   297,237
+elynch         2,903 |         MSCHPC   102,763 |       400,000   297,237
+hannigs            6 |         MSCHPC   102,763 |       400,000   297,237
+hernonma         457 |         MSCHPC   102,763 |       400,000   297,237
+holtonmi           0 |         MSCHPC   102,763 |       400,000   297,237
+howardrj          37 |         MSCHPC   102,763 |       400,000   297,237
+hynesr         1,365 |         MSCHPC   102,763 |       400,000   297,237
+jabehan        3,862 |         MSCHPC   102,763 |       400,000   297,237
+jbulava          158 |         MSCHPC   102,763 |       400,000   297,237
+jose               0 |         MSCHPC   102,763 |       400,000   297,237
+kcleary           67 |         MSCHPC   102,763 |       400,000   297,237
+lambem           514 |         MSCHPC   102,763 |       400,000   297,237
+liul1            504 |         MSCHPC   102,763 |       400,000   297,237
+luoq           2,782 |         MSCHPC   102,763 |       400,000   297,237
+makirby        1,126 |         MSCHPC   102,763 |       400,000   297,237
+mcbridne       2,142 |         MSCHPC   102,763 |       400,000   297,237
+mehtav            82 |         MSCHPC   102,763 |       400,000   297,237
+melbyrne         302 |         MSCHPC   102,763 |       400,000   297,237
+murphd37      15,590 |         MSCHPC   102,763 |       400,000   297,237
+murrayb8       2,421 |         MSCHPC   102,763 |       400,000   297,237
+nobyrnes       1,513 |         MSCHPC   102,763 |       400,000   297,237
+oconnm28         619 |         MSCHPC   102,763 |       400,000   297,237
+ormondca       1,661 |         MSCHPC   102,763 |       400,000   297,237
+osheac9          968 |         MSCHPC   102,763 |       400,000   297,237
+osullm40       3,484 |         MSCHPC   102,763 |       400,000   297,237
+paddy          1,363 |         MSCHPC   102,763 |       400,000   297,237
+phalpin          592 |         MSCHPC   102,763 |       400,000   297,237
+purdyd           173 |         MSCHPC   102,763 |       400,000   297,237
+rooneydt         312 |         MSCHPC   102,763 |       400,000   297,237
+sharding       1,196 |         MSCHPC   102,763 |       400,000   297,237
+sikelleh         842 |         MSCHPC   102,763 |       400,000   297,237
+simpsoao         509 |         MSCHPC   102,763 |       400,000   297,237
+smurray4         514 |         MSCHPC   102,763 |       400,000   297,237
+spellacl       1,730 |         MSCHPC   102,763 |       400,000   297,237
+vetsaa            80 |         MSCHPC   102,763 |       400,000   297,237
+wechen         7,593 |         MSCHPC   102,763 |       400,000   297,237
+wyattg           200 |         MSCHPC   102,763 |       400,000   297,237
+zhuang         8,155 |         MSCHPC   102,763 |       400,000   297,237
+
+
+Acknowledgements:
+=================
+
+Note that usage of TCHPC Resources *must* be acknowledged in all publications.
+
+Please see this page for details relevant to this cluster:
+
+http://www.tchpc.tcd.ie/resources/acknowledgementpolicy
+
+################################################################################
