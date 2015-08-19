@@ -23,7 +23,7 @@ void clock_stop(char * programName, clOptions options, char * tag){
 	
 	if (rank == 0){
 		fp = fopen(options.timingFName, "a");
-		fprintf(fp, "%s%t%s\t%d\t%d\t%lf\n", programName, tag, options.nParticles, size, diff);
+		fprintf(fp, "%s\t%s\t%d\t%d\t%lf\n", programName, tag, options.nParticles, size, diff);
 		fclose(fp);
 	}
 	
