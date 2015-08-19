@@ -58,6 +58,6 @@ int main(int argc, char** argv){
 	takeTime(100);
 	clock_stop(argv[0], options, newtag);
 	
-	MPI_Finalize(MPI_COMM_WORLD);
+	MPI_Finalize();
 	
 }

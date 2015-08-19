@@ -1,0 +1,12 @@
+bin/naive	init_read	1000	2	0.002099
+bin/naive	naive	1000	2	249.993301
+bin/naive	comparison	1000	2	0.000280
+bin/naive	init_read	1000	4	0.002728
+bin/naive	naive	1000	4	124.855679
+bin/naive	comparison	1000	4	0.000148
+bin/naive	init_read	1000	5	0.005850
+bin/naive	naive	1000	5	99.935149
+bin/naive	comparison	1000	5	0.000125
+bin/naive	init_read	1000	8	0.028472
+bin/naive	naive	1000	8	62.428446
+bin/naive	comparison	1000	8	0.000089
