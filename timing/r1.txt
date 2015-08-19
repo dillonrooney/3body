@@ -1,0 +1,10 @@
+bin/naive	init_gen2	1000	1	0.000985
+bin/naive	init_gen2	768	1	0.000805
+bin/naive	init_gen2	1536	1	0.006828
+bin/naive	naive	768	1	224.560100
+bin/naive	writing	768	1	0.024362
+bin/naive	naive	1000	1	497.814366
+bin/naive	writing	1000	1	0.007489
+bin/naive	naive	1536	1	1799.947767
+bin/naive	comparison	1536	1	0.000822
+bin/naive	writing	1536	1	0.020684
