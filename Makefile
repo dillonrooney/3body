@@ -44,7 +44,7 @@ test/bin/split: test/test_split.c
 test/bin/cla: test/test_cla.c
 	gcc test/test_cla.c -o test/bin/cla
 test/bin/timing: test/test_timing.c headers/timing.h
-	gcc test/test_timing.c -o test/bin/timing
+	mpicc $(CFLAGS) test/test_timing.c -o test/bin/timing
 
 #runs
 test_pass:test/bin/pass
@@ -66,7 +66,7 @@ test_cla:test/bin/cla
 	./test/bin/cla test/test.ini
 	
 test_timing: test/bin/timing
-	./test/bin/timing test/test.ini
+	mpirun -n 1 test/bin/timing test/test.ini
 
 test: test_datatype_ax test_compare_ax test_pass test_split
 

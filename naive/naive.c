@@ -76,7 +76,7 @@ int main(int argc, char ** argv){
 	if(options.timing >=1){
 		clock_start();
 	}
-	char * initTypeTimingTag;
+	char * initTypeTimingTag = "undefined_tag";
 		
 	int nParticles = options.nParticles;
 	int nEachMax = pieceSize(nParticles, size, 0);

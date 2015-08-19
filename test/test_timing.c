@@ -2,6 +2,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+#include "mpi.h"
+
 int rank,size;
 
 #include "../headers/timing.h"
@@ -27,6 +29,7 @@ int main(int argc, char** argv){
 	size = 10;
 	rank = 0;
 	
+	MPI_Init(&argc,&argv);
 	clOptions options;
 	if(getCla(argc, argv, &options)){
 		//NOTHING TO WORRY ABOUT
@@ -48,5 +51,13 @@ int main(int argc, char** argv){
 	takeTime(1000);
 	clock_stop(argv[0], options, "E6");
 	
+	char * newtag;
+	newtag = "hardcoded_string";
+	
+	clock_start();
+	takeTime(100);
+	clock_stop(argv[0], options, newtag);
+	
+	MPI_Finalize(MPI_COMM_WORLD);
 	
 }
