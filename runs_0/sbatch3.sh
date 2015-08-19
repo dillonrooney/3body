@@ -2,16 +2,17 @@
 #SBATCH -n 8            # 8 CPU cores
 #SBATCH -t 0-00:30:00   # 30 minutes
 #SBATCH -p debug      # partition name
-#SBATCH -J 1536particles     # sensible name for the job
+#SBATCH -J 1000particles     # sensible name for the job
 
 
 
 # load up the correct modules, if required
 source /etc/profile.d/modules.sh
 module load default-gcc-openmpi
-make bin/naive
 
 # launch the code
-echo "gen"
-echo "1536 particles"
-time mpirun -n 1 bin/naive gen1536.init
+
+time mpirun -n 2 bin/naive check1000.ini
+time mpirun -n 4 bin/naive check1000.ini
+time mpirun -n 5 bin/naive check1000.ini
+time mpirun -n 8 bin/naive check1000.ini

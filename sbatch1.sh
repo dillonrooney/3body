@@ -2,7 +2,7 @@
 #SBATCH -n 8            # 8 CPU cores
 #SBATCH -t 0-00:30:00   # 30 minutes
 #SBATCH -p debug      # partition name
-#SBATCH -J 1536particles     # sensible name for the job
+#SBATCH -J 1024particles     # sensible name for the job
 
 
 
@@ -13,5 +13,5 @@ make bin/naive
 
 # launch the code
 echo "gen"
-echo "1536 particles"
-time mpirun -n 1 bin/naive gen1536.init
+echo "1000 particles"
+time mpirun -n 1 bin/naive gen1000.init

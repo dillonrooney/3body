@@ -1,0 +1,11 @@
+768	#nParticles_int
+2	#timing_int
+timing/r1.txt	#timing_file_string
+1	#read_input_int
+dataSets/r1_g2_768.dat	#input_file_string
+0	#write_output_int
+dataSets/r1_g2_768.dat	#output_file_string
+2	#generatingFunction_int
+0	#genFunctionSeed_int
+1	#compareResults_int
+0	#verbosity_int
