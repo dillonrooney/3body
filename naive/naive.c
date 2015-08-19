@@ -14,7 +14,7 @@ MPI_Datatype MPI_particle;
 #include "../headers/split.h"
 #include "../headers/mpi_io.h"
 #include "../headers/cla.h"
-
+#include "../headers/timing.h"
 
 
 void func(particle ** buffers, int * nEach, int * buf_index){
@@ -73,7 +73,10 @@ int main(int argc, char ** argv){
 	
 
 	//Setup
-		
+	if(options.timing >=1){
+		clock_start();
+	}
+	char * initTypeTimingTag;
 		
 	int nParticles = options.nParticles;
 	int nEachMax = pieceSize(nParticles, size, 0);
@@ -97,11 +100,15 @@ int main(int argc, char ** argv){
 		if(options.verbosity>=2){
 			printf("reading particles\n");
 		}
+		
+		initTypeTimingTag = "init_read";
 		readParticles(options.readFName, buffers[3], nParticles, size, rank);
 	}else if(options.genFunction == 2){
 		if(options.verbosity>=2){
 			printf("generating particles\n");
 		}
+		
+		initTypeTimingTag = "init_gen2";
 		initialize_2(buffers[3], nEachMax);
 		
 		//fprintParticles(stdout, buffers[3], nEachMax);
@@ -144,7 +151,13 @@ int main(int argc, char ** argv){
 		//Pass
 		//Calculate
 		//Collect
-		
+	if(options.timing == 2){
+		clock_stop(argv[0], options, initTypeTimingTag);
+	}
+	if(options.timing >=1){
+		clock_start();
+	}
+	
 	
 	int j;
 	for(i=0;i<size;i++){
@@ -191,6 +204,10 @@ int main(int argc, char ** argv){
 		buffers[2][i].dvz = buffers[0][i].dvz;
 	}
 
+	
+	if(options.timing >= 1){
+		clock_stop(argv[0], options, "naive");
+	}
 	if(rank == 0){
 		//fprintParticles(stdout, buffers[3], nEachMax);
 		//fprintParticles(stdout, buffers[0], nEachMax);
@@ -203,13 +220,26 @@ int main(int argc, char ** argv){
 		if(options.verbosity>=2){
 			printf("comparing results");
 		}	
+		
+		if(options.timing == 2){
+			clock_start();
+		}
 		diff =compareMultipleParticles(buffers[0], buffers[3],  nEach[0]);
+		if(options.timing == 2){
+			clock_stop(argv[0], options, "comparison");
+		}
 		printf("rank %d diff = %g\n", rank, diff);
+		
 	}
 	if(options.writeOutput == 1){
+		if(options.timing == 2){
+			clock_start();
+		}
 		writeParticles(options.writeFName, buffers[0], nParticles, size, rank);
+		if(options.timing == 2){
+			clock_stop(argv[0], options, "writing");
+		}
 	}
-
 	//freeing and finalization
 	free(buffers[0]);
 	free(buffers[1]);

@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+#ifndef _CLA_INCL_GUARD
+#define _CLA_INCL_GUARD
 /*
 //  NEEDED  //
 timing output file
@@ -79,3 +81,6 @@ int getCla(int argc, char** argv, clOptions * in){
 	
 	return 1;
 }
+
+
+#endif
