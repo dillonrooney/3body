@@ -4,7 +4,7 @@ CFLAGS=-lm
 
 #main programs
 #sources
-naive/naive.c: headers/mpi_pass.h headers/compare_ax.h headers/mpi_io.h headers/datatype_ax.h
+naive/naive.c: headers/mpi_pass.h headers/compare_ax.h headers/mpi_io.h headers/datatype_ax.h headers/timing.h
 	touch naive/naive.c
 
 serial/serial_MPI.c: headers/mpi_io.h headers/datatype_ax.h
