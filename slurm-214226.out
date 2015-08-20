@@ -1,0 +1,222 @@
+make: `bin/naive' is up to date.
+compare
+1000 particles
+50 core checking
+rank 46 diff = 470.89
+rank 47 diff = 425.618
+rank 40 diff = 1113.85
+rank 41 diff = 563.914
+rank 42 diff = 580.92
+rank 43 diff = 499.494
+rank 44 diff = 494.784
+rank 45 diff = 582.407
+rank 33 diff = 319.73
+rank 34 diff = 391.088
+rank 35 diff = 376.754
+rank 36 diff = 342.075
+rank 37 diff = 293.853
+rank 27 diff = 323.555
+rank 38 diff = 483.925
+rank 28 diff = 196.755
+rank 39 diff = 516.528
+rank 6 diff = 409.734
+rank 7 diff = 515.09
+rank 1 diff = 536.256
+rank 2 diff = 504.372
+rank 3 diff = 1025.68
+rank 4 diff = 2277.05
+rank 5 diff = 619.02
+rank 29 diff = 4033.04
+rank 32 diff = 822.253
+rank 49 diff = 2306.98
+rank 17 diff = 988.219
+rank 30 diff = 209.851
+rank 8 diff = 411.66
+rank 48 diff = 2372.57
+rank 18 diff = 602.313
+rank 31 diff = 315.201
+rank 9 diff = 592.611
+rank 10 diff = 508.291
+rank 19 diff = 1497.31
+rank 24 diff = 6191.4
+rank 11 diff = 377.545
+rank 20 diff = 1524.23
+rank 25 diff = 758.616
+rank 12 diff = 5611.61
+rank 21 diff = 1393.59
+rank 26 diff = 278.109
+rank 13 diff = 411.034
+rank 22 diff = 899.611
+rank 14 diff = 8160.02
+rank 23 diff = 4001.76
+rank 15 diff = 3209.35
+rank 16 diff = 825.742
+rank 0 diff = 266.456
+
+real	0m15.148s
+user	1m23.276s
+sys	0m0.887s
+40 core checking
+rank 4 diff = 725.645
+rank 5 diff = 410.287
+rank 6 diff = 535.717
+rank 7 diff = 508.297
+rank 2 diff = 1018.04
+rank 3 diff = 1772.81
+rank 8 diff = 521.167
+rank 9 diff = 392.683
+rank 10 diff = 5988.4
+rank 24 diff = 212.612
+rank 25 diff = 299.731
+rank 26 diff = 806.246
+rank 27 diff = 361.095
+rank 32 diff = 1358.72
+rank 28 diff = 348.182
+rank 33 diff = 606.986
+rank 29 diff = 329.147
+rank 34 diff = 525.577
+rank 30 diff = 457.369
+rank 35 diff = 487.585
+rank 31 diff = 531.113
+rank 36 diff = 573.642
+rank 11 diff = 8594.81
+rank 12 diff = 3594.87
+rank 37 diff = 473.677
+rank 13 diff = 464.435
+rank 14 diff = 607.643
+rank 16 diff = 1478.55
+rank 15 diff = 1415.54
+rank 17 diff = 553.115
+rank 18 diff = 3915.34
+rank 19 diff = 6102.88
+rank 20 diff = 746.945
+rank 21 diff = 265.667
+rank 22 diff = 294.398
+rank 23 diff = 3527.95
+rank 1 diff = 488.211
+rank 38 diff = 11289.4
+rank 39 diff = 2062.44
+rank 0 diff = 477.537
+
+real	0m15.404s
+user	1m42.761s
+sys	0m0.809s
+
+
+###############################################################################
+TCHPC Cluster: lonsdale
+Job 214226 (1000particles) for User 'rooneydt' in Account 'mschpc'
+Finished at: Wed Aug 19 23:10:55 IST 2015
+
+Job completion status:
+======================
+
+       JobID    JobName AllocCPUS NTasks NNodes     MaxRSS    MaxRSSNode  MaxDiskRead MaxDiskWrite    Elapsed      State ExitCode 
+------------ ---------- --------- ------ ------ ---------- ------------- ------------ ------------ ---------- ---------- -------- 
+214226       1000parti+        64             8                                                      00:00:33  COMPLETED      0:0 
+214226.batch      batch        64      1      1    231528K lonsdale-n009           2M        0.80M   00:00:33  COMPLETED      0:0 
+214226.0          orted         6      6      6     21484K lonsdale-n046        0.10M        0.12M   00:00:16  COMPLETED      0:0 
+214226.1          orted         4      4      4     25036K lonsdale-n049        0.16M        0.27M   00:00:16  COMPLETED      0:0 
+
+
+Job details:
+============
+
+JobId=214226 JobName=1000particles
+   UserId=rooneydt(5482) GroupId=rooneydt(9287)
+   Priority=10366736 Nice=0 Account=mschpc QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:33 TimeLimit=00:05:00 TimeMin=N/A
+   SubmitTime=2015-08-19T23:10:02 EligibleTime=2015-08-19T23:10:02
+   StartTime=2015-08-19T23:10:22 EndTime=2015-08-19T23:10:55
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=compute AllocNode:Sid=lonsdale01:19188
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   BatchHost=lonsdale-n009
+   NumNodes=8 NumCPUs=64 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+     Nodes=lonsdale-n[009,046,048-049,055,060-061,077] CPU_IDs=0-7 Mem=15000
+   MinCPUsNode=1 MinMemoryNode=15000M MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   Shared=0 Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/users/mschpc/2014/rooneydt/3body/sbatch16.sh
+   WorkDir=/home/users/mschpc/2014/rooneydt/3body
+   StdErr=/home/users/mschpc/2014/rooneydt/3body/slurm-214226.out
+   StdIn=/dev/null
+   StdOut=/home/users/mschpc/2014/rooneydt/3body/slurm-214226.out
+
+
+Disk quota details:
+===================
+
+Quota Type           Name  Filesystem     Usage in MB     Limit in MB    % Used
+-------------------------------------------------------------------------------
+USER             rooneydt       /home              30          51,200     0.06%
+
+GROUP              mschpc   /projects          23,731          51,200    46.35%
+
+
+SLURM Bank Statement:
+=====================
+
+User           Usage |        Account     Usage | Account Limit Available (CPU hrs)
+---------- --------- + -------------- --------- + ------------- ---------
+
+aljohani          22 |         MSCHPC   103,205 |       400,000   296,795
+boycek           430 |         MSCHPC   103,205 |       400,000   296,795
+dalyso           200 |         MSCHPC   103,205 |       400,000   296,795
+deleligt         709 |         MSCHPC   103,205 |       400,000   296,795
+dowlindo         563 |         MSCHPC   103,205 |       400,000   296,795
+dunneff        4,157 |         MSCHPC   103,205 |       400,000   296,795
+elynch         2,903 |         MSCHPC   103,205 |       400,000   296,795
+hannigs            6 |         MSCHPC   103,205 |       400,000   296,795
+hernonma         457 |         MSCHPC   103,205 |       400,000   296,795
+holtonmi           0 |         MSCHPC   103,205 |       400,000   296,795
+howardrj          37 |         MSCHPC   103,205 |       400,000   296,795
+hynesr         1,365 |         MSCHPC   103,205 |       400,000   296,795
+jabehan        3,862 |         MSCHPC   103,205 |       400,000   296,795
+jbulava          158 |         MSCHPC   103,205 |       400,000   296,795
+jose               0 |         MSCHPC   103,205 |       400,000   296,795
+kcleary           67 |         MSCHPC   103,205 |       400,000   296,795
+lambem           514 |         MSCHPC   103,205 |       400,000   296,795
+liul1            504 |         MSCHPC   103,205 |       400,000   296,795
+luoq           2,782 |         MSCHPC   103,205 |       400,000   296,795
+makirby        1,126 |         MSCHPC   103,205 |       400,000   296,795
+mcbridne       2,142 |         MSCHPC   103,205 |       400,000   296,795
+mehtav            82 |         MSCHPC   103,205 |       400,000   296,795
+melbyrne         302 |         MSCHPC   103,205 |       400,000   296,795
+murphd37      15,590 |         MSCHPC   103,205 |       400,000   296,795
+murrayb8       2,421 |         MSCHPC   103,205 |       400,000   296,795
+nobyrnes       1,513 |         MSCHPC   103,205 |       400,000   296,795
+oconnm28         619 |         MSCHPC   103,205 |       400,000   296,795
+ormondca       1,661 |         MSCHPC   103,205 |       400,000   296,795
+osheac9          968 |         MSCHPC   103,205 |       400,000   296,795
+osullm40       3,809 |         MSCHPC   103,205 |       400,000   296,795
+paddy          1,363 |         MSCHPC   103,205 |       400,000   296,795
+phalpin          592 |         MSCHPC   103,205 |       400,000   296,795
+purdyd           173 |         MSCHPC   103,205 |       400,000   296,795
+rooneydt         319 |         MSCHPC   103,205 |       400,000   296,795
+sharding       1,196 |         MSCHPC   103,205 |       400,000   296,795
+sikelleh         842 |         MSCHPC   103,205 |       400,000   296,795
+simpsoao         509 |         MSCHPC   103,205 |       400,000   296,795
+smurray4         514 |         MSCHPC   103,205 |       400,000   296,795
+spellacl       1,730 |         MSCHPC   103,205 |       400,000   296,795
+vetsaa            80 |         MSCHPC   103,205 |       400,000   296,795
+wechen         7,593 |         MSCHPC   103,205 |       400,000   296,795
+wyattg           200 |         MSCHPC   103,205 |       400,000   296,795
+zhuang         8,265 |         MSCHPC   103,205 |       400,000   296,795
+
+
+Acknowledgements:
+=================
+
+Note that usage of TCHPC Resources *must* be acknowledged in all publications.
+
+Please see this page for details relevant to this cluster:
+
+http://www.tchpc.tcd.ie/resources/acknowledgementpolicy
+
+################################################################################
