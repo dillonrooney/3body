@@ -14,7 +14,9 @@ make bin/naive
 # launch the code
 echo "gen"
 echo "1536 particles"
-echo "2 core checking"
-time mpirun -n 2 bin/naive check1536.init
-echo "3 core checking"
-time mpirun -n 3 bin/naive check1536.init
+echo "4 core checking"
+time mpirun -n 4 bin/naive check1536.init
+echo "6 core checking"
+time mpirun -n 6 bin/naive check1536.init
+echo "8 core checking"
+time mpirun -n 8 bin/naive check1536.init

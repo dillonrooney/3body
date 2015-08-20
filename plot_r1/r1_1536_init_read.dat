@@ -8,3 +8,6 @@ bin/naive	init_read	1536	16	0.272869
 bin/naive	init_read	1536	2	0.002022
 bin/naive	init_read	1536	3	0.001999
 bin/naive	init_read	1536	4	0.002798
+bin/naive	init_read	1536	4	0.025408
+bin/naive	init_read	1536	6	0.006382
+bin/naive	init_read	1536	8	0.014711

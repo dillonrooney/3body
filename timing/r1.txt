@@ -102,3 +102,12 @@ bin/naive	comparison	1536	3	0.000294
 bin/naive	init_read	1536	4	0.002798
 bin/naive	naive	1536	1	1794.484772
 bin/naive	comparison	1536	1	0.000718
+bin/naive	init_read	1536	4	0.025408
+bin/naive	naive	1536	4	453.888393
+bin/naive	comparison	1536	4	0.000219
+bin/naive	init_read	1536	6	0.006382
+bin/naive	naive	1536	6	301.064308
+bin/naive	comparison	1536	6	0.000162
+bin/naive	init_read	1536	8	0.014711
+bin/naive	naive	1536	8	225.471134
+bin/naive	comparison	1536	8	0.000122

@@ -5,6 +5,7 @@ sbatch sbatch6.sh
 sbatch sbatch7.sh
 sbatch sbatch8.sh
 sbatch sbatch9.sh
+sbatch sbatch9_2.sh
 sbatch sbatch10.sh
 sbatch sbatch11.sh
 sbatch sbatch12.sh
