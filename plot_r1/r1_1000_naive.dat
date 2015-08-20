@@ -1,0 +1,11 @@
+bin/naive	naive	1000	1	497.814366
+bin/naive	naive	1000	50	10.087104
+bin/naive	naive	1000	40	12.584191
+bin/naive	naive	1000	10	50.449022
+bin/naive	naive	1000	20	27.237993
+bin/naive	naive	1000	25	22.333015
+bin/naive	naive	1000	1	497.751807
+bin/naive	naive	1000	2	248.892900
+bin/naive	naive	1000	4	124.555171
+bin/naive	naive	1000	5	100.179697
+bin/naive	naive	1000	8	63.045487
