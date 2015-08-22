@@ -12,7 +12,8 @@ serial/serial_MPI.c: headers/mpi_io.h headers/datatype_ax.h
 #binaries
 bin/naive: naive/naive.c
 	mpicc naive/naive.c -o bin/naive $(CFLAGS)
-
+bin/statsNaive: naive/naive.c naive/compareStats.c compare_ax_stats.h
+	mpicc naive/compareStats.c -o bin/statsNaive $(CFLAGS)
 #runs
 
 #testing
