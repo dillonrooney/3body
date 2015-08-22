@@ -1,0 +1,12 @@
+bin/naive	comparison	768	48	0.000022
+bin/naive	comparison	768	64	0.000017
+bin/naive	comparison	768	32	0.000026
+bin/naive	comparison	768	12	0.000046
+bin/naive	comparison	768	24	0.000029
+bin/naive	comparison	768	16	0.000037
+bin/naive	comparison	768	1	0.000364
+bin/naive	comparison	768	2	0.000226
+bin/naive	comparison	768	3	0.000155
+bin/naive	comparison	768	4	0.000121
+bin/naive	comparison	768	6	0.000082
+bin/naive	comparison	768	8	0.000069

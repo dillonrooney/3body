@@ -1,0 +1,13 @@
+bin/naive	comparison	1536	1	0.000822
+bin/naive	comparison	1536	48	0.000033
+bin/naive	comparison	1536	64	0.000030
+bin/naive	comparison	1536	32	0.000037
+bin/naive	comparison	1536	12	0.000080
+bin/naive	comparison	1536	24	0.000044
+bin/naive	comparison	1536	16	0.000067
+bin/naive	comparison	1536	2	0.000441
+bin/naive	comparison	1536	3	0.000294
+bin/naive	comparison	1536	1	0.000718
+bin/naive	comparison	1536	4	0.000219
+bin/naive	comparison	1536	6	0.000162
+bin/naive	comparison	1536	8	0.000122

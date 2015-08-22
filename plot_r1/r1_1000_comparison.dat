@@ -1,0 +1,10 @@
+bin/naive	comparison	1000	50	0.000025
+bin/naive	comparison	1000	40	0.000028
+bin/naive	comparison	1000	10	0.000072
+bin/naive	comparison	1000	20	0.000041
+bin/naive	comparison	1000	25	0.000040
+bin/naive	comparison	1000	1	0.000486
+bin/naive	comparison	1000	2	0.000280
+bin/naive	comparison	1000	4	0.000149
+bin/naive	comparison	1000	5	0.000124
+bin/naive	comparison	1000	8	0.000083
