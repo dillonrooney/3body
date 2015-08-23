@@ -36,7 +36,7 @@ double rel_diff(double in1, double in2, double minTol, double epsTol){
 	//out = min(relDiff, absDiff);
 	out = absDiff<relDiff?absDiff:relDiff;
 	
-	if(out < 0.49){
+	if(out < 0.49 &&(minTol>=1 && epsTol>=1)){
 		printf("unexpected small output of rel_diff  = %g\n", out);
 	}
 	return out;
@@ -175,10 +175,38 @@ double compareMultipleParticles(particle*in1, particle * in2, int nEach){
 	}
 	variance = variance/count;
 	double stdev = sqrt(variance);
-	//4:histogram
-	//later...
-	//5:print
+	//4:min,max
+	double min = comparisonData[0];
+	double max = comparisonData[0];
+	for(i=0;i<count;i++){
+		min = min>comparisonData[i]?min:comparisonData[i];
+		max = max<comparisonData[i]?max:comparisonData[i];
+	}
+	//5:histogram
+		if(size == 1){
+		double length = max - min;
+		int nBins = 15;
+		double binDim = length/nBins;
+		double * binvals = calloc(nBins+1,sizeof(double));
+		int binIndex;
+		for(i=0;i<count;i++){
+			binIndex = (int)((comparisonData[i] - min)/binDim);
+			binvals[binIndex]++;
+		}
+		binvals[nBins-1]+=binvals[nBins];	//values of max end up outside last bin
+		double normalization = 1/(count*length);
+		for(i=;i<nBins;i++){
+			binvals[i]*=normalization;
+		}
+	//6:print
+		double bin0Mid = min + binDim/2;
+		double binMid;
 	
+		for(i=0;i<nBins){
+			binMid = bin0Mid + i *binDim;
+			printf("%lf\t%lf\n", binMid, binVals[i]);
+		}
+	}
 	printf("comparison of dv statistics:rank %d: mean=%lf\tstdev=%lf\n", rank, mean, stdev);
 	
 	

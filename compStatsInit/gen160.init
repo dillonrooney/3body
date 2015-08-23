@@ -1,0 +1,11 @@
+160	#nParticles_int
+0	#timing_int
+timing/cs.txt	#timing_file_string
+0	#read_input_int
+dataSets/cs_g2_160.dat	#input_file_string
+1	#write_output_int
+dataSets/cs_g2_160.dat	#output_file_string
+2	#generatingFunction_int
+0	#genFunctionSeed_int
+0	#compareResults_int
+0	#verbosity_int
