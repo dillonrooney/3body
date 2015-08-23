@@ -15,6 +15,6 @@ make bin/statsNaive
 echo "gen"
 echo "1536 particles"
 echo "printing comparison standard deviation:2 processes"
-time mpirun -n 2 statsNaive compStats1536.init
+time mpirun -n 2 bin/statsNaive compStats1536.init
 echo "printing comparison standard deviation:3 processes"
-time mpirun -n 3 statsNaive compStats1536.init
+time mpirun -n 3 bin/statsNaive compStats1536.init

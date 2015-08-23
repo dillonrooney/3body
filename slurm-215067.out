@@ -1,0 +1,447 @@
+make: `bin/statsNaive' is up to date.
+gen
+1536 particles
+printing comparison standard deviation:4 processes
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 2: mean=12.066285	stdev=9.189391
+rank 2 diff = 66.5365
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 1: mean=20.492066	stdev=19.821509
+rank 1 diff = 334.865
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 3: mean=35.279140	stdev=24.201552
+rank 3 diff = 213.959
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 0: mean=10.635224	stdev=8.330563
+rank 0 diff = 47.3391
+
+real	7m34.624s
+user	30m13.771s
+sys	0m0.244s
+printing comparison standard deviation:6 processes
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 0: mean=18.381958	stdev=12.335203
+rank 0 diff = 110.782
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 1: mean=16.918106	stdev=14.164978
+rank 1 diff = 74.7972
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 5: mean=6.483068	stdev=5.895065
+rank 5 diff = 72.04
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 2: mean=12.106403	stdev=9.144310
+rank 2 diff = 65.1117
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 4: mean=35.035051	stdev=24.684045
+rank 4 diff = 151.119
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 3: mean=20.373853	stdev=14.887152
+rank 3 diff = 102.286
+
+real	5m1.731s
+user	30m3.070s
+sys	0m0.385s
+printing comparison standard deviation:8 processes
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 0: mean=14.010789	stdev=10.683979
+rank 0 diff = 114.937
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 1: mean=21.678363	stdev=18.110292
+rank 1 diff = 120.256
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 7: mean=5.631740	stdev=4.912359
+rank 7 diff = 41.7832
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 2: mean=13.305066	stdev=10.219944
+rank 2 diff = 59.3432
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 6: mean=40.413100	stdev=26.949075
+rank 6 diff = 162.8
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 3: mean=13.602011	stdev=10.809822
+rank 3 diff = 64.0443
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 5: mean=29.038284	stdev=19.771113
+rank 5 diff = 112.882
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+unexpected small output of rel_diff  = 0
+comparison of dv statistics:rank 4: mean=18.273439	stdev=14.082772
+rank 4 diff = 96.06
+
+real	3m48.420s
+user	30m14.691s
+sys	0m0.563s
+
+
+###############################################################################
+TCHPC Cluster: lonsdale
+Job 215067 (1536particles) for User 'rooneydt' in Account 'mschpc'
+Finished at: Sat Aug 22 16:39:22 IST 2015
+
+Job completion status:
+======================
+
+       JobID    JobName AllocCPUS NTasks NNodes     MaxRSS    MaxRSSNode  MaxDiskRead MaxDiskWrite    Elapsed      State ExitCode 
+------------ ---------- --------- ------ ------ ---------- ------------- ------------ ------------ ---------- ---------- -------- 
+215067       1536parti+         8             1                                                      00:16:28  COMPLETED      0:0 
+215067.batch      batch         8      1      1     39508K lonsdale-n002           2M        0.34M   00:16:28  COMPLETED      0:0 
+
+
+Job details:
+============
+
+JobId=215067 JobName=1536particles
+   UserId=rooneydt(5482) GroupId=rooneydt(9287)
+   Priority=10096388 Nice=0 Account=mschpc QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:16:28 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2015-08-22T16:22:54 EligibleTime=2015-08-22T16:22:54
+   StartTime=2015-08-22T16:22:54 EndTime=2015-08-22T16:39:22
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=debug AllocNode:Sid=lonsdale01:14682
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   BatchHost=lonsdale-n002
+   NumNodes=1 NumCPUs=8 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+     Nodes=lonsdale-n002 CPU_IDs=0-7 Mem=15000
+   MinCPUsNode=1 MinMemoryNode=15000M MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   Shared=0 Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/users/mschpc/2014/rooneydt/3body/statsbatch2.sh
+   WorkDir=/home/users/mschpc/2014/rooneydt/3body
+   StdErr=/home/users/mschpc/2014/rooneydt/3body/slurm-215067.out
+   StdIn=/dev/null
+   StdOut=/home/users/mschpc/2014/rooneydt/3body/slurm-215067.out
+
+
+Disk quota details:
+===================
+
+Quota Type           Name  Filesystem     Usage in MB     Limit in MB    % Used
+-------------------------------------------------------------------------------
+USER             rooneydt       /home              32          51,200     0.06%
+
+GROUP              mschpc   /projects          23,731          51,200    46.35%
+
+
+SLURM Bank Statement:
+=====================
+
+User           Usage |        Account     Usage | Account Limit Available (CPU hrs)
+---------- --------- + -------------- --------- + ------------- ---------
+
+aljohani          22 |         MSCHPC   105,555 |       400,000   294,445
+boycek           250 |         MSCHPC   105,555 |       400,000   294,445
+dalyso           222 |         MSCHPC   105,555 |       400,000   294,445
+deleligt         709 |         MSCHPC   105,555 |       400,000   294,445
+dowlindo         563 |         MSCHPC   105,555 |       400,000   294,445
+dunneff        4,157 |         MSCHPC   105,555 |       400,000   294,445
+elynch         2,903 |         MSCHPC   105,555 |       400,000   294,445
+hannigs            6 |         MSCHPC   105,555 |       400,000   294,445
+hernonma         457 |         MSCHPC   105,555 |       400,000   294,445
+holtonmi           0 |         MSCHPC   105,555 |       400,000   294,445
+howardrj          37 |         MSCHPC   105,555 |       400,000   294,445
+hynesr         1,365 |         MSCHPC   105,555 |       400,000   294,445
+jabehan        3,862 |         MSCHPC   105,555 |       400,000   294,445
+jbulava          158 |         MSCHPC   105,555 |       400,000   294,445
+jose               0 |         MSCHPC   105,555 |       400,000   294,445
+kcleary           67 |         MSCHPC   105,555 |       400,000   294,445
+lambem           514 |         MSCHPC   105,555 |       400,000   294,445
+liul1            504 |         MSCHPC   105,555 |       400,000   294,445
+luoq           2,782 |         MSCHPC   105,555 |       400,000   294,445
+makirby        1,126 |         MSCHPC   105,555 |       400,000   294,445
+mcbridne       2,142 |         MSCHPC   105,555 |       400,000   294,445
+mehtav            82 |         MSCHPC   105,555 |       400,000   294,445
+melbyrne         300 |         MSCHPC   105,555 |       400,000   294,445
+murphd37      15,590 |         MSCHPC   105,555 |       400,000   294,445
+murrayb8       2,421 |         MSCHPC   105,555 |       400,000   294,445
+nobyrnes       1,513 |         MSCHPC   105,555 |       400,000   294,445
+oconnm28         619 |         MSCHPC   105,555 |       400,000   294,445
+ormondca       1,661 |         MSCHPC   105,555 |       400,000   294,445
+osheac9          968 |         MSCHPC   105,555 |       400,000   294,445
+osullm40       6,013 |         MSCHPC   105,555 |       400,000   294,445
+paddy          1,319 |         MSCHPC   105,555 |       400,000   294,445
+phalpin          592 |         MSCHPC   105,555 |       400,000   294,445
+purdyd           173 |         MSCHPC   105,555 |       400,000   294,445
+rooneydt         350 |         MSCHPC   105,555 |       400,000   294,445
+sharding       1,196 |         MSCHPC   105,555 |       400,000   294,445
+sikelleh         988 |         MSCHPC   105,555 |       400,000   294,445
+simpsoao         509 |         MSCHPC   105,555 |       400,000   294,445
+smurray4         514 |         MSCHPC   105,555 |       400,000   294,445
+spellacl       1,730 |         MSCHPC   105,555 |       400,000   294,445
+vetsaa            80 |         MSCHPC   105,555 |       400,000   294,445
+wechen         7,593 |         MSCHPC   105,555 |       400,000   294,445
+wyattg           200 |         MSCHPC   105,555 |       400,000   294,445
+zhuang         8,619 |         MSCHPC   105,555 |       400,000   294,445
+
+
+Acknowledgements:
+=================
+
+Note that usage of TCHPC Resources *must* be acknowledged in all publications.
+
+Please see this page for details relevant to this cluster:
+
+http://www.tchpc.tcd.ie/resources/acknowledgementpolicy
+
+################################################################################

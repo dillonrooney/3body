@@ -1,0 +1,714 @@
+make: `bin/naive' is up to date.
+gen
+1536 particles
+128 core checking
+rank 2 diff = 120.476
+rank 3 diff = 56.0516
+rank 4 diff = 44.1536
+rank 5 diff = 38.0719
+rank 6 diff = 27.9993
+rank 7 diff = 46.5484
+rank 0 diff = 32.5644
+rank 1 diff = 52.9932
+rank 127 diff = 30.9984
+rank 126 diff = 48.5428
+rank 96 diff = 134.778
+rank 97 diff = 107.802
+rank 16 diff = 69.4715
+rank 9 diff = 46.4166
+rank 98 diff = 136.487
+rank 17 diff = 73.6009
+rank 109 diff = 22.9441
+rank 10 diff = 111.857
+rank 99 diff = 135.329
+rank 18 diff = 90.1917
+rank 110 diff = 20.8696
+rank 11 diff = 80.4394
+rank 85 diff = 92.3058
+rank 19 diff = 68.9476
+rank 94 diff = 91.8871
+rank 111 diff = 15.1327
+rank 12 diff = 61.4165
+rank 100 diff = 80.8455
+rank 86 diff = 106.966
+rank 20 diff = 45.0488
+rank 95 diff = 94.7113
+rank 104 diff = 22.9578
+rank 13 diff = 54.6862
+rank 101 diff = 39.4225
+rank 87 diff = 96.5553
+rank 21 diff = 50.0577
+rank 88 diff = 75.0749
+rank 105 diff = 25.075
+rank 14 diff = 87.5075
+rank 102 diff = 19.4564
+rank 121 diff = 22.5425
+rank 89 diff = 102.747
+rank 106 diff = 17.6849
+rank 15 diff = 74.9622
+rank 103 diff = 53.879
+rank 82 diff = 90.6489
+rank 122 diff = 24.9704
+rank 90 diff = 83.4751
+rank 107 diff = 19.4211
+rank 8 diff = 41.4308
+rank 83 diff = 104.486
+rank 123 diff = 31.0003
+rank 22 diff = 49.2625
+rank 91 diff = 87.1108
+rank 108 diff = 20.3141
+rank 84 diff = 74.2313
+rank 124 diff = 28.816
+rank 23 diff = 56.3103
+rank 92 diff = 82.4092
+rank 93 diff = 93.5759
+rank 125 diff = 30.7225
+rank 35 diff = 50.0708
+rank 120 diff = 18.5119
+rank 32 diff = 37.3999
+rank 33 diff = 27.0776
+rank 34 diff = 47.8149
+rank 37 diff = 37.7799
+rank 38 diff = 70.7145
+rank 39 diff = 27.8887
+rank 80 diff = 69.5733
+rank 81 diff = 76.2397
+rank 112 diff = 16.344
+rank 72 diff = 63.5652
+rank 113 diff = 18.1677
+rank 36 diff = 34.0566
+rank 73 diff = 64.6186
+rank 64 diff = 48.4671
+rank 56 diff = 42.789
+rank 114 diff = 21.5193
+rank 115 diff = 19.979
+rank 74 diff = 75.6945
+rank 65 diff = 40.9301
+rank 57 diff = 33.1683
+rank 75 diff = 66.682
+rank 66 diff = 53.1297
+rank 58 diff = 45.3415
+rank 116 diff = 30.8257
+rank 27 diff = 43.308
+rank 67 diff = 46.9688
+rank 59 diff = 49.4105
+rank 117 diff = 28.1153
+rank 48 diff = 45.0278
+rank 40 diff = 28.6746
+rank 76 diff = 84.4972
+rank 49 diff = 37.279
+rank 41 diff = 32.586
+rank 77 diff = 93.9637
+rank 28 diff = 42.9535
+rank 68 diff = 51.2048
+rank 60 diff = 56.0709
+rank 118 diff = 24.5569
+rank 50 diff = 34.2156
+rank 42 diff = 39.4856
+rank 78 diff = 61.1929
+rank 29 diff = 42.1566
+rank 69 diff = 45.9674
+rank 61 diff = 54.622
+rank 119 diff = 19.9109
+rank 51 diff = 33.5678
+rank 43 diff = 33.5787
+rank 79 diff = 97.7255
+rank 30 diff = 41.7071
+rank 70 diff = 37.942
+rank 62 diff = 60.4217
+rank 52 diff = 45.2897
+rank 44 diff = 32.9349
+rank 31 diff = 45.2501
+rank 71 diff = 56.2703
+rank 63 diff = 55.7881
+rank 53 diff = 40.6881
+rank 45 diff = 44.5158
+rank 24 diff = 45.5718
+rank 54 diff = 32.9253
+rank 46 diff = 34.1644
+rank 25 diff = 43.2623
+rank 55 diff = 32.7852
+rank 47 diff = 46.1898
+rank 26 diff = 51.3703
+
+real	0m16.860s
+user	1m59.301s
+sys	0m0.912s
+256 core checking
+rank 1 diff = 23.8944
+rank 2 diff = 55.171
+rank 3 diff = 44.209
+rank 4 diff = 27.3774
+rank 5 diff = 118.399
+rank 6 diff = 40.8471
+rank 7 diff = 54.717
+rank 24 diff = 57.8038
+rank 152 diff = 85.3867
+rank 52 diff = 51.3703
+rank 232 diff = 30.8257
+rank 216 diff = 12.9613
+rank 139 diff = 34.9658
+rank 200 diff = 79.8943
+rank 240 diff = 16.455
+rank 88 diff = 32.9349
+rank 75 diff = 37.7799
+rank 224 diff = 16.9277
+rank 132 diff = 51.4818
+rank 25 diff = 43.6514
+rank 42 diff = 50.0577
+rank 66 diff = 27.0776
+rank 104 diff = 42.0251
+rank 192 diff = 61.2102
+rank 96 diff = 38.0042
+rank 153 diff = 72.5658
+rank 184 diff = 81.1591
+rank 168 diff = 72.0056
+rank 8 diff = 32.0177
+rank 120 diff = 56.5725
+rank 160 diff = 51.7949
+rank 144 diff = 52.6591
+rank 20 diff = 104.739
+rank 33 diff = 68.8282
+rank 53 diff = 40.3313
+rank 233 diff = 22.5886
+rank 252 diff = 38.1227
+rank 214 diff = 16.9996
+rank 217 diff = 20.8784
+rank 140 diff = 34.0805
+rank 201 diff = 65.4083
+rank 241 diff = 16.3558
+rank 89 diff = 18.0845
+rank 76 diff = 34.2912
+rank 225 diff = 17.1038
+rank 133 diff = 51.162
+rank 26 diff = 54.6862
+rank 43 diff = 49.9364
+rank 67 diff = 24.1174
+rank 105 diff = 44.6607
+rank 193 diff = 134.778
+rank 176 diff = 72.1412
+rank 97 diff = 45.0278
+rank 56 diff = 38.7219
+rank 154 diff = 79.3828
+rank 185 diff = 82.9148
+rank 169 diff = 79.0594
+rank 9 diff = 44.1536
+rank 121 diff = 46.6711
+rank 112 diff = 34.7304
+rank 161 diff = 68.9576
+rank 145 diff = 62.45
+rank 21 diff = 26.1851
+rank 34 diff = 73.6009
+rank 83 diff = 30.6111
+rank 54 diff = 41.3416
+rank 234 diff = 20.0204
+rank 253 diff = 50.5654
+rank 215 diff = 19.4211
+rank 218 diff = 12.3511
+rank 141 diff = 33.113
+rank 202 diff = 40.8825
+rank 242 diff = 21.4823
+rank 90 diff = 42.8464
+rank 77 diff = 73.1741
+rank 226 diff = 17.0322
+rank 134 diff = 46.3588
+rank 27 diff = 33.3805
+rank 44 diff = 49.2625
+rank 68 diff = 48.7712
+rank 106 diff = 33.8561
+rank 194 diff = 107.802
+rank 177 diff = 72.224
+rank 98 diff = 30.9169
+rank 57 diff = 42.9535
+rank 155 diff = 93.9637
+rank 186 diff = 84.1209
+rank 170 diff = 78.9123
+rank 10 diff = 33.0137
+rank 122 diff = 51.4022
+rank 113 diff = 42.789
+rank 162 diff = 74.3337
+rank 146 diff = 53.5689
+rank 22 diff = 79.1098
+rank 35 diff = 46.3433
+rank 84 diff = 40.0121
+rank 23 diff = 27.9145
+rank 36 diff = 92.1524
+rank 85 diff = 31.7345
+rank 55 diff = 40.1236
+rank 235 diff = 31.7826
+rank 254 diff = 26.6181
+rank 208 diff = 18.9449
+rank 219 diff = 22.0616
+rank 142 diff = 57.332
+rank 203 diff = 29.7034
+rank 243 diff = 22.5425
+rank 91 diff = 33.3646
+rank 78 diff = 27.8887
+rank 227 diff = 13.5536
+rank 135 diff = 42.3816
+rank 28 diff = 89.5115
+rank 45 diff = 44.0662
+rank 69 diff = 36.4089
+rank 107 diff = 39.5734
+rank 195 diff = 60.2658
+rank 178 diff = 83.8145
+rank 99 diff = 36.7142
+rank 58 diff = 42.1566
+rank 156 diff = 47.7509
+rank 187 diff = 96.2118
+rank 171 diff = 95.2085
+rank 11 diff = 36.9354
+rank 123 diff = 56.9069
+rank 114 diff = 32.6155
+rank 163 diff = 42.0229
+rank 147 diff = 64.6186
+rank 48 diff = 43.2015
+rank 236 diff = 24.5569
+rank 255 diff = 29.1749
+rank 209 diff = 26.6607
+rank 220 diff = 21.5217
+rank 143 diff = 37.7931
+rank 204 diff = 19.4564
+rank 244 diff = 24.01
+rank 92 diff = 33.3311
+rank 79 diff = 24.0515
+rank 228 diff = 17.4907
+rank 128 diff = 47.5167
+rank 29 diff = 85.5711
+rank 46 diff = 57.5616
+rank 70 diff = 27.3991
+rank 108 diff = 31.3976
+rank 196 diff = 60.8929
+rank 179 diff = 102.747
+rank 100 diff = 33.2652
+rank 59 diff = 28.8756
+rank 157 diff = 59.2807
+rank 188 diff = 93.6208
+rank 172 diff = 86.6252
+rank 12 diff = 21.5593
+rank 124 diff = 60.4217
+rank 115 diff = 33.1628
+rank 164 diff = 91.9167
+rank 148 diff = 73.3104
+rank 16 diff = 39.7045
+rank 37 diff = 71.984
+rank 86 diff = 33.5787
+rank 180 diff = 58.8169
+rank 101 diff = 17.3653
+rank 60 diff = 27.1399
+rank 158 diff = 46.5068
+rank 189 diff = 53.0248
+rank 173 diff = 106.966
+rank 13 diff = 26.8358
+rank 125 diff = 32.7245
+rank 116 diff = 40.4063
+rank 165 diff = 51.6111
+rank 149 diff = 56.2054
+rank 17 diff = 38.6108
+rank 38 diff = 47.5861
+rank 87 diff = 29.3459
+rank 49 diff = 45.5718
+rank 237 diff = 15.9267
+rank 248 diff = 25.9344
+rank 210 diff = 25.075
+rank 221 diff = 18.8793
+rank 136 diff = 51.2048
+rank 205 diff = 19.8617
+rank 245 diff = 26.2262
+rank 93 diff = 30.1486
+rank 72 diff = 28.0996
+rank 229 diff = 21.5193
+rank 129 diff = 49.6714
+rank 30 diff = 51.0894
+rank 47 diff = 33.5031
+rank 71 diff = 49.4527
+rank 109 diff = 31.9569
+rank 197 diff = 135.78
+rank 159 diff = 101.191
+rank 190 diff = 89.5992
+rank 174 diff = 92.9601
+rank 14 diff = 44.7581
+rank 126 diff = 42.7182
+rank 117 diff = 45.8567
+rank 166 diff = 104.486
+rank 150 diff = 65.7294
+rank 18 diff = 44.1797
+rank 39 diff = 67.99
+rank 80 diff = 20.5655
+rank 50 diff = 31.0334
+rank 238 diff = 19.9109
+rank 249 diff = 19.9311
+rank 211 diff = 16.8731
+rank 222 diff = 15.1327
+rank 137 diff = 39.7299
+rank 206 diff = 51.6024
+rank 246 diff = 31.8161
+rank 94 diff = 46.7463
+rank 73 diff = 34.0566
+rank 230 diff = 19.979
+rank 130 diff = 40.9301
+rank 31 diff = 74.9622
+rank 40 diff = 45.0488
+rank 64 diff = 34.8848
+rank 110 diff = 32.7852
+rank 198 diff = 131.736
+rank 181 diff = 84.4237
+rank 102 diff = 32.6087
+rank 61 diff = 43.2146
+rank 51 diff = 41.8439
+rank 239 diff = 11.8055
+rank 250 diff = 28.5791
+rank 212 diff = 15.8944
+rank 223 diff = 10.7939
+rank 138 diff = 45.4509
+rank 207 diff = 11.1835
+rank 247 diff = 14.3476
+rank 95 diff = 39.2306
+rank 74 diff = 20.1633
+rank 231 diff = 13.153
+rank 131 diff = 39.4622
+rank 41 diff = 29.8363
+rank 65 diff = 36.1103
+rank 111 diff = 27.6259
+rank 199 diff = 127.118
+rank 182 diff = 56.8144
+rank 103 diff = 22.089
+rank 62 diff = 39.5835
+rank 191 diff = 96.5867
+rank 175 diff = 85.991
+rank 15 diff = 40.3251
+rank 127 diff = 51.9844
+rank 118 diff = 49.4105
+rank 167 diff = 91.7843
+rank 151 diff = 65.9035
+rank 19 diff = 24.7285
+rank 32 diff = 53.9363
+rank 81 diff = 29.298
+rank 82 diff = 28.7211
+rank 251 diff = 19.7668
+rank 213 diff = 17.6849
+rank 183 diff = 87.642
+rank 63 diff = 43.7905
+rank 119 diff = 29.3562
+rank 0 diff = 30.7553
+
+real	0m11.696s
+user	1m7.249s
+sys	0m0.990s
+192 core checking
+rank 1 diff = 26.8568
+rank 2 diff = 55.171
+rank 3 diff = 120.476
+rank 4 diff = 31.6843
+rank 5 diff = 54.717
+rank 6 diff = 32.0177
+rank 7 diff = 43.6341
+rank 0 diff = 29.8507
+rank 76 diff = 31.6496
+rank 112 diff = 65.7294
+rank 136 diff = 83.4751
+rank 88 diff = 49.0572
+rank 177 diff = 25.5392
+rank 153 diff = 19.4564
+rank 184 diff = 31.0003
+rank 77 diff = 22.2239
+rank 24 diff = 71.4012
+rank 56 diff = 35.756
+rank 80 diff = 42.3602
+rank 51 diff = 47.8149
+rank 96 diff = 47.5167
+rank 137 diff = 85.5173
+rank 89 diff = 36.549
+rank 134 diff = 102.116
+rank 14 diff = 30.4287
+rank 105 diff = 36.0852
+rank 47 diff = 45.98
+rank 18 diff = 56.5995
+rank 144 diff = 69.2196
+rank 178 diff = 20.5464
+rank 154 diff = 52.3613
+rank 32 diff = 51.3235
+rank 185 diff = 13.6302
+rank 120 diff = 51.7949
+rank 65 diff = 29.3459
+rank 164 diff = 23.8265
+rank 78 diff = 45.0231
+rank 168 diff = 16.344
+rank 25 diff = 75.0301
+rank 57 diff = 34.2912
+rank 81 diff = 30.9885
+rank 113 diff = 66.4527
+rank 121 diff = 71.4204
+rank 66 diff = 32.4037
+rank 165 diff = 21.5217
+rank 79 diff = 40.8865
+rank 169 diff = 18.0541
+rank 26 diff = 45.4851
+rank 58 diff = 68.2548
+rank 82 diff = 30.8567
+rank 114 diff = 84.4972
+rank 52 diff = 27.3991
+rank 97 diff = 49.0179
+rank 138 diff = 81.1591
+rank 90 diff = 54.4376
+rank 135 diff = 61.4407
+rank 15 diff = 104.23
+rank 106 diff = 52.0384
+rank 42 diff = 42.9535
+rank 19 diff = 42.995
+rank 145 diff = 137.631
+rank 179 diff = 17.3385
+rank 155 diff = 23.4826
+rank 33 diff = 47.9311
+rank 186 diff = 28.816
+rank 98 diff = 39.4622
+rank 139 diff = 82.3311
+rank 91 diff = 51.4022
+rank 128 diff = 93.4669
+rank 8 diff = 34.6625
+rank 107 diff = 57.332
+rank 43 diff = 43.1848
+rank 20 diff = 54.6862
+rank 146 diff = 60.2658
+rank 180 diff = 16.455
+rank 156 diff = 25.9201
+rank 34 diff = 63.8183
+rank 187 diff = 26.4357
+rank 122 diff = 41.4393
+rank 67 diff = 33.2191
+rank 166 diff = 18.8793
+rank 72 diff = 38.0042
+rank 170 diff = 17.0322
+rank 27 diff = 94.7666
+rank 59 diff = 25.8114
+rank 83 diff = 31.844
+rank 115 diff = 48.7012
+rank 53 diff = 50.0708
+rank 99 diff = 49.8211
+rank 140 diff = 93.5759
+rank 92 diff = 54.0615
+rank 129 diff = 85.6733
+rank 9 diff = 25.9701
+rank 108 diff = 59.2184
+rank 44 diff = 38.6735
+rank 21 diff = 88.1755
+rank 147 diff = 103.842
+rank 181 diff = 20.2548
+rank 157 diff = 24.4634
+rank 35 diff = 34.9597
+rank 188 diff = 20.1643
+rank 123 diff = 91.2828
+rank 68 diff = 44.5158
+rank 167 diff = 12.5009
+rank 73 diff = 45.0278
+rank 171 diff = 17.4907
+rank 28 diff = 74.7004
+rank 60 diff = 21.9454
+rank 84 diff = 37.6368
+rank 116 diff = 93.9637
+rank 54 diff = 34.0566
+rank 55 diff = 24.2142
+rank 100 diff = 52.1459
+rank 141 diff = 91.8871
+rank 93 diff = 60.4217
+rank 130 diff = 108.075
+rank 10 diff = 26.4945
+rank 109 diff = 62.45
+rank 45 diff = 43.2146
+rank 22 diff = 85.0429
+rank 148 diff = 138.609
+rank 182 diff = 22.5425
+rank 158 diff = 17.5762
+rank 36 diff = 45.8358
+rank 189 diff = 38.1227
+rank 124 diff = 50.966
+rank 69 diff = 33.3311
+rank 160 diff = 19.0453
+rank 74 diff = 36.1493
+rank 172 diff = 22.117
+rank 29 diff = 67.0324
+rank 61 diff = 30.0266
+rank 85 diff = 42.789
+rank 117 diff = 54.8435
+rank 118 diff = 60.2368
+rank 48 diff = 34.8848
+rank 101 diff = 40.5781
+rank 142 diff = 78.0183
+rank 94 diff = 39.7204
+rank 131 diff = 90.3922
+rank 11 diff = 43.8629
+rank 110 diff = 62.7181
+rank 46 diff = 33.5676
+rank 23 diff = 80.0617
+rank 149 diff = 126.483
+rank 183 diff = 24.01
+rank 159 diff = 17.219
+rank 37 diff = 43.4356
+rank 190 diff = 48.5428
+rank 125 diff = 110.083
+rank 70 diff = 46.7463
+rank 161 diff = 20.346
+rank 75 diff = 33.2652
+rank 173 diff = 16.0805
+rank 30 diff = 45.5916
+rank 62 diff = 31.0776
+rank 86 diff = 33.1628
+rank 49 diff = 36.1103
+rank 102 diff = 53.3383
+rank 143 diff = 96.5867
+rank 95 diff = 50.7164
+rank 132 diff = 72.1412
+rank 12 diff = 37.9782
+rank 111 diff = 75.6945
+rank 40 diff = 40.7069
+rank 16 diff = 79.7746
+rank 150 diff = 79.8943
+rank 176 diff = 27.5041
+rank 152 diff = 42.3426
+rank 38 diff = 41.8439
+rank 191 diff = 29.1749
+rank 126 diff = 71.4761
+rank 71 diff = 38.2737
+rank 162 diff = 13.6914
+rank 174 diff = 28.8991
+rank 31 diff = 50.2154
+rank 63 diff = 40.5386
+rank 87 diff = 40.1654
+rank 119 diff = 102.577
+rank 50 diff = 26.2042
+rank 103 diff = 44.418
+rank 133 diff = 82.7602
+rank 13 diff = 39.7058
+rank 104 diff = 34.252
+rank 41 diff = 40.7605
+rank 17 diff = 42.8506
+rank 151 diff = 102.793
+rank 39 diff = 52.838
+rank 127 diff = 79.6629
+rank 64 diff = 32.8934
+rank 163 diff = 23.1355
+rank 175 diff = 21.9271
+
+real	0m14.003s
+user	1m26.479s
+sys	0m1.042s
+
+
+###############################################################################
+TCHPC Cluster: lonsdale
+Job 214233 (1536particles) for User 'rooneydt' in Account 'mschpc'
+Finished at: Sat Aug 22 21:47:56 IST 2015
+
+Job completion status:
+======================
+
+       JobID    JobName AllocCPUS NTasks NNodes     MaxRSS    MaxRSSNode  MaxDiskRead MaxDiskWrite    Elapsed      State ExitCode 
+------------ ---------- --------- ------ ------ ---------- ------------- ------------ ------------ ---------- ---------- -------- 
+214233       1536parti+       256            32                                                      00:00:44  COMPLETED      0:0 
+214233.batch      batch       256      1      1     34256K lonsdale-n013           4M           3M   00:00:44  COMPLETED      0:0 
+214233.0          orted        15     15     15     30344K lonsdale-n066        0.20M        0.58M   00:00:18  COMPLETED      0:0 
+214233.1          orted        31     31     31    291584K lonsdale-n066        0.32M           1M   00:00:12  COMPLETED      0:0 
+214233.2          orted        23     23     23     33692K lonsdale-n117        0.23M        0.84M   00:00:14  COMPLETED      0:0 
+
+
+Job details:
+============
+
+JobId=214233 JobName=1536particles
+   UserId=rooneydt(5482) GroupId=rooneydt(9287)
+   Priority=12872514 Nice=0 Account=mschpc QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:44 TimeLimit=00:10:00 TimeMin=N/A
+   SubmitTime=2015-08-20T12:03:16 EligibleTime=2015-08-20T12:03:16
+   StartTime=2015-08-22T21:47:12 EndTime=2015-08-22T21:47:56
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=compute AllocNode:Sid=lonsdale01:1905
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=lonsdale-n[014,025-026,065-068,070,072,079,113-125,146]
+   BatchHost=lonsdale-n013
+   NumNodes=24 NumCPUs=192 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+     Nodes=lonsdale-n[013-014,025-026,065-068,070,072,079,113-125,127-128,146-149,151-152] CPU_IDs=0-7 Mem=15000
+   MinCPUsNode=1 MinMemoryNode=15000M MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   Shared=0 Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/users/mschpc/2014/rooneydt/3body/sbatch21.sh
+   WorkDir=/home/users/mschpc/2014/rooneydt/3body
+   StdErr=/home/users/mschpc/2014/rooneydt/3body/slurm-214233.out
+   StdIn=/dev/null
+   StdOut=/home/users/mschpc/2014/rooneydt/3body/slurm-214233.out
+
+
+Disk quota details:
+===================
+
+Quota Type           Name  Filesystem     Usage in MB     Limit in MB    % Used
+-------------------------------------------------------------------------------
+USER             rooneydt       /home              32          51,200     0.06%
+
+GROUP              mschpc   /projects          23,731          51,200    46.35%
+
+
+SLURM Bank Statement:
+=====================
+
+User           Usage |        Account     Usage | Account Limit Available (CPU hrs)
+---------- --------- + -------------- --------- + ------------- ---------
+
+aljohani          22 |         MSCHPC   105,826 |       400,000   294,174
+boycek           250 |         MSCHPC   105,826 |       400,000   294,174
+dalyso           233 |         MSCHPC   105,826 |       400,000   294,174
+deleligt         709 |         MSCHPC   105,826 |       400,000   294,174
+dowlindo         563 |         MSCHPC   105,826 |       400,000   294,174
+dunneff        4,157 |         MSCHPC   105,826 |       400,000   294,174
+elynch         2,903 |         MSCHPC   105,826 |       400,000   294,174
+hannigs            6 |         MSCHPC   105,826 |       400,000   294,174
+hernonma         457 |         MSCHPC   105,826 |       400,000   294,174
+holtonmi           0 |         MSCHPC   105,826 |       400,000   294,174
+howardrj          37 |         MSCHPC   105,826 |       400,000   294,174
+hynesr         1,365 |         MSCHPC   105,826 |       400,000   294,174
+jabehan        3,862 |         MSCHPC   105,826 |       400,000   294,174
+jbulava          158 |         MSCHPC   105,826 |       400,000   294,174
+jose               0 |         MSCHPC   105,826 |       400,000   294,174
+kcleary           67 |         MSCHPC   105,826 |       400,000   294,174
+lambem           514 |         MSCHPC   105,826 |       400,000   294,174
+liul1            504 |         MSCHPC   105,826 |       400,000   294,174
+luoq           2,782 |         MSCHPC   105,826 |       400,000   294,174
+makirby        1,126 |         MSCHPC   105,826 |       400,000   294,174
+mcbridne       2,142 |         MSCHPC   105,826 |       400,000   294,174
+mehtav            82 |         MSCHPC   105,826 |       400,000   294,174
+melbyrne         300 |         MSCHPC   105,826 |       400,000   294,174
+murphd37      15,590 |         MSCHPC   105,826 |       400,000   294,174
+murrayb8       2,421 |         MSCHPC   105,826 |       400,000   294,174
+nobyrnes       1,513 |         MSCHPC   105,826 |       400,000   294,174
+oconnm28         619 |         MSCHPC   105,826 |       400,000   294,174
+ormondca       1,661 |         MSCHPC   105,826 |       400,000   294,174
+osheac9          968 |         MSCHPC   105,826 |       400,000   294,174
+osullm40       6,232 |         MSCHPC   105,826 |       400,000   294,174
+paddy          1,319 |         MSCHPC   105,826 |       400,000   294,174
+phalpin          592 |         MSCHPC   105,826 |       400,000   294,174
+purdyd           173 |         MSCHPC   105,826 |       400,000   294,174
+rooneydt         356 |         MSCHPC   105,826 |       400,000   294,174
+sharding       1,196 |         MSCHPC   105,826 |       400,000   294,174
+sikelleh         989 |         MSCHPC   105,826 |       400,000   294,174
+simpsoao         509 |         MSCHPC   105,826 |       400,000   294,174
+smurray4         514 |         MSCHPC   105,826 |       400,000   294,174
+spellacl       1,730 |         MSCHPC   105,826 |       400,000   294,174
+vetsaa            80 |         MSCHPC   105,826 |       400,000   294,174
+wechen         7,593 |         MSCHPC   105,826 |       400,000   294,174
+wyattg           200 |         MSCHPC   105,826 |       400,000   294,174
+zhuang         8,654 |         MSCHPC   105,826 |       400,000   294,174
+
+
+Acknowledgements:
+=================
+
+Note that usage of TCHPC Resources *must* be acknowledged in all publications.
+
+Please see this page for details relevant to this cluster:
+
+http://www.tchpc.tcd.ie/resources/acknowledgementpolicy
+
+################################################################################

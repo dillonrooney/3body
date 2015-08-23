@@ -152,10 +152,12 @@ double compareMultipleParticles(particle*in1, particle * in2, int nEach){
 	double * comparisonData = malloc(3*nEach*sizeof(double));
 	//1:collect
 	int i;
+	double minTol = 0;
+	double epsTol = 0;
 	for (i=0;i<nEach;i++){
-		comparisonData[3*i] = rel_diff(in1-> dvx, in2->dvx, minTol, epsTol);
-		comparisonData[3*i+1] = rel_diff(in1-> dvy, in2->dvy, minTol, epsTol);
-		comparisonData[3*i+2] = rel_diff(in1-> dvz, in2->dvz, minTol, epsTol);
+		comparisonData[3*i] = rel_diff((in1+i)-> dvx, (in2+i)->dvx, minTol, epsTol);
+		comparisonData[3*i+1] = rel_diff((in1+i)-> dvy, (in2+i)->dvy, minTol, epsTol);
+		comparisonData[3*i+2] = rel_diff((in1+i)-> dvz, (in2+i)->dvz, minTol, epsTol);
 	}
 	//2:mean
 	double mean = 0;
@@ -177,7 +179,7 @@ double compareMultipleParticles(particle*in1, particle * in2, int nEach){
 	//later...
 	//5:print
 	
-	printf("comparison of dv statistics:rank %d: mean=%lf\tstdev=%lf\n"rank, mean, stdev);
+	printf("comparison of dv statistics:rank %d: mean=%lf\tstdev=%lf\n", rank, mean, stdev);
 	
 	
 	free(comparisonData);

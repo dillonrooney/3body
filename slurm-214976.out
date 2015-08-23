@@ -1,0 +1,161 @@
+mpicc naive/compareStats.c -o bin/statsNaive -lm
+In file included from naive/compareStats.c:13:0:
+naive/../headers/compare_ax_stats.h: In function 'compareMultipleParticles':
+naive/../headers/compare_ax_stats.h:158:39: error: invalid type argument of '->' (have 'int')
+   comparisonData[3*i] = rel_diff(in1+i-> dvx, in2+i->dvx, minTol, epsTol);
+                                       ^
+naive/../headers/compare_ax_stats.h:158:52: error: invalid type argument of '->' (have 'int')
+   comparisonData[3*i] = rel_diff(in1+i-> dvx, in2+i->dvx, minTol, epsTol);
+                                                    ^
+naive/../headers/compare_ax_stats.h:159:41: error: invalid type argument of '->' (have 'int')
+   comparisonData[3*i+1] = rel_diff(in1+i-> dvy, in2+i->dvy, minTol, epsTol);
+                                         ^
+naive/../headers/compare_ax_stats.h:159:54: error: invalid type argument of '->' (have 'int')
+   comparisonData[3*i+1] = rel_diff(in1+i-> dvy, in2+i->dvy, minTol, epsTol);
+                                                      ^
+naive/../headers/compare_ax_stats.h:160:41: error: invalid type argument of '->' (have 'int')
+   comparisonData[3*i+2] = rel_diff(in1+i-> dvz, in2+i->dvz, minTol, epsTol);
+                                         ^
+naive/../headers/compare_ax_stats.h:160:54: error: invalid type argument of '->' (have 'int')
+   comparisonData[3*i+2] = rel_diff(in1+i-> dvz, in2+i->dvz, minTol, epsTol);
+                                                      ^
+make: *** [bin/statsNaive] Error 1
+gen
+1536 particles
+printing comparison standard deviation:2 processes
+comparison of dv statistics:rank 0: mean=17.452135	stdev=12.891663
+rank 0 diff = 91.2565
+comparison of dv statistics:rank 1: mean=17.072196	stdev=11.792659
+rank 1 diff = 72.0243
+
+real	15m5.352s
+user	30m8.286s
+sys	0m0.084s
+printing comparison standard deviation:3 processes
+comparison of dv statistics:rank 1: mean=10.737854	stdev=5.853108
+rank 1 diff = 241.288
+comparison of dv statistics:rank 2: mean=15.616716	stdev=5.842616
+rank 2 diff = 177.218
+comparison of dv statistics:rank 0: mean=11.758110	stdev=11.034551
+rank 0 diff = 85.8564
+
+real	10m6.927s
+user	30m17.267s
+sys	0m0.124s
+
+
+###############################################################################
+TCHPC Cluster: lonsdale
+Job 214976 (1536particles) for User 'rooneydt' in Account 'mschpc'
+Finished at: Sat Aug 22 15:34:40 IST 2015
+
+Job completion status:
+======================
+
+       JobID    JobName AllocCPUS NTasks NNodes     MaxRSS    MaxRSSNode  MaxDiskRead MaxDiskWrite    Elapsed      State ExitCode 
+------------ ---------- --------- ------ ------ ---------- ------------- ------------ ------------ ---------- ---------- -------- 
+214976       1536parti+         8             1                                                      00:25:15  COMPLETED      0:0 
+214976.batch      batch         8      1      1     15664K lonsdale-n001           1M        0.06M   00:25:15  COMPLETED      0:0 
+
+
+Job details:
+============
+
+JobId=214976 JobName=1536particles
+   UserId=rooneydt(5482) GroupId=rooneydt(9287)
+   Priority=10098473 Nice=0 Account=mschpc QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:25:15 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2015-08-22T15:09:24 EligibleTime=2015-08-22T15:09:24
+   StartTime=2015-08-22T15:09:24 EndTime=2015-08-22T15:34:39
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=debug AllocNode:Sid=lonsdale01:31982
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   BatchHost=lonsdale-n001
+   NumNodes=1 NumCPUs=8 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+     Nodes=lonsdale-n001 CPU_IDs=0-7 Mem=15000
+   MinCPUsNode=1 MinMemoryNode=15000M MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   Shared=0 Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/users/mschpc/2014/rooneydt/3body/statsbatch1.sh
+   WorkDir=/home/users/mschpc/2014/rooneydt/3body
+   StdErr=/home/users/mschpc/2014/rooneydt/3body/slurm-214976.out
+   StdIn=/dev/null
+   StdOut=/home/users/mschpc/2014/rooneydt/3body/slurm-214976.out
+
+
+Disk quota details:
+===================
+
+Quota Type           Name  Filesystem     Usage in MB     Limit in MB    % Used
+-------------------------------------------------------------------------------
+USER             rooneydt       /home              32          51,200     0.06%
+
+GROUP              mschpc   /projects          23,731          51,200    46.35%
+
+
+SLURM Bank Statement:
+=====================
+
+User           Usage |        Account     Usage | Account Limit Available (CPU hrs)
+---------- --------- + -------------- --------- + ------------- ---------
+
+aljohani          22 |         MSCHPC   105,483 |       400,000   294,517
+boycek           250 |         MSCHPC   105,483 |       400,000   294,517
+dalyso           222 |         MSCHPC   105,483 |       400,000   294,517
+deleligt         709 |         MSCHPC   105,483 |       400,000   294,517
+dowlindo         563 |         MSCHPC   105,483 |       400,000   294,517
+dunneff        4,157 |         MSCHPC   105,483 |       400,000   294,517
+elynch         2,903 |         MSCHPC   105,483 |       400,000   294,517
+hannigs            6 |         MSCHPC   105,483 |       400,000   294,517
+hernonma         457 |         MSCHPC   105,483 |       400,000   294,517
+holtonmi           0 |         MSCHPC   105,483 |       400,000   294,517
+howardrj          37 |         MSCHPC   105,483 |       400,000   294,517
+hynesr         1,365 |         MSCHPC   105,483 |       400,000   294,517
+jabehan        3,862 |         MSCHPC   105,483 |       400,000   294,517
+jbulava          158 |         MSCHPC   105,483 |       400,000   294,517
+jose               0 |         MSCHPC   105,483 |       400,000   294,517
+kcleary           67 |         MSCHPC   105,483 |       400,000   294,517
+lambem           514 |         MSCHPC   105,483 |       400,000   294,517
+liul1            504 |         MSCHPC   105,483 |       400,000   294,517
+luoq           2,782 |         MSCHPC   105,483 |       400,000   294,517
+makirby        1,126 |         MSCHPC   105,483 |       400,000   294,517
+mcbridne       2,142 |         MSCHPC   105,483 |       400,000   294,517
+mehtav            82 |         MSCHPC   105,483 |       400,000   294,517
+melbyrne         300 |         MSCHPC   105,483 |       400,000   294,517
+murphd37      15,590 |         MSCHPC   105,483 |       400,000   294,517
+murrayb8       2,421 |         MSCHPC   105,483 |       400,000   294,517
+nobyrnes       1,513 |         MSCHPC   105,483 |       400,000   294,517
+oconnm28         619 |         MSCHPC   105,483 |       400,000   294,517
+ormondca       1,661 |         MSCHPC   105,483 |       400,000   294,517
+osheac9          968 |         MSCHPC   105,483 |       400,000   294,517
+osullm40       5,964 |         MSCHPC   105,483 |       400,000   294,517
+paddy          1,319 |         MSCHPC   105,483 |       400,000   294,517
+phalpin          592 |         MSCHPC   105,483 |       400,000   294,517
+purdyd           173 |         MSCHPC   105,483 |       400,000   294,517
+rooneydt         345 |         MSCHPC   105,483 |       400,000   294,517
+sharding       1,196 |         MSCHPC   105,483 |       400,000   294,517
+sikelleh         987 |         MSCHPC   105,483 |       400,000   294,517
+simpsoao         509 |         MSCHPC   105,483 |       400,000   294,517
+smurray4         514 |         MSCHPC   105,483 |       400,000   294,517
+spellacl       1,730 |         MSCHPC   105,483 |       400,000   294,517
+vetsaa            80 |         MSCHPC   105,483 |       400,000   294,517
+wechen         7,593 |         MSCHPC   105,483 |       400,000   294,517
+wyattg           200 |         MSCHPC   105,483 |       400,000   294,517
+zhuang         8,603 |         MSCHPC   105,483 |       400,000   294,517
+
+
+Acknowledgements:
+=================
+
+Note that usage of TCHPC Resources *must* be acknowledged in all publications.
+
+Please see this page for details relevant to this cluster:
+
+http://www.tchpc.tcd.ie/resources/acknowledgementpolicy
+
+################################################################################
