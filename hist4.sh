@@ -10,14 +10,13 @@
 source /etc/profile.d/modules.sh
 module load default-gcc-openmpi
 make bin/statsNaive
+make bin/naive
 
 # launch the code
 echo "comp"
-echo "1000 particles"
-time mpirun -n 1 bin/statsNaive compStatsInit/comp1000.init
-echo "160 particles"
-time mpirun -n 1 bin/statsNaive compStatsInit/comp160.init
-echo "120 particles"
-time mpirun -n 1 bin/statsNaive compStatsInit/comp120.init
+echo "600 particles"
+#time mpirun -n 1 bin/statsNaive compStatsInit/comp600.init
+echo "400 particles"
+#time mpirun -n 1 bin/statsNaive compStatsInit/comp400.init
 echo "80 particles"
-time mpirun -n 1 bin/statsNaive compStatsInit/comp80.init
+time mpirun -n 8 bin/statsNaive compStatsInit/gen80.init

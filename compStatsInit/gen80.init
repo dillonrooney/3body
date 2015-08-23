@@ -7,5 +7,5 @@ dataSets/cs_g2_80.dat	#input_file_string
 dataSets/cs_g2_80.dat	#output_file_string
 2	#generatingFunction_int
 0	#genFunctionSeed_int
-0	#compareResults_int
+1	#compareResults_int
 0	#verbosity_int

@@ -1,0 +1,226 @@
+mpicc naive/compareStats.c -o bin/statsNaive -lm
+gen
+1000 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	1m3.866s
+user	8m20.541s
+sys	0m0.487s
+600 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	0m16.504s
+user	1m58.528s
+sys	0m0.507s
+400 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	0m5.777s
+user	0m35.392s
+sys	0m0.474s
+200 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	0m1.782s
+user	0m4.509s
+sys	0m0.496s
+160 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	0m1.539s
+user	0m2.648s
+sys	0m0.467s
+120 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	0m1.377s
+user	0m1.293s
+sys	0m0.483s
+80 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+comparison of dv statistics:rank 3: mean=9007199254740992.000000	stdev=0.000000
+rank 3 diff = 9.0072e+15
+comparison of dv statistics:rank 7: mean=9007199254740992.000000	stdev=0.000000
+rank 7 diff = 9.0072e+15
+comparison of dv statistics:rank 6: mean=9007199254740992.000000	stdev=0.000000
+rank 6 diff = 9.0072e+15
+comparison of dv statistics:rank 0: mean=9007199254740992.000000	stdev=0.000000
+rank 0 diff = 9.0072e+15
+comparison of dv statistics:rank 2: mean=9007199254740992.000000	stdev=0.000000
+rank 2 diff = 9.0072e+15
+comparison of dv statistics:rank 4: mean=9007199254740992.000000	stdev=0.000000
+rank 4 diff = 9.0072e+15
+comparison of dv statistics:rank 5: mean=9007199254740992.000000	stdev=0.000000
+rank 5 diff = 9.0072e+15
+comparison of dv statistics:rank 1: mean=9007199254740992.000000	stdev=0.000000
+rank 1 diff = 9.0072e+15
+
+real	0m1.260s
+user	0m0.488s
+sys	0m0.444s
+
+
+###############################################################################
+TCHPC Cluster: lonsdale
+Job 215214 (inits) for User 'rooneydt' in Account 'mschpc'
+Finished at: Sun Aug 23 21:58:33 IST 2015
+
+Job completion status:
+======================
+
+       JobID    JobName AllocCPUS NTasks NNodes     MaxRSS    MaxRSSNode  MaxDiskRead MaxDiskWrite    Elapsed      State ExitCode 
+------------ ---------- --------- ------ ------ ---------- ------------- ------------ ------------ ---------- ---------- -------- 
+215214            inits         8             1                                                      00:01:34  COMPLETED      0:0 
+215214.batch      batch         8      1      1     39100K lonsdale-n001          14M           1M   00:01:34  COMPLETED      0:0 
+
+
+Job details:
+============
+
+JobId=215214 JobName=inits
+   UserId=rooneydt(5482) GroupId=rooneydt(9287)
+   Priority=10094003 Nice=0 Account=mschpc QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:01:34 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2015-08-23T21:56:59 EligibleTime=2015-08-23T21:56:59
+   StartTime=2015-08-23T21:56:59 EndTime=2015-08-23T21:58:33
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=debug AllocNode:Sid=lonsdale01:8939
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   BatchHost=lonsdale-n001
+   NumNodes=1 NumCPUs=8 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+     Nodes=lonsdale-n001 CPU_IDs=0-7 Mem=15000
+   MinCPUsNode=1 MinMemoryNode=15000M MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   Shared=0 Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/users/mschpc/2014/rooneydt/3body/hist1.sh
+   WorkDir=/home/users/mschpc/2014/rooneydt/3body
+   StdErr=/home/users/mschpc/2014/rooneydt/3body/slurm-215214.out
+   StdIn=/dev/null
+   StdOut=/home/users/mschpc/2014/rooneydt/3body/slurm-215214.out
+
+
+Disk quota details:
+===================
+
+Quota Type           Name  Filesystem     Usage in MB     Limit in MB    % Used
+-------------------------------------------------------------------------------
+USER             rooneydt       /home              36          51,200     0.07%
+
+GROUP              mschpc   /projects          23,731          51,200    46.35%
+
+
+SLURM Bank Statement:
+=====================
+
+User           Usage |        Account     Usage | Account Limit Available (CPU hrs)
+---------- --------- + -------------- --------- + ------------- ---------
+
+aljohani          22 |         MSCHPC   106,236 |       400,000   293,764
+boycek           249 |         MSCHPC   106,236 |       400,000   293,764
+dalyso           251 |         MSCHPC   106,236 |       400,000   293,764
+deleligt         709 |         MSCHPC   106,236 |       400,000   293,764
+dowlindo         563 |         MSCHPC   106,236 |       400,000   293,764
+dunneff        4,157 |         MSCHPC   106,236 |       400,000   293,764
+elynch         2,903 |         MSCHPC   106,236 |       400,000   293,764
+hannigs            6 |         MSCHPC   106,236 |       400,000   293,764
+hernonma         457 |         MSCHPC   106,236 |       400,000   293,764
+holtonmi           0 |         MSCHPC   106,236 |       400,000   293,764
+howardrj          37 |         MSCHPC   106,236 |       400,000   293,764
+hynesr         1,365 |         MSCHPC   106,236 |       400,000   293,764
+jabehan        4,012 |         MSCHPC   106,236 |       400,000   293,764
+jbulava          158 |         MSCHPC   106,236 |       400,000   293,764
+jose               0 |         MSCHPC   106,236 |       400,000   293,764
+kcleary           67 |         MSCHPC   106,236 |       400,000   293,764
+lambem           514 |         MSCHPC   106,236 |       400,000   293,764
+liul1            505 |         MSCHPC   106,236 |       400,000   293,764
+luoq           2,782 |         MSCHPC   106,236 |       400,000   293,764
+makirby        1,126 |         MSCHPC   106,236 |       400,000   293,764
+mcbridne       2,142 |         MSCHPC   106,236 |       400,000   293,764
+mehtav            82 |         MSCHPC   106,236 |       400,000   293,764
+melbyrne         300 |         MSCHPC   106,236 |       400,000   293,764
+murphd37      15,590 |         MSCHPC   106,236 |       400,000   293,764
+murrayb8       2,421 |         MSCHPC   106,236 |       400,000   293,764
+nobyrnes       1,513 |         MSCHPC   106,236 |       400,000   293,764
+oconnm28         619 |         MSCHPC   106,236 |       400,000   293,764
+ormondca       1,661 |         MSCHPC   106,236 |       400,000   293,764
+osheac9          968 |         MSCHPC   106,236 |       400,000   293,764
+osullm40       6,523 |         MSCHPC   106,236 |       400,000   293,764
+paddy          1,319 |         MSCHPC   106,236 |       400,000   293,764
+phalpin          592 |         MSCHPC   106,236 |       400,000   293,764
+purdyd           173 |         MSCHPC   106,236 |       400,000   293,764
+rooneydt         366 |         MSCHPC   106,236 |       400,000   293,764
+sharding       1,196 |         MSCHPC   106,236 |       400,000   293,764
+sikelleh         990 |         MSCHPC   106,236 |       400,000   293,764
+simpsoao         509 |         MSCHPC   106,236 |       400,000   293,764
+smurray4         514 |         MSCHPC   106,236 |       400,000   293,764
+spellacl       1,730 |         MSCHPC   106,236 |       400,000   293,764
+vetsaa            80 |         MSCHPC   106,236 |       400,000   293,764
+wechen         7,593 |         MSCHPC   106,236 |       400,000   293,764
+wyattg           200 |         MSCHPC   106,236 |       400,000   293,764
+zhuang         8,654 |         MSCHPC   106,236 |       400,000   293,764
+
+
+Acknowledgements:
+=================
+
+Note that usage of TCHPC Resources *must* be acknowledged in all publications.
+
+Please see this page for details relevant to this cluster:
+
+http://www.tchpc.tcd.ie/resources/acknowledgementpolicy
+
+################################################################################

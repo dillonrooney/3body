@@ -189,7 +189,7 @@ void basicParticle(particle * in){
 
 void initialize_1(particle * in, int nEach){
 	int i;
-	srand(rank);
+	srand(rank+ 12345);
 	//not a very good random number generator, but it could work for basic testing.
 	
 	for(i = 0;i<nEach;i++){
@@ -209,7 +209,7 @@ void initialize_1(particle * in, int nEach){
 
 void initialize_2(particle * in, int nEach){
 	int i;
-	srand(rank);
+	srand(rank+12345);
 	//not a very good random number generator, but it could work for basic testing.
 	//need reasonably close values for x,y,z
 	printf("initializing\n");	

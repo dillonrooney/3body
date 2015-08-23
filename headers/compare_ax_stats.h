@@ -147,7 +147,7 @@ double compare_particle(particle*in1, particle * in2){
 }
 
 double compareMultipleParticles(particle*in1, particle * in2, int nEach){
-	
+	//fprintParticles(stdout, in1, nEach);	
 	//0:allocate
 	double * comparisonData = malloc(3*nEach*sizeof(double));
 	//1:collect
@@ -179,13 +179,13 @@ double compareMultipleParticles(particle*in1, particle * in2, int nEach){
 	double min = comparisonData[0];
 	double max = comparisonData[0];
 	for(i=0;i<count;i++){
-		min = min>comparisonData[i]?min:comparisonData[i];
-		max = max<comparisonData[i]?max:comparisonData[i];
+		min = min<comparisonData[i]?min:comparisonData[i];
+		max = max>comparisonData[i]?max:comparisonData[i];
 	}
 	//5:histogram
 		if(size == 1){
 		double length = max - min;
-		int nBins = 15;
+		int nBins = count/5;
 		double binDim = length/nBins;
 		double * binvals = calloc(nBins+1,sizeof(double));
 		int binIndex;
@@ -194,7 +194,7 @@ double compareMultipleParticles(particle*in1, particle * in2, int nEach){
 			binvals[binIndex]++;
 		}
 		binvals[nBins-1]+=binvals[nBins];	//values of max end up outside last bin
-		double normalization = 1/(count*length);
+		double normalization = 1/(count*binDim);
 		for(i=0;i<nBins;i++){
 			binvals[i]*=normalization;
 		}
@@ -204,7 +204,7 @@ double compareMultipleParticles(particle*in1, particle * in2, int nEach){
 	
 		for(i=0;i<nBins;i++){
 			binMid = bin0Mid + i *binDim;
-			printf("%lf\t%lf\n", binMid, binvals[i]);
+			printf("%g\t%g\n", binMid, binvals[i]);
 		}
 	}
 	printf("comparison of dv statistics:rank %d: mean=%lf\tstdev=%lf\n", rank, mean, stdev);

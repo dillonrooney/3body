@@ -1,0 +1,384 @@
+make: `bin/statsNaive' is up to date.
+make: `bin/naive' is up to date.
+comp
+600 particles
+400 particles
+80 particles
+0	0.440932	-0.223668	0.983994
+		0	1.71464e+09	1.95775e+09
+		-nan	-nan	-nan	1
+1	0.393254	-0.776554	0.981714
+		1	5.96517e+08	1.18964e+09
+		-nan	-nan	-nan	1
+2	-0.491561	0.62103	0.985727
+		2	1.10252e+09	2.0449e+09
+		-nan	-nan	-nan	1
+3	-0.453758	0.823044	-0.0297074
+		3	3.04089e+08	1.30346e+09
+		-nan	-nan	-nan	1
+4	0.751668	0.642427	0.982381
+		4	1.72696e+09	3.36466e+08
+		-nan	-nan	-nan	1
+5	-0.62792	0.998035	0.795418
+		5	2.14517e+09	4.68703e+08
+		-nan	-nan	-nan	1
+6	-0.917567	-0.844143	-0.581815
+		6	6.35723e+08	1.36913e+09
+		-nan	-nan	-nan	1
+7	-0.943313	0.911458	0.109116
+		7	6.28175e+08	1.65648e+09
+		-nan	-nan	-nan	1
+8	0.796277	-0.967388	0.650048
+		8	1.91454e+09	6.08414e+08
+		-nan	-nan	-nan	1
+9	-0.495862	-0.44668	0.897453
+		9	1.49798e+08	2.03866e+09
+		-nan	-nan	-nan	1
+10	0.440932	-0.223668	0.983994
+		0	1.71464e+09	1.95775e+09
+		-nan	-nan	-nan	1
+11	0.393254	-0.776554	0.981714
+		1	5.96517e+08	1.18964e+09
+		-nan	-nan	-nan	1
+12	-0.491561	0.62103	0.985727
+		2	1.10252e+09	2.0449e+09
+		-nan	-nan	-nan	1
+13	-0.453758	0.823044	-0.0297074
+		3	3.04089e+08	1.30346e+09
+		-nan	-nan	-nan	1
+14	0.751668	0.642427	0.982381
+		4	1.72696e+09	3.36466e+08
+		-nan	-nan	-nan	1
+15	-0.62792	0.998035	0.795418
+		5	2.14517e+09	4.68703e+08
+		-nan	-nan	-nan	1
+16	-0.917567	-0.844143	-0.581815
+		6	6.35723e+08	1.36913e+09
+		-nan	-nan	-nan	1
+17	-0.943313	0.911458	0.109116
+		7	6.28175e+08	1.65648e+09
+		-nan	-nan	-nan	1
+18	0.796277	-0.967388	0.650048
+		8	1.91454e+09	6.08414e+08
+		-nan	-nan	-nan	1
+19	-0.495862	-0.44668	0.897453
+		9	1.49798e+08	2.03866e+09
+		-nan	-nan	-nan	1
+20	0.513514	0.972409	-0.625163
+		0	2.60875e+08	7.47983e+08
+		-nan	-nan	-nan	1
+21	-0.722306	0.521067	-0.676059
+		1	1.26161e+09	1.38076e+09
+		-nan	-nan	-nan	1
+22	0.0618383	0.58393	-0.84178
+		2	1.49585e+08	2.03934e+09
+		-nan	-nan	-nan	1
+23	-0.491321	-0.906904	0.429002
+		3	1.8093e+09	5.91233e+08
+		-nan	-nan	-nan	1
+24	-0.218317	0.0123302	0.143912
+		4	3.96476e+08	8.5356e+08
+		-nan	-nan	-nan	1
+25	-0.601099	0.582823	-0.670065
+		5	2.21122e+08	9.64231e+07
+		-nan	-nan	-nan	1
+26	-0.0932124	-0.807533	0.912594
+		6	1.57579e+09	1.98733e+09
+		-nan	-nan	-nan	1
+27	0.941165	0.685187	0.972127
+		7	5.78248e+08	1.59608e+09
+		-nan	-nan	-nan	1
+28	-0.108962	-0.0955246	0.333533
+		8	1.15864e+09	7.07654e+08
+		-nan	-nan	-nan	1
+29	0.960158	0.999679	0.954384
+		9	2.09799e+09	1.64117e+09
+		-nan	-nan	-nan	1
+30	-0.0389815	0.354291	0.926499
+		0	9.5335e+08	6.12121e+08
+		-nan	-nan	-nan	1
+31	-0.493384	0.935218	0.221615
+		1	1.92286e+09	4.95649e+08
+		-nan	-nan	-nan	1
+32	0.995404	-0.408575	-0.564254
+		2	1.34468e+09	2.0291e+09
+		-nan	-nan	-nan	1
+33	0.0628692	0.860096	-0.239372
+		3	8.75172e+07	9.5337e+08
+		-nan	-nan	-nan	1
+34	-0.0398047	-0.834759	0.228137
+		4	1.20782e+09	2.87632e+08
+		-nan	-nan	-nan	1
+35	0.0609303	0.320394	-0.760334
+		5	4.44268e+08	1.86568e+09
+		-nan	-nan	-nan	1
+36	0.757133	-0.996055	-0.850697
+		6	3.51238e+08	4.5569e+08
+		-nan	-nan	-nan	1
+37	0.985766	-0.0311445	0.982196
+		7	5.22866e+08	4.3753e+08
+		-nan	-nan	-nan	1
+38	-0.601318	-0.752784	-0.772592
+		8	3.92731e+08	1.87616e+09
+		-nan	-nan	-nan	1
+39	-0.807167	0.912319	0.0374879
+		9	1.86031e+09	1.49717e+08
+		-nan	-nan	-nan	1
+40	-0.0248219	0.344836	-0.811722
+		0	5.58519e+08	4.60165e+08
+		-nan	-nan	-nan	1
+41	-0.813426	0.987611	0.999975
+		1	4.17397e+08	6.65131e+08
+		-nan	-nan	-nan	1
+42	0.753496	0.0903964	0.673261
+		2	1.4392e+09	1.99103e+09
+		-nan	-nan	-nan	1
+43	-0.355478	-0.379712	-0.857494
+		3	1.55454e+09	2.04144e+08
+		-nan	-nan	-nan	1
+44	-0.145395	0.931119	0.964716
+		4	1.97096e+09	7.4911e+08
+		-nan	-nan	-nan	1
+45	-0.858341	0.205893	0.748854
+		5	6.05083e+08	1.41831e+09
+		-nan	-nan	-nan	1
+46	0.0297055	0.455795	0.361731
+		6	1.20658e+08	9.84197e+08
+		-nan	-nan	-nan	1
+47	0.415418	-0.89831	-0.609648
+		7	1.42334e+09	1.3115e+09
+		-nan	-nan	-nan	1
+48	-0.85834	0.923741	0.581353
+		8	1.62892e+09	1.80355e+09
+		-nan	-nan	-nan	1
+49	0.999944	-0.195354	0.901487
+		9	1.42323e+09	1.67451e+09
+		-nan	-nan	-nan	1
+50	-0.357462	0.975622	0.75303
+		0	1.71864e+08	3.17159e+08
+		-nan	-nan	-nan	1
+51	0.984951	0.845039	0.996248
+		1	1.06998e+09	1.91985e+09
+		-nan	-nan	-nan	1
+52	-0.897875	0.880361	0.414551
+		2	4.75191e+08	8.94416e+08
+		-nan	-nan	-nan	1
+53	-0.732383	-0.0308354	-0.993473
+		3	8.93282e+08	5.50277e+08
+		-nan	-nan	-nan	1
+54	-0.632814	-0.681658	0.999399
+		4	6.12872e+08	1.63967e+08
+		-nan	-nan	-nan	1
+55	-0.408117	0.995389	0.355631
+		5	8.02348e+08	2.08242e+09
+		-nan	-nan	-nan	1
+56	-0.502423	0.657211	0.260871
+		6	1.00958e+09	1.56422e+09
+		-nan	-nan	-nan	1
+57	0.7705	0.966863	0.995906
+		7	1.31493e+09	1.03114e+08
+		-nan	-nan	-nan	1
+58	0.894803	0.972815	0.984764
+		8	1.87773e+09	1.82379e+09
+		-nan	-nan	-nan	1
+59	0.34576	-0.853216	0.0311379
+		9	2.36412e+07	1.17358e+09
+		-nan	-nan	-nan	1
+60	-0.642196	0.98316	0.999732
+		0	8.65456e+08	1.82811e+08
+		-nan	-nan	-nan	1
+61	0.646161	0.372558	0.557535
+		1	6.65477e+08	2.11123e+09
+		-nan	-nan	-nan	1
+62	0.395646	0.758366	0.882407
+		2	1.67136e+09	8.94852e+08
+		-nan	-nan	-nan	1
+63	0.475325	-0.845149	-0.605145
+		3	1.32665e+09	9.13158e+08
+		-nan	-nan	-nan	1
+64	0.809164	-0.966451	0.986507
+		4	3.65799e+08	6.85286e+08
+		-nan	-nan	-nan	1
+65	0.376607	-0.0827697	0.134195
+		5	2.10024e+09	1.7228e+09
+		-nan	-nan	-nan	1
+66	0.214424	-0.921624	0.830348
+		6	8.86776e+08	1.10906e+09
+		-nan	-nan	-nan	1
+67	-0.892369	-0.148232	-0.629556
+		7	2.08917e+08	1.13486e+09
+		-nan	-nan	-nan	1
+68	0.812055	-0.987537	0.515008
+		8	4.93578e+07	8.70234e+08
+		-nan	-nan	-nan	1
+69	0.572009	-0.989901	0.993556
+		9	2.00835e+09	1.85416e+09
+		-nan	-nan	-nan	1
+70	0.21052	0.600426	0.560862
+		0	4.61086e+08	2.19613e+07
+		-nan	-nan	-nan	1
+71	0.0633421	-0.997713	-0.0352609
+		1	1.29185e+09	1.18852e+08
+		-nan	-nan	-nan	1
+72	-0.849197	0.849079	-0.5041
+		2	1.75126e+09	1.90905e+09
+		-nan	-nan	-nan	1
+73	-0.999122	-0.999827	0.625063
+		3	1.69372e+09	1.43121e+08
+		-nan	-nan	-nan	1
+74	-0.999786	-0.956199	0.986799
+		4	1.09487e+09	3.44127e+07
+		-nan	-nan	-nan	1
+75	0.996238	0.243516	0.891611
+		5	7.71443e+07	1.55493e+08
+		-nan	-nan	-nan	1
+76	-0.467932	-0.744015	-0.990871
+		6	1.66246e+09	1.58385e+09
+		-nan	-nan	-nan	1
+77	0.841204	0.959603	-0.354341
+		7	2.11e+09	1.9124e+09
+		-nan	-nan	-nan	1
+78	0.959786	-0.945238	0.555009
+		8	1.18813e+09	6.97535e+08
+		-nan	-nan	-nan	1
+79	0.12991	-0.998961	0.583272
+		9	1.40995e+09	1.08633e+09
+		-nan	-nan	-nan	1
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+comparison of dv statistics:rank 0: mean=nan	stdev=nan
+rank 0 diff = nan
+
+real	0m0.331s
+user	0m0.278s
+sys	0m0.046s
+
+
+###############################################################################
+TCHPC Cluster: lonsdale
+Job 215206 (histogram) for User 'rooneydt' in Account 'mschpc'
+Finished at: Sun Aug 23 21:35:42 IST 2015
+
+Job completion status:
+======================
+
+       JobID    JobName AllocCPUS NTasks NNodes     MaxRSS    MaxRSSNode  MaxDiskRead MaxDiskWrite    Elapsed      State ExitCode 
+------------ ---------- --------- ------ ------ ---------- ------------- ------------ ------------ ---------- ---------- -------- 
+215206        histogram         8             1                                                      00:00:02  COMPLETED      0:0 
+215206.batch      batch         8      1      1          0 lonsdale-n001        0.00M        0.00M   00:00:02  COMPLETED      0:0 
+
+
+Job details:
+============
+
+JobId=215206 JobName=histogram
+   UserId=rooneydt(5482) GroupId=rooneydt(9287)
+   Priority=10064183 Nice=0 Account=mschpc QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:02 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2015-08-23T21:35:39 EligibleTime=2015-08-23T21:35:40
+   StartTime=2015-08-23T21:35:40 EndTime=2015-08-23T21:35:42
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=debug AllocNode:Sid=lonsdale01:8939
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   BatchHost=lonsdale-n001
+   NumNodes=1 NumCPUs=8 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+     Nodes=lonsdale-n001 CPU_IDs=0-7 Mem=15000
+   MinCPUsNode=1 MinMemoryNode=15000M MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   Shared=0 Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/users/mschpc/2014/rooneydt/3body/hist4.sh
+   WorkDir=/home/users/mschpc/2014/rooneydt/3body
+   StdErr=/home/users/mschpc/2014/rooneydt/3body/slurm-215206.out
+   StdIn=/dev/null
+   StdOut=/home/users/mschpc/2014/rooneydt/3body/slurm-215206.out
+
+
+Disk quota details:
+===================
+
+Quota Type           Name  Filesystem     Usage in MB     Limit in MB    % Used
+-------------------------------------------------------------------------------
+USER             rooneydt       /home              35          51,200     0.07%
+
+GROUP              mschpc   /projects          23,731          51,200    46.35%
+
+
+SLURM Bank Statement:
+=====================
+
+User           Usage |        Account     Usage | Account Limit Available (CPU hrs)
+---------- --------- + -------------- --------- + ------------- ---------
+
+aljohani          22 |         MSCHPC   106,236 |       400,000   293,764
+boycek           249 |         MSCHPC   106,236 |       400,000   293,764
+dalyso           251 |         MSCHPC   106,236 |       400,000   293,764
+deleligt         709 |         MSCHPC   106,236 |       400,000   293,764
+dowlindo         563 |         MSCHPC   106,236 |       400,000   293,764
+dunneff        4,157 |         MSCHPC   106,236 |       400,000   293,764
+elynch         2,903 |         MSCHPC   106,236 |       400,000   293,764
+hannigs            6 |         MSCHPC   106,236 |       400,000   293,764
+hernonma         457 |         MSCHPC   106,236 |       400,000   293,764
+holtonmi           0 |         MSCHPC   106,236 |       400,000   293,764
+howardrj          37 |         MSCHPC   106,236 |       400,000   293,764
+hynesr         1,365 |         MSCHPC   106,236 |       400,000   293,764
+jabehan        4,012 |         MSCHPC   106,236 |       400,000   293,764
+jbulava          158 |         MSCHPC   106,236 |       400,000   293,764
+jose               0 |         MSCHPC   106,236 |       400,000   293,764
+kcleary           67 |         MSCHPC   106,236 |       400,000   293,764
+lambem           514 |         MSCHPC   106,236 |       400,000   293,764
+liul1            505 |         MSCHPC   106,236 |       400,000   293,764
+luoq           2,782 |         MSCHPC   106,236 |       400,000   293,764
+makirby        1,126 |         MSCHPC   106,236 |       400,000   293,764
+mcbridne       2,142 |         MSCHPC   106,236 |       400,000   293,764
+mehtav            82 |         MSCHPC   106,236 |       400,000   293,764
+melbyrne         300 |         MSCHPC   106,236 |       400,000   293,764
+murphd37      15,590 |         MSCHPC   106,236 |       400,000   293,764
+murrayb8       2,421 |         MSCHPC   106,236 |       400,000   293,764
+nobyrnes       1,513 |         MSCHPC   106,236 |       400,000   293,764
+oconnm28         619 |         MSCHPC   106,236 |       400,000   293,764
+ormondca       1,661 |         MSCHPC   106,236 |       400,000   293,764
+osheac9          968 |         MSCHPC   106,236 |       400,000   293,764
+osullm40       6,523 |         MSCHPC   106,236 |       400,000   293,764
+paddy          1,319 |         MSCHPC   106,236 |       400,000   293,764
+phalpin          592 |         MSCHPC   106,236 |       400,000   293,764
+purdyd           173 |         MSCHPC   106,236 |       400,000   293,764
+rooneydt         366 |         MSCHPC   106,236 |       400,000   293,764
+sharding       1,196 |         MSCHPC   106,236 |       400,000   293,764
+sikelleh         990 |         MSCHPC   106,236 |       400,000   293,764
+simpsoao         509 |         MSCHPC   106,236 |       400,000   293,764
+smurray4         514 |         MSCHPC   106,236 |       400,000   293,764
+spellacl       1,730 |         MSCHPC   106,236 |       400,000   293,764
+vetsaa            80 |         MSCHPC   106,236 |       400,000   293,764
+wechen         7,593 |         MSCHPC   106,236 |       400,000   293,764
+wyattg           200 |         MSCHPC   106,236 |       400,000   293,764
+zhuang         8,654 |         MSCHPC   106,236 |       400,000   293,764
+
+
+Acknowledgements:
+=================
+
+Note that usage of TCHPC Resources *must* be acknowledged in all publications.
+
+Please see this page for details relevant to this cluster:
+
+http://www.tchpc.tcd.ie/resources/acknowledgementpolicy
+
+################################################################################
