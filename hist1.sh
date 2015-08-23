@@ -14,16 +14,16 @@ make bin/statsNaive
 # launch the code
 echo "gen"
 echo "1000 particles"
-time mpirun -n 8 bin/statsNaive compStats/init/gen1000.init
+time mpirun -n 8 bin/statsNaive compStatsInit/gen1000.init
 echo "600 particles"
-time mpirun -n 8 bin/statsNaive compStats/init/gen600.init
+time mpirun -n 8 bin/statsNaive compStatsInit/gen600.init
 echo "400 particles"
-time mpirun -n 8 bin/statsNaive compStats/init/gen400.init
+time mpirun -n 8 bin/statsNaive compStatsInit/gen400.init
 echo "200 particles"
-time mpirun -n 8 bin/statsNaive compStats/init/gen200.init
+time mpirun -n 8 bin/statsNaive compStatsInit/gen200.init
 echo "160 particles"
-time mpirun -n 8 bin/statsNaive compStats/init/gen160.init
+time mpirun -n 8 bin/statsNaive compStatsInit/gen160.init
 echo "120 particles"
-time mpirun -n 8 bin/statsNaive compStats/init/gen120.init
+time mpirun -n 8 bin/statsNaive compStatsInit/gen120.init
 echo "80 particles"
-time mpirun -n 8 bin/statsNaive compStats/init/gen80.init
+time mpirun -n 8 bin/statsNaive compStatsInit/gen80.init

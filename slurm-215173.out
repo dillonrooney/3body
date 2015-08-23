@@ -1,0 +1,173 @@
+make: `bin/statsNaive' is up to date.
+comp
+600 particles
+[lonsdale-n002:04623] *** Process received signal ***
+[lonsdale-n002:04623] Signal: Segmentation fault (11)
+[lonsdale-n002:04623] Signal code: Address not mapped (1)
+[lonsdale-n002:04623] Failing at address: 0xfffffffc01320220
+[lonsdale-n002:04623] [ 0] /lib64/libpthread.so.0() [0x32b580f710]
+[lonsdale-n002:04623] [ 1] bin/statsNaive(compareMultipleParticles+0x530) [0x403db3]
+[lonsdale-n002:04623] [ 2] bin/statsNaive(main+0xcc1) [0x40539b]
+[lonsdale-n002:04623] [ 3] /lib64/libc.so.6(__libc_start_main+0xfd) [0x32b501ed5d]
+[lonsdale-n002:04623] [ 4] bin/statsNaive() [0x401779]
+[lonsdale-n002:04623] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 4623 on node lonsdale-n002.cluster exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+
+real	1m46.826s
+user	1m46.630s
+sys	0m0.092s
+400 particles
+[lonsdale-n002:04629] *** Process received signal ***
+[lonsdale-n002:04629] Signal: Segmentation fault (11)
+[lonsdale-n002:04629] Signal code: Address not mapped (1)
+[lonsdale-n002:04629] Failing at address: 0xfffffffc0075f720
+[lonsdale-n002:04629] [ 0] /lib64/libpthread.so.0() [0x32b580f710]
+[lonsdale-n002:04629] [ 1] bin/statsNaive(compareMultipleParticles+0x530) [0x403db3]
+[lonsdale-n002:04629] [ 2] bin/statsNaive(main+0xcc1) [0x40539b]
+[lonsdale-n002:04629] [ 3] /lib64/libc.so.6(__libc_start_main+0xfd) [0x32b501ed5d]
+[lonsdale-n002:04629] [ 4] bin/statsNaive() [0x401779]
+[lonsdale-n002:04629] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 4629 on node lonsdale-n002.cluster exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+
+real	0m31.633s
+user	0m31.546s
+sys	0m0.054s
+200 particles
+[lonsdale-n002:04633] *** Process received signal ***
+[lonsdale-n002:04633] Signal: Segmentation fault (11)
+[lonsdale-n002:04633] Signal code: Address not mapped (1)
+[lonsdale-n002:04633] Failing at address: 0xfffffffc02379ca0
+[lonsdale-n002:04633] [ 0] /lib64/libpthread.so.0() [0x32b580f710]
+[lonsdale-n002:04633] [ 1] bin/statsNaive(compareMultipleParticles+0x530) [0x403db3]
+[lonsdale-n002:04633] [ 2] bin/statsNaive(main+0xcc1) [0x40539b]
+[lonsdale-n002:04633] [ 3] /lib64/libc.so.6(__libc_start_main+0xfd) [0x32b501ed5d]
+[lonsdale-n002:04633] [ 4] bin/statsNaive() [0x401779]
+[lonsdale-n002:04633] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 4633 on node lonsdale-n002.cluster exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+
+real	0m4.020s
+user	0m3.960s
+sys	0m0.047s
+
+
+###############################################################################
+TCHPC Cluster: lonsdale
+Job 215173 (histogram) for User 'rooneydt' in Account 'mschpc'
+Finished at: Sun Aug 23 16:05:24 IST 2015
+
+Job completion status:
+======================
+
+       JobID    JobName AllocCPUS NTasks NNodes     MaxRSS    MaxRSSNode  MaxDiskRead MaxDiskWrite    Elapsed      State ExitCode 
+------------ ---------- --------- ------ ------ ---------- ------------- ------------ ------------ ---------- ---------- -------- 
+215173        histogram         8             1                                                      00:02:25     FAILED     11:0 
+215173.batch      batch         8      1      1     11564K lonsdale-n002        0.74M        0.02M   00:02:25     FAILED     11:0 
+
+
+Job details:
+============
+
+JobId=215173 JobName=histogram
+   UserId=rooneydt(5482) GroupId=rooneydt(9287)
+   Priority=10065295 Nice=0 Account=mschpc QOS=normal
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=139:0
+   DerivedExitCode=0:0
+   RunTime=00:02:25 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2015-08-23T16:02:58 EligibleTime=2015-08-23T16:02:58
+   StartTime=2015-08-23T16:02:59 EndTime=2015-08-23T16:05:24
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=debug AllocNode:Sid=lonsdale01:30214
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   BatchHost=lonsdale-n002
+   NumNodes=1 NumCPUs=8 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+     Nodes=lonsdale-n002 CPU_IDs=0-7 Mem=15000
+   MinCPUsNode=1 MinMemoryNode=15000M MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   Shared=0 Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/users/mschpc/2014/rooneydt/3body/hist3.sh
+   WorkDir=/home/users/mschpc/2014/rooneydt/3body
+   StdErr=/home/users/mschpc/2014/rooneydt/3body/slurm-215173.out
+   StdIn=/dev/null
+   StdOut=/home/users/mschpc/2014/rooneydt/3body/slurm-215173.out
+
+
+Disk quota details:
+===================
+
+Quota Type           Name  Filesystem     Usage in MB     Limit in MB    % Used
+-------------------------------------------------------------------------------
+USER             rooneydt       /home              34          51,200     0.07%
+
+GROUP              mschpc   /projects          23,731          51,200    46.35%
+
+
+SLURM Bank Statement:
+=====================
+
+User           Usage |        Account     Usage | Account Limit Available (CPU hrs)
+---------- --------- + -------------- --------- + ------------- ---------
+
+aljohani          22 |         MSCHPC   106,052 |       400,000   293,948
+boycek           249 |         MSCHPC   106,052 |       400,000   293,948
+dalyso           244 |         MSCHPC   106,052 |       400,000   293,948
+deleligt         709 |         MSCHPC   106,052 |       400,000   293,948
+dowlindo         563 |         MSCHPC   106,052 |       400,000   293,948
+dunneff        4,157 |         MSCHPC   106,052 |       400,000   293,948
+elynch         2,903 |         MSCHPC   106,052 |       400,000   293,948
+hannigs            6 |         MSCHPC   106,052 |       400,000   293,948
+hernonma         457 |         MSCHPC   106,052 |       400,000   293,948
+holtonmi           0 |         MSCHPC   106,052 |       400,000   293,948
+howardrj          37 |         MSCHPC   106,052 |       400,000   293,948
+hynesr         1,365 |         MSCHPC   106,052 |       400,000   293,948
+jabehan        3,965 |         MSCHPC   106,052 |       400,000   293,948
+jbulava          158 |         MSCHPC   106,052 |       400,000   293,948
+jose               0 |         MSCHPC   106,052 |       400,000   293,948
+kcleary           67 |         MSCHPC   106,052 |       400,000   293,948
+lambem           514 |         MSCHPC   106,052 |       400,000   293,948
+liul1            505 |         MSCHPC   106,052 |       400,000   293,948
+luoq           2,782 |         MSCHPC   106,052 |       400,000   293,948
+makirby        1,126 |         MSCHPC   106,052 |       400,000   293,948
+mcbridne       2,142 |         MSCHPC   106,052 |       400,000   293,948
+mehtav            82 |         MSCHPC   106,052 |       400,000   293,948
+melbyrne         300 |         MSCHPC   106,052 |       400,000   293,948
+murphd37      15,590 |         MSCHPC   106,052 |       400,000   293,948
+murrayb8       2,421 |         MSCHPC   106,052 |       400,000   293,948
+nobyrnes       1,513 |         MSCHPC   106,052 |       400,000   293,948
+oconnm28         619 |         MSCHPC   106,052 |       400,000   293,948
+ormondca       1,661 |         MSCHPC   106,052 |       400,000   293,948
+osheac9          968 |         MSCHPC   106,052 |       400,000   293,948
+osullm40       6,396 |         MSCHPC   106,052 |       400,000   293,948
+paddy          1,319 |         MSCHPC   106,052 |       400,000   293,948
+phalpin          592 |         MSCHPC   106,052 |       400,000   293,948
+purdyd           173 |         MSCHPC   106,052 |       400,000   293,948
+rooneydt         364 |         MSCHPC   106,052 |       400,000   293,948
+sharding       1,196 |         MSCHPC   106,052 |       400,000   293,948
+sikelleh         990 |         MSCHPC   106,052 |       400,000   293,948
+simpsoao         509 |         MSCHPC   106,052 |       400,000   293,948
+smurray4         514 |         MSCHPC   106,052 |       400,000   293,948
+spellacl       1,730 |         MSCHPC   106,052 |       400,000   293,948
+vetsaa            80 |         MSCHPC   106,052 |       400,000   293,948
+wechen         7,593 |         MSCHPC   106,052 |       400,000   293,948
+wyattg           200 |         MSCHPC   106,052 |       400,000   293,948
+zhuang         8,654 |         MSCHPC   106,052 |       400,000   293,948
+
+
+Acknowledgements:
+=================
+
+Note that usage of TCHPC Resources *must* be acknowledged in all publications.
+
+Please see this page for details relevant to this cluster:
+
+http://www.tchpc.tcd.ie/resources/acknowledgementpolicy
+
+################################################################################

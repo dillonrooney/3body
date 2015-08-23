@@ -1,0 +1,210 @@
+make: `bin/statsNaive' is up to date.
+gen
+1000 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	1m3.772s
+user	8m19.249s
+sys	0m0.531s
+600 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	0m16.086s
+user	1m55.702s
+sys	0m0.531s
+400 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	0m5.576s
+user	0m34.075s
+sys	0m0.529s
+200 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	0m1.802s
+user	0m4.661s
+sys	0m0.498s
+160 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	0m1.623s
+user	0m3.051s
+sys	0m0.483s
+120 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	0m1.412s
+user	0m1.459s
+sys	0m0.482s
+80 particles
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+initializing
+
+real	0m1.359s
+user	0m1.097s
+sys	0m0.487s
+
+
+###############################################################################
+TCHPC Cluster: lonsdale
+Job 215169 (inits) for User 'rooneydt' in Account 'mschpc'
+Finished at: Sun Aug 23 15:36:18 IST 2015
+
+Job completion status:
+======================
+
+       JobID    JobName AllocCPUS NTasks NNodes     MaxRSS    MaxRSSNode  MaxDiskRead MaxDiskWrite    Elapsed      State ExitCode 
+------------ ---------- --------- ------ ------ ---------- ------------- ------------ ------------ ---------- ---------- -------- 
+215169            inits         8             1                                                      00:01:33  COMPLETED      0:0 
+215169.batch      batch         8      1      1     39088K lonsdale-n001           7M           1M   00:01:33  COMPLETED      0:0 
+
+
+Job details:
+============
+
+JobId=215169 JobName=inits
+   UserId=rooneydt(5482) GroupId=rooneydt(9287)
+   Priority=10095295 Nice=0 Account=mschpc QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:01:33 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2015-08-23T15:34:44 EligibleTime=2015-08-23T15:34:44
+   StartTime=2015-08-23T15:34:45 EndTime=2015-08-23T15:36:18
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=debug AllocNode:Sid=lonsdale01:22816
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   BatchHost=lonsdale-n001
+   NumNodes=1 NumCPUs=8 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+     Nodes=lonsdale-n001 CPU_IDs=0-7 Mem=15000
+   MinCPUsNode=1 MinMemoryNode=15000M MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   Shared=0 Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/users/mschpc/2014/rooneydt/3body/hist1.sh
+   WorkDir=/home/users/mschpc/2014/rooneydt/3body
+   StdErr=/home/users/mschpc/2014/rooneydt/3body/slurm-215169.out
+   StdIn=/dev/null
+   StdOut=/home/users/mschpc/2014/rooneydt/3body/slurm-215169.out
+
+
+Disk quota details:
+===================
+
+Quota Type           Name  Filesystem     Usage in MB     Limit in MB    % Used
+-------------------------------------------------------------------------------
+USER             rooneydt       /home              33          51,200     0.07%
+
+GROUP              mschpc   /projects          23,731          51,200    46.35%
+
+
+SLURM Bank Statement:
+=====================
+
+User           Usage |        Account     Usage | Account Limit Available (CPU hrs)
+---------- --------- + -------------- --------- + ------------- ---------
+
+aljohani          22 |         MSCHPC   106,028 |       400,000   293,972
+boycek           249 |         MSCHPC   106,028 |       400,000   293,972
+dalyso           244 |         MSCHPC   106,028 |       400,000   293,972
+deleligt         709 |         MSCHPC   106,028 |       400,000   293,972
+dowlindo         563 |         MSCHPC   106,028 |       400,000   293,972
+dunneff        4,157 |         MSCHPC   106,028 |       400,000   293,972
+elynch         2,903 |         MSCHPC   106,028 |       400,000   293,972
+hannigs            6 |         MSCHPC   106,028 |       400,000   293,972
+hernonma         457 |         MSCHPC   106,028 |       400,000   293,972
+holtonmi           0 |         MSCHPC   106,028 |       400,000   293,972
+howardrj          37 |         MSCHPC   106,028 |       400,000   293,972
+hynesr         1,365 |         MSCHPC   106,028 |       400,000   293,972
+jabehan        3,949 |         MSCHPC   106,028 |       400,000   293,972
+jbulava          158 |         MSCHPC   106,028 |       400,000   293,972
+jose               0 |         MSCHPC   106,028 |       400,000   293,972
+kcleary           67 |         MSCHPC   106,028 |       400,000   293,972
+lambem           514 |         MSCHPC   106,028 |       400,000   293,972
+liul1            505 |         MSCHPC   106,028 |       400,000   293,972
+luoq           2,782 |         MSCHPC   106,028 |       400,000   293,972
+makirby        1,126 |         MSCHPC   106,028 |       400,000   293,972
+mcbridne       2,142 |         MSCHPC   106,028 |       400,000   293,972
+mehtav            82 |         MSCHPC   106,028 |       400,000   293,972
+melbyrne         300 |         MSCHPC   106,028 |       400,000   293,972
+murphd37      15,590 |         MSCHPC   106,028 |       400,000   293,972
+murrayb8       2,421 |         MSCHPC   106,028 |       400,000   293,972
+nobyrnes       1,513 |         MSCHPC   106,028 |       400,000   293,972
+oconnm28         619 |         MSCHPC   106,028 |       400,000   293,972
+ormondca       1,661 |         MSCHPC   106,028 |       400,000   293,972
+osheac9          968 |         MSCHPC   106,028 |       400,000   293,972
+osullm40       6,388 |         MSCHPC   106,028 |       400,000   293,972
+paddy          1,319 |         MSCHPC   106,028 |       400,000   293,972
+phalpin          592 |         MSCHPC   106,028 |       400,000   293,972
+purdyd           173 |         MSCHPC   106,028 |       400,000   293,972
+rooneydt         364 |         MSCHPC   106,028 |       400,000   293,972
+sharding       1,196 |         MSCHPC   106,028 |       400,000   293,972
+sikelleh         990 |         MSCHPC   106,028 |       400,000   293,972
+simpsoao         509 |         MSCHPC   106,028 |       400,000   293,972
+smurray4         514 |         MSCHPC   106,028 |       400,000   293,972
+spellacl       1,730 |         MSCHPC   106,028 |       400,000   293,972
+vetsaa            80 |         MSCHPC   106,028 |       400,000   293,972
+wechen         7,593 |         MSCHPC   106,028 |       400,000   293,972
+wyattg           200 |         MSCHPC   106,028 |       400,000   293,972
+zhuang         8,654 |         MSCHPC   106,028 |       400,000   293,972
+
+
+Acknowledgements:
+=================
+
+Note that usage of TCHPC Resources *must* be acknowledged in all publications.
+
+Please see this page for details relevant to this cluster:
+
+http://www.tchpc.tcd.ie/resources/acknowledgementpolicy
+
+################################################################################

@@ -14,10 +14,10 @@ make bin/statsNaive
 # launch the code
 echo "comp"
 echo "1000 particles"
-time mpirun -n 1 bin/statsNaive compStats/init/comp1000.init
+time mpirun -n 1 bin/statsNaive compStatsInit/comp1000.init
 echo "160 particles"
-time mpirun -n 1 bin/statsNaive compStats/init/comp160.init
+time mpirun -n 1 bin/statsNaive compStatsInit/comp160.init
 echo "120 particles"
-time mpirun -n 1 bin/statsNaive compStats/init/comp120.init
+time mpirun -n 1 bin/statsNaive compStatsInit/comp120.init
 echo "80 particles"
-time mpirun -n 1 bin/statsNaive compStats/init/comp10.init
+time mpirun -n 1 bin/statsNaive compStatsInit/comp10.init

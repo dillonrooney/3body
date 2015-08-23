@@ -195,16 +195,16 @@ double compareMultipleParticles(particle*in1, particle * in2, int nEach){
 		}
 		binvals[nBins-1]+=binvals[nBins];	//values of max end up outside last bin
 		double normalization = 1/(count*length);
-		for(i=;i<nBins;i++){
+		for(i=0;i<nBins;i++){
 			binvals[i]*=normalization;
 		}
 	//6:print
 		double bin0Mid = min + binDim/2;
 		double binMid;
 	
-		for(i=0;i<nBins){
+		for(i=0;i<nBins;i++){
 			binMid = bin0Mid + i *binDim;
-			printf("%lf\t%lf\n", binMid, binVals[i]);
+			printf("%lf\t%lf\n", binMid, binvals[i]);
 		}
 	}
 	printf("comparison of dv statistics:rank %d: mean=%lf\tstdev=%lf\n", rank, mean, stdev);
