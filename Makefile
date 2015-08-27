@@ -6,6 +6,8 @@ CFLAGS=-lm
 #sources
 naive/naive.c: headers/mpi_pass.h headers/compare_ax.h headers/mpi_io.h headers/datatype_ax.h headers/timing.h
 	touch naive/naive.c
+no_duplicates/no_duplicates.c: headers/mpi_pass.h headers/compare_ax.h headers/mpi_io.h headers/datatype_ax.h headers/timing.h
+	touch no_duplicates/no_duplicates.c
 
 serial/serial_MPI.c: headers/mpi_io.h headers/datatype_ax.h
 	touch serial/serial_MPI.c
@@ -14,6 +16,8 @@ bin/naive: naive/naive.c
 	mpicc naive/naive.c -o bin/naive $(CFLAGS)
 bin/statsNaive: naive/naive.c naive/compareStats.c headers/compare_ax_stats.h
 	mpicc naive/compareStats.c -o bin/statsNaive $(CFLAGS)
+bin/no_duplicates: no_duplicates/no_duplicates.c
+	mpicc no_duplicates/no_duplicates.c -o bin/no_duplicates $(CFLAGS)
 #runs
 
 #testing
