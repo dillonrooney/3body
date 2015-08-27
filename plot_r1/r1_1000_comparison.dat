@@ -8,3 +8,8 @@ bin/naive	comparison	1000	2	0.000280
 bin/naive	comparison	1000	4	0.000149
 bin/naive	comparison	1000	5	0.000124
 bin/naive	comparison	1000	8	0.000083
+bin/naive	comparison	1000	250	0.000018
+bin/naive	comparison	1000	125	0.000110
+bin/naive	comparison	1000	200	0.000018
+bin/naive	comparison	1000	100	0.000019
+bin/naive	comparison	1000	80	0.000014

@@ -11,3 +11,6 @@ bin/naive	comparison	1536	1	0.000718
 bin/naive	comparison	1536	4	0.000219
 bin/naive	comparison	1536	6	0.000162
 bin/naive	comparison	1536	8	0.000122
+bin/naive	comparison	1536	128	0.000021
+bin/naive	comparison	1536	256	0.003495
+bin/naive	comparison	1536	192	0.000022

@@ -11,3 +11,6 @@ bin/naive	naive	768	3	75.120283
 bin/naive	naive	768	4	56.546863
 bin/naive	naive	768	6	37.630418
 bin/naive	naive	768	8	30.391018
+bin/naive	naive	768	128	2.636723
+bin/naive	naive	768	256	1.459882
+bin/naive	naive	768	192	1.681864

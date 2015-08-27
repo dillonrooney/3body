@@ -9,3 +9,8 @@ bin/naive	naive	1000	2	248.892900
 bin/naive	naive	1000	4	124.555171
 bin/naive	naive	1000	5	100.179697
 bin/naive	naive	1000	8	63.045487
+bin/naive	naive	1000	250	3.045045
+bin/naive	naive	1000	125	4.205394
+bin/naive	naive	1000	200	3.326249
+bin/naive	naive	1000	100	5.196754
+bin/naive	naive	1000	80	7.107726

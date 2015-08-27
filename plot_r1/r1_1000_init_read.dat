@@ -8,3 +8,8 @@ bin/naive	init_read	1000	2	0.001492
 bin/naive	init_read	1000	4	0.003249
 bin/naive	init_read	1000	5	0.004730
 bin/naive	init_read	1000	8	0.026855
+bin/naive	init_read	1000	250	0.975898
+bin/naive	init_read	1000	125	0.526513
+bin/naive	init_read	1000	200	0.887962
+bin/naive	init_read	1000	100	0.500104
+bin/naive	init_read	1000	80	0.547610

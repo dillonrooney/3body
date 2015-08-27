@@ -11,3 +11,6 @@ bin/naive	init_read	1536	4	0.002798
 bin/naive	init_read	1536	4	0.025408
 bin/naive	init_read	1536	6	0.006382
 bin/naive	init_read	1536	8	0.014711
+bin/naive	init_read	1536	128	0.581078
+bin/naive	init_read	1536	256	0.758555
+bin/naive	init_read	1536	192	0.814609

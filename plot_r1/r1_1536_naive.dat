@@ -11,3 +11,6 @@ bin/naive	naive	1536	1	1794.484772
 bin/naive	naive	1536	4	453.888393
 bin/naive	naive	1536	6	301.064308
 bin/naive	naive	1536	8	225.471134
+bin/naive	naive	1536	128	14.524205
+bin/naive	naive	1536	256	7.703975
+bin/naive	naive	1536	192	10.232190

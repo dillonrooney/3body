@@ -10,3 +10,6 @@ bin/naive	comparison	768	3	0.000155
 bin/naive	comparison	768	4	0.000121
 bin/naive	comparison	768	6	0.000082
 bin/naive	comparison	768	8	0.000069
+bin/naive	comparison	768	128	0.000016
+bin/naive	comparison	768	256	0.000018
+bin/naive	comparison	768	192	0.000018
