@@ -32,5 +32,5 @@ MPI_pass(particle ** buffers, int passBuffer, int nEach, int passDistance, int *
 	//buffers[passBuffer] = spare_buffer;
 	//spare_buffer = spare_particle_pointer;
 	// Re-calculate what is in each buffer for later use
-	buf_index[passBuffer] = (buf_index[passBuffer]+passDistance+size)%size;
+	buf_index[passBuffer] = (buf_index[passBuffer]-passDistance+size)%size;
 }

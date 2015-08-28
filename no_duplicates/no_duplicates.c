@@ -167,10 +167,11 @@ int main(int argc, char ** argv){
 	
 	int passTimes;
 	int passingBuffer = 0;
-	for(passTimes = size; passTimes >=3;passTimes -=3){
+	for(passTimes = size; passTimes >0;passTimes -=3){
 		for(i=0;i<passTimes;i++){
 			MPI_pass(buffers, passingBuffer, nEachMax, 1, buf_index);
 			nEach[passingBuffer] = pieceSize(nParticles, size, buf_index[passingBuffer]);
+			printf("pass:%d:\t%d\t%d\t%d\n", rank, buf_index[0], buf_index[1], buf_index[2]);
 			func(buffers, nEach, buf_index);
 		}
 		if(passTimes ==3){passTimes+=1;}
@@ -183,17 +184,17 @@ int main(int argc, char ** argv){
 	}
 	int dist;
 	passingBuffer =0;
-	dist = (rank *2 - buf_index[passingBuffer])%rank;
+	dist = (rank *2 - buf_index[passingBuffer])%size;
 	MPI_pass(buffers, passingBuffer, nEachMax, dist, buf_index);
 	nEach[passingBuffer] = pieceSize(nParticles, size, buf_index[passingBuffer]);
 
 	passingBuffer =1;
-	dist = (rank *2 - buf_index[passingBuffer])%rank;
+	dist = (rank *2 - buf_index[passingBuffer])%size;
 	MPI_pass(buffers, passingBuffer, nEachMax, dist, buf_index);
 	nEach[passingBuffer] = pieceSize(nParticles, size, buf_index[passingBuffer]);
 
 	passingBuffer =2;
-	dist = (rank *2 - buf_index[passingBuffer])%rank;
+	dist = (rank *2 - buf_index[passingBuffer])%size;
 	MPI_pass(buffers, passingBuffer, nEachMax, dist, buf_index);
 	nEach[passingBuffer] = pieceSize(nParticles, size, buf_index[passingBuffer]);
 
@@ -235,7 +236,7 @@ int main(int argc, char ** argv){
 
 	
 	if(options.timing >= 1){
-		clock_stop(argv[0], options, "naive");
+		clock_stop(argv[0], options, "no_duplicates");
 	}
 	if(rank == 0){
 		//fprintParticles(stdout, buffers[3], nEachMax);
