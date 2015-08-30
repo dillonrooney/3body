@@ -40,21 +40,31 @@ set ylabel "time taken (s)"
 
 plot "plot_r1/r1_1000_init_read.dat" using ($4):($5) title "1000 particles", "plot_r1/r1_768_init_read.dat" using ($4):($5) title "768 particles", "plot_r1/r1_1536_init_read.dat" using ($4):($5) title "1536 particles"
 
+set output "plot_r1/reading_time_small.png"
+
+set xrange [0.5:8.5]
+plot "plot_r1/r1_1000_init_read.dat" using ($4):($5) title "1000 particles", "plot_r1/r1_768_init_read.dat" using ($4):($5) title "768 particles", "plot_r1/r1_1536_init_read.dat" using ($4):($5) title "1536 particles"
+
+
 set title "reading speedup"
 set output "plot_r1/reading.png"
 set ylabel "Speedup"
 
-set xrange [0:8]
+set xrange [1.5:7.5]
 plot "plot_r1/r1_1000_init_read.dat" using ($4):(0.165075/$5) title "1000 particles", "plot_r1/r1_768_init_read.dat" using ($4):(0.023288/$5) title "768 particles", "plot_r1/r1_1536_init_read.dat" using ($4):(0.105945/$5) title "1536 particles"
+
+#set xrange restore
 
 set logscale x
 set logscale y
 
 
 set output "plot_r1/reading_loglog.png"
-replot
 
-set xrange restore
+plot "plot_r1/r1_1000_init_read.dat" using ($4):(0.165075/$5) title "1000 particles", "plot_r1/r1_768_init_read.dat" using ($4):(0.023288/$5) title "768 particles", "plot_r1/r1_1536_init_read.dat" using ($4):(0.105945/$5) title "1536 particles"
+
+#set xrange restore
+set autoscale x
 
 unset logscale x
 unset logscale y
@@ -69,7 +79,7 @@ set logscale y
 
 
 set output "plot_r1/data_generation_loglog.png"
-replot
+#replot
 
 unset logscale x
 unset logscale y
@@ -80,7 +90,12 @@ set ylabel "time taken (s)"
 
 plot "plot_r1/r1_1000_comparison.dat" using ($4):($5) title "1000 particles", "plot_r1/r1_768_comparison.dat" using ($4):($5) title "768 particles", "plot_r1/r1_1536_comparison.dat" using ($4):($5) title "1536 particles"
 
+set output "plot_r1/comparison_time_large.png"
+set xrange [31:210]
 
+plot "plot_r1/r1_1000_comparison.dat" using ($4):($5) title "1000 particles", "plot_r1/r1_768_comparison.dat" using ($4):($5) title "768 particles", "plot_r1/r1_1536_comparison.dat" using ($4):($5) title "1536 particles"
+
+set autoscale x
 
 set title "Comparison speed"
 set output "plot_r1/comparison.png"

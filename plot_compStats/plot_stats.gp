@@ -1,6 +1,6 @@
 set term png
 
-set xlabel "Relative Difference"
+set xlabel "Relative Difference (eps)"
 set ylabel "Probability Density"
 
 set title "Probability Density of Relative Difference"
@@ -16,7 +16,7 @@ set output "reldiff_mean.png"
 
 set title "Mean of Relative Difference"
 set xlabel "Number of Particles"
-set ylabel "Mean Relative Difference"
+set ylabel "Mean Relative Difference (eps)"
 plot 'means' using 1:2
 #:3 with yerrorbars
 
