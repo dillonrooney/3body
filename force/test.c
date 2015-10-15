@@ -1,5 +1,6 @@
 #include<stdlib.h>
 #include<stdio.h>
+#include<float.h>
 
 //Global variables
 //to allow compatibility with other stuff
@@ -10,6 +11,52 @@ int size = 1;
 #include "datatype_ax_serial.h"
 
 //Functions
+
+
+double rel_diff(double in1, double in2){
+	double minTol = 10;
+	double epsTol = 10;
+	//returns a result of the difference as approximately the the smallest multiple of either the smallest double value(DBL_MIN) or the difference between adjacent doubles (DBL_EPSILON)
+	//effectively relative to smallest possible difference
+	
+	double out;
+	out = 0;
+	double diff = in1-in2;
+	double absDiff = fabs(diff);
+	double magnitude = (fabs(in1) + fabs(in2))*0.5;
+	double relDiff = absDiff/magnitude;
+	//important to have split the two here
+	absDiff = absDiff/DBL_MIN;
+	if(absDiff < minTol){
+		return 0;
+	}
+	//
+	//in case one is very close to 0, leading to large differences
+	// x-y/0.5 x+y <z epsilon
+	//x^2  - y^2 /0.5 (x+y)^2  
+	//assume x = y + d and d small
+	//x^2 - x^2 + xd + d^2 / 2x^2
+	//0 + xd + 0 /2x^2
+	// d/2x 
+	// also d/x = epsilon
+	// 1/2 >z
+
+	relDiff = relDiff/DBL_EPSILON;
+	//	~0 if diff small;  ~1 if diff large
+	if(relDiff < epsTol){
+		return 0;
+	}
+	
+	//out = min(relDiff, absDiff);
+	out = absDiff<relDiff?absDiff:relDiff;
+	
+	if(out < 0.49){
+		printf("unexpected small output of rel_diff  = %g\n", out);
+	}
+	return out;
+	
+}
+
 void testInitLinear(int n){
 	particle * stuff = malloc(n * sizeof(particle));
 	initialize_linearx(stuff, n);
@@ -27,13 +74,7 @@ void calcForces(particle * particles, int n){
 				findForce(particles +i, particles + j, particles + k);
 			}
 		}
-	}
-	
-	
-}
-
-void leapFrogStep(particle * particles, int n){	
-	
+	}	
 }
 
 void totalMomentum(particle * particles, int n, double * out){
@@ -178,17 +219,185 @@ int testEnergy(){
 		printf("unexpected potential energy %g found. expected 1.375\n", potential - 1.375);
 	}
 	
+	
+	free(particles);
 	if(failed == 0){
 		printf("energy test passed\n");
 	}
 	return !failed;
 }
 
+int testForce(){
+	int failed = 0;
+	int n = 3;
+	particle * particles = malloc(n * sizeof(particle));
+	initialize_linearx(particles, n);
+	findForce(particles, particles + 1, particles + 2);
+	fprintParticles(stdout, particles, n);
+	//calcForces(particle * particles, int n);
+	
+	
+	free(particles);
+	return !failed;
+}
+
+
+
+void positionStep(particle * particles, int n, double h){
+	int i;
+	for(i=0;i<n;i++){
+		particles[i].x += h*particles[i].vx;
+		particles[i].y += h*particles[i].vy;
+		particles[i].z += h*particles[i].vz;
+	}	
+}
+
+void velocityStep(particle * particles, int n, double h){
+	int i;
+	for(i=0;i<n;i++){
+		particles[i].dvx = 0;
+		particles[i].dvy = 0;
+		particles[i].dvz = 0;
+	}
+	calcForces(particles, n);
+	for(i=0;i<n;i++){
+		particles[i].vx += h*particles[i].dvx;
+		particles[i].vy += h*particles[i].dvy;
+		particles[i].vz += h*particles[i].dvz;
+	}
+	//zeroing before and after to be sure
+	for(i=0;i<n;i++){
+		particles[i].dvx = 0;
+		particles[i].dvy = 0;
+		particles[i].dvz = 0;
+	}
+}
+
+void leapFrogStep(particle * particles, int n, double h){
+	positionStep(particles, n, h/2);
+	velocityStep(particles, n, h);
+	positionStep(particles, n, h/2);
+}
+
+void localLeapFrogAccuracy(){
+	double h = 1;
+	int n = 3;
+	particle * particles = malloc(n * sizeof(particle));
+	FILE * fp;
+	double currentEnergy;
+	double energyChange;
+	double energy;
+	
+	fp = fopen("lin3local1.dat","w");
+	initialize_linearx(particles, n);
+	energy = totalEnergy(particles, n);
+	for (h = 1;h>1E-8;h/=2){
+		initialize_linearx(particles, n);
+		leapFrogStep(particles, n, h);
+		currentEnergy = totalEnergy(particles, n);
+		energyChange = currentEnergy - energy;
+		fprintf(fp, "%g\t%g\n", h, energyChange);
+	}
+	fclose(fp);
+	
+	// 
+
+	fp = fopen("lin3local10.dat","w");
+	initialize_linearx(particles, n);
+	energy = totalEnergy(particles, n);
+	for (h = 1;h>1E-8;h/=2){
+		initialize_linearx(particles, n);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		currentEnergy = totalEnergy(particles, n);
+		energyChange = currentEnergy - energy;
+		fprintf(fp, "%g\t%g\n", h, energyChange);
+	}
+	fclose(fp);
+	
+	//	10 particles
+	free(particles);
+	n = 10;
+	particles = malloc(n * sizeof(particle));
+	
+	fp = fopen("lin10local1.dat","w");
+	initialize_linearx(particles, n);
+	energy = totalEnergy(particles, n);
+	for (h = 1;h>1E-8;h/=2){
+		initialize_linearx(particles, n);
+		leapFrogStep(particles, n, h);
+		currentEnergy = totalEnergy(particles, n);
+		energyChange = currentEnergy - energy;
+		fprintf(fp, "%g\t%g\n", h, energyChange);
+	}
+	fclose(fp);
+	
+	// 
+
+	fp = fopen("lin10local10.dat","w");
+	initialize_linearx(particles, n);
+	energy = totalEnergy(particles, n);
+	for (h = 1;h>1E-8;h/=2){
+		initialize_linearx(particles, n);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		leapFrogStep(particles, n, h);
+		currentEnergy = totalEnergy(particles, n);
+		energyChange = currentEnergy - energy;
+		fprintf(fp, "%g\t%g\n", h, energyChange);
+	}
+	fclose(fp);
+	
+	
+	
+	
+	free(particles);
+}
+
+void globalLeapFrogAccuracy(){
+	double h = 1;
+	int n = 3;
+	double t;
+	particle * particles = malloc(n * sizeof(particle));
+	initialize_linearx(particles, n);
+	double energy = totalEnergy(particles, n);
+	double currentEnergy;
+	double energyChange;
+	for (h = 1;h>1E-6;h/=2){
+		initialize_linearx(particles, n);
+		for(t=0;t<1;t+=h){
+			//printf("leapfrogging at time t = %lf", t);
+			leapFrogStep(particles, n, h);
+		}
+		currentEnergy = totalEnergy(particles, n);
+		energyChange = currentEnergy - energy;
+		printf("%g\t%g\n", h, energyChange);
+	}
+	free(particles);
+}
+
 int main(int argc, char ** argv){
 	testInitLinear(3);
 	testMomentum();
 	testEnergy();
-	
+	testForce();
+	localLeapFrogAccuracy();
+	globalLeapFrogAccuracy();
 	return 0;
 }
 

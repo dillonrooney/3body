@@ -88,7 +88,7 @@ create_MPI_struct(MPI_Datatype * new_type){
 
 
 
-double findForce(particle * a, particle * b, particle * c){
+double findForce_old(particle * a, particle * b, particle * c){
 //	printf("finding forces\n");
 	//I need to be more explicit on possible multiple counting
 	double ra,rb,rc;
@@ -165,6 +165,93 @@ double findForce(particle * a, particle * b, particle * c){
 }
 
 
+double findForce(particle * a, particle * b, particle * c){
+//	printf("finding forces\n");
+	//I need to be more explicit on possible multiple counting
+	double ra,rb,rc;
+	//ra is the distance between particle b and particle c
+	double rabx = a->x - b->x;
+	double raby = a->y - b->y;
+	double rabz = a->z - b->z;
+	
+	double rbcx = b->x - c->x;
+	double rbcy = b->y - c->y;
+	double rbcz = b->z - c->z;
+	
+	double rcax = c->x - a->x;
+	double rcay = c->y - a->y;
+	double rcaz = c->z - a->z;
+	
+	//	my/fortran
+	//Single index   |||   double index 
+	//	c/1					ab/12
+	//	b/2					ca/13
+	//	a/3					bc/23
+	double r132 = rcax*rcax +rcay*rcay + rcaz*rcaz;
+	double r122 = rabx*rabx +raby*raby + rabz*rabz;
+	double r232 = rbcx*rbcx +rbcy*rbcy + rbcz*rbcz;
+	
+	double rr122 = 1/r122;
+	double rr132 = 1/r132;
+	double rr232 = 1/r232;
+	
+	double rr12 = sqrt(rr122);
+	double rr13 = sqrt(rr132);
+	double rr23 = sqrt(rr232);
+	
+	double rr124 = rr122*rr122;
+	double rr134 = rr132*rr132;
+	double rr234 = rr232*rr232;
+	
+	double rkthb = 1;
+	
+	
+	double p1 = r132 + r232 - r122;
+    double p2 = r122 + r232 - r132;
+    double p3 = r122 + r132 - r232;
+    double rk8 = 0.125*rkthb*rr124*rr12*rr134*rr13*rr234*rr23;
+    double e0 = rk8*(8.0*r122*r132*r232 + 3.0*p1*p2*p3);
+
+//	First derivatives
+
+	double e1dt1 = 16.0*r132*r232 + 6.0*(p1*p2+p1*p3 - p2*p3);
+	double e1dt2 = 16.0*r122*r232 + 6.0*(p1*p2+p2*p3 - p1*p3);
+	double e1dt3 = 16.0*r122*r132 + 6.0*(p1*p3+p2*p3 - p1*p2);
+	double e1d1 =  - 5.0*e0*rr122 + rk8*e1dt1;
+	double e1d2 =  - 5.0*e0*rr132 + rk8*e1dt2;
+	double e1d3 =  - 5.0*e0*rr232 + rk8*e1dt3;
+
+	a->dvx += rabx*e1d1/a->mass;
+	a->dvx += -rcax*e1d2/a->mass;
+	
+	b->dvx += rbcx*e1d3/b->mass;
+	b->dvx += -rabx*e1d1/b->mass;
+	
+	c->dvx += rcax*e1d2/c->mass;
+	c->dvx += -rbcx*e1d3/c->mass;
+	
+	a->dvy += raby*e1d1/a->mass;
+	a->dvy += -rcay*e1d2/a->mass;
+	
+	b->dvy += rbcy*e1d3/b->mass;
+	b->dvy += -raby*e1d1/b->mass;
+	
+	c->dvy += rcay*e1d2/c->mass;
+	c->dvy += -rbcy*e1d3/c->mass;
+	
+	a->dvz += rabz*e1d1/a->mass;
+	a->dvz += -rcaz*e1d2/a->mass;
+	
+	b->dvz += rbcz*e1d3/b->mass;
+	b->dvz += -rabz*e1d1/b->mass;
+	
+	c->dvz += rcaz*e1d2/c->mass;
+	c->dvz += -rbcz*e1d3/c->mass;
+	
+	return 0;
+}
+
+
 void fprintParticles(FILE*fp, particle * particles, int n){
 	int i;
 	for(i=0;i<n;i++){
@@ -220,8 +307,8 @@ void initialize_2(particle * in, int nEach){
 		in[i].y = sin((double)rand());
 		in[i].z = sin((double)rand());
 		in[i].vx = i;
-		in[i].vy = rand();
-		in[i].vz = (double)rand();
+		in[i].vy = 0;
+		in[i].vz = 0;
 		in[i].dvx = 0;
 		in[i].dvy = 0;
 		in[i].dvz = 0;
