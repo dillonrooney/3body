@@ -221,32 +221,32 @@ double findForce(particle * a, particle * b, particle * c){
 	double e1d2 =  - 5.0*e0*rr132 + rk8*e1dt2;
 	double e1d3 =  - 5.0*e0*rr232 + rk8*e1dt3;
 
-	a->dvx += rabx*e1d1/a->mass;
-	a->dvx += -rcax*e1d2/a->mass;
+	a->dvx += -rabx*e1d1/a->mass;
+	a->dvx += rcax*e1d2/a->mass;
 	
-	b->dvx += rbcx*e1d3/b->mass;
-	b->dvx += -rabx*e1d1/b->mass;
+	b->dvx += -rbcx*e1d3/b->mass;
+	b->dvx += rabx*e1d1/b->mass;
 	
-	c->dvx += rcax*e1d2/c->mass;
-	c->dvx += -rbcx*e1d3/c->mass;
+	c->dvx += -rcax*e1d2/c->mass;
+	c->dvx += rbcx*e1d3/c->mass;
 	
-	a->dvy += raby*e1d1/a->mass;
-	a->dvy += -rcay*e1d2/a->mass;
+	a->dvy += -raby*e1d1/a->mass;
+	a->dvy += rcay*e1d2/a->mass;
 	
-	b->dvy += rbcy*e1d3/b->mass;
-	b->dvy += -raby*e1d1/b->mass;
+	b->dvy += -rbcy*e1d3/b->mass;
+	b->dvy += raby*e1d1/b->mass;
 	
-	c->dvy += rcay*e1d2/c->mass;
-	c->dvy += -rbcy*e1d3/c->mass;
+	c->dvy += -rcay*e1d2/c->mass;
+	c->dvy += rbcy*e1d3/c->mass;
 	
-	a->dvz += rabz*e1d1/a->mass;
-	a->dvz += -rcaz*e1d2/a->mass;
+	a->dvz += -rabz*e1d1/a->mass;
+	a->dvz += rcaz*e1d2/a->mass;
 	
-	b->dvz += rbcz*e1d3/b->mass;
-	b->dvz += -rabz*e1d1/b->mass;
+	b->dvz += -rbcz*e1d3/b->mass;
+	b->dvz += rabz*e1d1/b->mass;
 	
-	c->dvz += rcaz*e1d2/c->mass;
-	c->dvz += -rbcz*e1d3/c->mass;
+	c->dvz += -rcaz*e1d2/c->mass;
+	c->dvz += rbcz*e1d3/c->mass;
 	
 	return 0;
 }
@@ -300,7 +300,7 @@ void initialize_2(particle * in, int nEach){
 	srand(rank+12345);
 	//not a very good random number generator, but it could work for basic testing.
 	//need reasonably close values for x,y,z
-	printf("initializing\n");	
+	//printf("initializing\n");	
 	
 	for(i = 0;i<nEach;i++){
 		in[i].x = sin((double)rand());
@@ -316,6 +316,34 @@ void initialize_2(particle * in, int nEach){
 		
 	}	
 }
+
+
+void initialize_3(particle * in, int nEach){
+	int i,j,k,l;
+	srand(rank+12345);
+	//not a very good random number generator, but it could work for basic testing.
+	//need reasonably close values for x,y,z
+	//printf("initializing\n");	
+	l=0;
+	for(i = 0;l<nEach;i++){
+		for(j=0;j<=i&&l<nEach;j++){
+			for(k=0;k<=j&&l<nEach;k++){		
+				in[l].x = sin((double)rand())/10.0+i;
+				in[l].y = sin((double)rand())/10.0+j;
+				in[l].z = sin((double)rand())/10.0+k;
+				in[l].vx = 0;
+				in[l].vy = 0;
+				in[l].vz = 0;
+				in[l].dvx = 0;
+				in[l].dvy = 0;
+				in[l].dvz = 0;
+				in[l].mass = 1;
+				l++;
+			}	
+		}
+	}	
+}
+
 
 
 void initialize_linearx(particle * in, int nEach){

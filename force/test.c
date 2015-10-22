@@ -181,6 +181,9 @@ double potentialEnergy(particle * particles, int n){
 
 double totalEnergy(particle * particles, int n){
 	double out = 0;
+	double kinetic = kineticEnergy(particles, n);
+	double potential = potentialEnergy(particles, n);
+	//printf("kinetic = %g, potential = %g\n", kinetic, potential);
 	out += kineticEnergy(particles, n);
 	out += potentialEnergy(particles, n);
 	return out;
@@ -291,11 +294,18 @@ void localLeapFrogAccuracy(){
 	fp = fopen("lin3local1.dat","w");
 	initialize_linearx(particles, n);
 	energy = totalEnergy(particles, n);
+	
+	printf("initial energy = %g\n", energy);
+	leapFrogStep(particles, n, 0.01);
+	currentEnergy = totalEnergy(particles, n);
+	printf("current energy = %g\n", currentEnergy);
+	fprintParticles(stdout, particles, n);
+	
 	for (h = 1;h>1E-8;h/=2){
 		initialize_linearx(particles, n);
 		leapFrogStep(particles, n, h);
 		currentEnergy = totalEnergy(particles, n);
-		energyChange = currentEnergy - energy;
+		energyChange = fabs(currentEnergy - energy);
 		fprintf(fp, "%g\t%g\n", h, energyChange);
 	}
 	fclose(fp);
@@ -318,7 +328,7 @@ void localLeapFrogAccuracy(){
 		leapFrogStep(particles, n, h);
 		leapFrogStep(particles, n, h);
 		currentEnergy = totalEnergy(particles, n);
-		energyChange = currentEnergy - energy;
+		energyChange = fabs(currentEnergy - energy);
 		fprintf(fp, "%g\t%g\n", h, energyChange);
 	}
 	fclose(fp);
@@ -335,7 +345,7 @@ void localLeapFrogAccuracy(){
 		initialize_linearx(particles, n);
 		leapFrogStep(particles, n, h);
 		currentEnergy = totalEnergy(particles, n);
-		energyChange = currentEnergy - energy;
+		energyChange = fabs(currentEnergy - energy);
 		fprintf(fp, "%g\t%g\n", h, energyChange);
 	}
 	fclose(fp);
@@ -358,7 +368,7 @@ void localLeapFrogAccuracy(){
 		leapFrogStep(particles, n, h);
 		leapFrogStep(particles, n, h);
 		currentEnergy = totalEnergy(particles, n);
-		energyChange = currentEnergy - energy;
+		energyChange = fabs(currentEnergy - energy);
 		fprintf(fp, "%g\t%g\n", h, energyChange);
 	}
 	fclose(fp);
@@ -373,21 +383,164 @@ void globalLeapFrogAccuracy(){
 	double h = 1;
 	int n = 3;
 	double t;
+	FILE * fp;
 	particle * particles = malloc(n * sizeof(particle));
-	initialize_linearx(particles, n);
-	double energy = totalEnergy(particles, n);
+	double energy;
 	double currentEnergy;
 	double energyChange;
-	for (h = 1;h>1E-6;h/=2){
+	
+	//lin3 global
+	fp = fopen("lin3global.dat","w");
+	initialize_linearx(particles, n);
+	energy = totalEnergy(particles, n);
+	for (h = 0.1;h>1E-7;h*=0.5){
 		initialize_linearx(particles, n);
-		for(t=0;t<1;t+=h){
+		for(t=0;t<0.1;t+=h){
 			//printf("leapfrogging at time t = %lf", t);
 			leapFrogStep(particles, n, h);
 		}
 		currentEnergy = totalEnergy(particles, n);
-		energyChange = currentEnergy - energy;
-		printf("%g\t%g\n", h, energyChange);
+		energyChange = fabs(currentEnergy - energy);
+		fprintf(fp, "%g\t%g\n", h, energyChange);
 	}
+	fclose(fp);
+	
+	
+	//equilateral global
+	fp = fopen("equilateralglobal.dat","w");
+	initialize_equilateral(particles, n);
+	energy = totalEnergy(particles, n);
+	for (h = 0.1;h>1E-7;h*=0.5){
+		initialize_equilateral(particles, n);
+		for(t=0;t<0.1;t+=h){
+			//printf("leapfrogging at time t = %lf", t);
+			leapFrogStep(particles, n, h);
+		}
+		currentEnergy = totalEnergy(particles, n);
+		energyChange = fabs(currentEnergy - energy);
+		fprintf(fp, "%g\t%g\n", h, energyChange);
+	}
+	fclose(fp);
+	
+	
+	printf("10 particles may take some time\n");
+	//linear 10 global
+	free(particles);
+	n = 10;
+	particles = malloc(n * sizeof(particle));
+	fp = fopen("lin10global.dat","w");
+	initialize_linearx(particles, n);
+	energy = totalEnergy(particles, n);
+	for (h = 0.1;h>1E-6;h*=0.5){
+		initialize_linearx(particles, n);
+		for(t=0;t<0.1;t+=h){
+			//printf("leapfrogging at time t = %lf", t);
+			leapFrogStep(particles, n, h);
+		}
+		currentEnergy = totalEnergy(particles, n);
+		energyChange = fabs(currentEnergy - energy);
+		fprintf(fp, "%g\t%g\n", h, energyChange);
+	}
+	fclose(fp);
+	
+	//random 10 global
+	free(particles);
+	n = 10;
+	particles = malloc(n * sizeof(particle));
+	fp = fopen("random10global.dat","w");
+	initialize_2(particles, n);
+	energy = totalEnergy(particles, n);
+	for (h = 0.1;h>1E-6;h*=0.5){
+		initialize_2(particles, n);
+		for(t=0;t<0.1;t+=h){
+			//printf("leapfrogging at time t = %lf", t);
+			leapFrogStep(particles, n, h);
+		}
+		currentEnergy = totalEnergy(particles, n);
+		energyChange = fabs(currentEnergy - energy);
+		fprintf(fp, "%g\t%g\n", h, energyChange);
+	}
+	fclose(fp);
+	
+	
+	printf("20 particles may take noticeably more time\n");
+	//random 20 global
+	free(particles);
+	n = 20;
+	particles = malloc(n * sizeof(particle));
+	fp = fopen("random20global.dat","w");
+	initialize_3(particles, n);
+	//fprintParticles(stdout, particles, n);
+	energy = totalEnergy(particles, n);
+	for (h = 0.1;h>1E-6;h*=0.5){
+		initialize_3(particles, n);
+		for(t=0;t<0.1;t+=h){
+			//printf("leapfrogging at time t = %lf", t);
+			leapFrogStep(particles, n, h);
+		}
+		currentEnergy = totalEnergy(particles, n);
+		energyChange = fabs(currentEnergy - energy);
+		fprintf(fp, "%g\t%g\n", h, energyChange);
+	}
+	fclose(fp);
+	
+	printf("40 particles may take noticeably more time\n");
+	//random 40 global
+	free(particles);
+	n = 40;
+	particles = malloc(n * sizeof(particle));
+	fp = fopen("random40global.dat","w");
+	initialize_3(particles, n);
+	//fprintParticles(stdout, particles, n);
+	energy = totalEnergy(particles, n);
+	for (h = 0.1;h>1E-6;h*=0.5){
+		initialize_3(particles, n);
+		for(t=0;t<0.1;t+=h){
+			//printf("leapfrogging at time t = %lf", t);
+			leapFrogStep(particles, n, h);
+		}
+		currentEnergy = totalEnergy(particles, n);
+		energyChange = fabs(currentEnergy - energy);
+		fprintf(fp, "%g\t%g\n", h, energyChange);
+	}
+	fclose(fp);
+	
+	free(particles);
+}
+
+void otherTests(){
+	int n = 20;
+	particle * particles = malloc(n * sizeof(particle));
+	initialize_2(particles, n);
+	
+	calcForces(particles, n);
+	
+	double max(double in1, double in2){
+		double out;
+		out = in2>in1?in2:in1;
+		return out;
+	}
+	
+	int i;
+	double x, y, z;
+	x=0;
+	y=0;
+	z=0;
+	double xMax, yMax, zMax;
+	xMax=0;
+	yMax=0;
+	zMax=0;
+	for(i=0;i<n;i++){
+		x+=particles[i].dvx;
+		xMax = max(xMax, fabs(particles[i].dvx));
+		y+=particles[i].dvy;
+		yMax = max(yMax, fabs(particles[i].dvy));
+		z+=particles[i].dvz;
+		zMax = max(zMax, fabs(particles[i].dvz));
+	}
+	printf("Testing Forces sum to zero \nx:\t %g max:%g\ny:\t %g max:%g\nz:\t %g max:%g\n", x, xMax, y, yMax,z, zMax);
+	
+	
 	free(particles);
 }
 
@@ -396,6 +549,7 @@ int main(int argc, char ** argv){
 	testMomentum();
 	testEnergy();
 	testForce();
+	otherTests();
 	localLeapFrogAccuracy();
 	globalLeapFrogAccuracy();
 	return 0;
